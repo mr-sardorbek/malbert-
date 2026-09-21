@@ -1,0 +1,24 @@
+{
+  "nav": {
+    "home": "Bosh sahifa",
+    "products": "Mahsulotlar",
+    "about": "Biz haqimizda",
+    "partners": "Hamkorlar",
+    "contact": "Kontakt",
+    "request": "Bog‘lanish"
+  },
+
+   "hero": {
+    "eyebrow": "Poligrafiya sohasida ishonchli hamkor",
+    "title": "CMYK kraskalar va etiketka rulonlari",
+    "description": "Sifatli bosma mahsulotlari bilan brendingizni keyingi bosqichga olib chiqing.",
+    "productsButton": "Mahsulotlar",
+    "aboutButton": "Biz haqimizda",
+
+    "features": {
+      "quality": "Premium sifat",
+      "delivery": "Tez yetkazib berish",
+      "technology": "Zamonaviy texnologiya"
+    }
+  }
+}
