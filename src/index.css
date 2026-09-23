@@ -182,3 +182,26 @@ body {
     @apply font-sans;
   }
 }
+
+@keyframes arrowMove {
+  0%, 100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+.arrow-move {
+  animation: arrowMove 1.2s ease-in-out infinite;
+}
+
+
+
+@media (max-width: 639px) {
+  .partners-glass {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}

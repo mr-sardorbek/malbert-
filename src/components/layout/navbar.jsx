@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import { Button } from "../ui/button";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Menu, X } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [language, setLanguage] = useState(() => {
@@ -47,42 +47,27 @@ const Navbar = () => {
     <nav className="relative w-full border-b border-border bg-background">
       {/* Main Navbar */}
       <div
-        className="
-          mx-auto flex h-[58px] max-w-7xl items-center
-          justify-between px-4
+        className="mx-auto flex h-[58px] max-w-7xl items-center justify-between px-4 sm:px-5 md:px-6">
 
-          sm:px-5
-
-          md:px-6
-        "
-      >
         {/* Logo */}
         <div className="pl-0 sm:pl-2 md:pl-3">
           <img
             src={Logo}
             alt="MALBERT"
             className="
-              h-7 w-auto object-contain
-
-              sm:h-8
-
-              md:h-8
-            "
-          />
+              h-7 w-auto object-contain sm:h-8 md:h-8"/>
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-6 lg:flex xl:gap-7">
           {navLinks.map((link) => (
             <NavLink
-              key={link.path}
-              to={link.path}
+              key={link.path} to={link.path}
               className={({ isActive }) =>
                 `group relative px-1 py-2 text-[12px] font-medium
                 transition-colors duration-200
                 xl:text-[13px]
-                ${
-                  isActive
+                ${isActive
                     ? "text-primary"
                     : "text-foreground hover:text-primary"
                 }`
@@ -97,7 +82,6 @@ const Navbar = () => {
                       absolute bottom-1 left-1/2 h-[2px]
                       -translate-x-1/2 bg-secondary
                       transition-all duration-300
-
                       ${isActive ? "w-full" : "w-0 group-hover:w-full"}
                     `}
                   />
@@ -119,9 +103,7 @@ const Navbar = () => {
                 h-8 w-8 cursor-pointer rounded-lg
                 bg-surface hover:bg-border
 
-                sm:h-9 sm:w-9
-              "
-            >
+                sm:h-9 sm:w-9">
               <span className={`fi fi-${language}`} />
             </Button>
 
@@ -131,21 +113,14 @@ const Navbar = () => {
                 className="
                   absolute right-0 top-full z-50 mt-2
                   w-32 rounded-xl border border-border
-                  bg-background p-2 shadow-xl
-
-                  sm:w-36
-                "
-              >
+                  bg-background p-2 shadow-xl sm:w-36">
                 {languages.map((lang) => (
                   <button
                     key={lang.code}
                     onClick={() => changeLanguage(lang.code)}
                     className={`
                       flex w-full items-center gap-3
-                      rounded-lg px-3 py-2
-                      text-xs transition-colors
-                      hover:bg-surface
-
+                      rounded-lg px-3 py-2 text-xs transition-colors hover:bg-surface
                       ${
                         language === lang.code
                           ? "bg-surface text-primary"
@@ -154,7 +129,6 @@ const Navbar = () => {
                     `}
                   >
                     <span className={`fi fi-${lang.flag}`} />
-
                     <span>{lang.name}</span>
                   </button>
                 ))}
@@ -163,32 +137,17 @@ const Navbar = () => {
           </div>
 
           {/* Request Button - Desktop */}
-          <Button
-            className="
-              hidden
-              bg-primary
-              px-5 py-4
-              text-xs font-medium
-              hover:bg-primary-hover
-
-              lg:inline-flex
-            "
-          >
-            {t("nav.request")} →
-          </Button>
+          <Button className="hidden bg-primary px-5 py-4 text-xs font-medium hover:bg-primary-hover lg:inline-flex">
+  <span>{t("nav.request")}</span>
+  <ArrowRight size={16} className="ml-1 animate-[arrowMove_1.2s_ease-in-out_infinite]" />
+</Button>
 
           {/* Mobile Menu Button */}
           <Button
-            variant="ghost"
-            size="icon"
+            variant="ghost" size="icon"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="
-              h-8 w-8 cursor-pointer rounded-lg
-              hover:bg-surface
+            className="h-8 w-8 cursor-pointer rounded-lg hover:bg-surface lg:hidden">
 
-              lg:hidden
-            "
-          >
             {isMobileMenuOpen ? (
               <X size={19} />
             ) : (
@@ -201,24 +160,10 @@ const Navbar = () => {
       {/* Mobile / Tablet Menu */}
       {isMobileMenuOpen && (
         <div
-          className="
-            absolute left-0 top-full z-40
-            w-full border-b border-border
-            bg-background shadow-lg
-
-            lg:hidden
-          "
-        >
+          className="absolute left-0 top-full z-40 w-full border-b border-border
+            bg-background shadow-lg lg:hidden">
           <div
-            className="
-              mx-auto max-w-7xl
-              px-4 py-4
-
-              sm:px-5
-
-              md:px-6
-            "
-          >
+            className="mx-auto max-w-7xl px-4 py-4 sm:px-5 md:px-6">
             {/* Navigation Links */}
             <div className="flex flex-col">
               {navLinks.map((link) => (
@@ -247,17 +192,10 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Request */}
-            <Button
-              className="
-                mt-4 w-full
-                bg-primary
-                py-5
-                text-sm font-medium
-                hover:bg-primary-hover
-              "
-            >
-              {t("nav.request")} →
-            </Button>
+        <Button className="mt-4 w-full bg-primary py-5 text-sm font-medium hover:bg-primary-hover">
+  <span>{t("nav.request")}</span>
+  <ArrowRight size={17} className="ml-1 animate-[arrowMove_1.2s_ease-in-out_infinite]" />
+</Button>
           </div>
         </div>
       )}

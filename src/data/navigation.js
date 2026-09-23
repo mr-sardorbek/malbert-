@@ -4,12 +4,12 @@ export const navLinks = [
     path: "/",
   },
   {
-    key: "products",
-    path: "/products",
-  },
-  {
     key: "about",
     path: "/about",
+  },
+  {
+    key: "products",
+    path: "/products",
   },
   {
     key: "partners",

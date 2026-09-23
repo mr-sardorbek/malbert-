@@ -20,5 +20,27 @@
       "delivery": "Tez yetkazib berish",
       "technology": "Zamonaviy texnologiya"
     }
-  }
+  },
+  "products": {
+  "title": "Bizning mahsulotlar",
+  "description": "Biznesingiz uchun sifatli va zamonaviy poligrafiya yechimlari.",
+  "details": "Batafsil",
+  "contact": "Bog‘lanish",
+  "loading": "Yuklanmoqda..."
+},
+
+"about": {
+  "eyebrow": "Biz haqimizda",
+  "title": "Poligrafiya uchun sifatli yechimlar",
+  "subtitle": "MALBERT — Flexo Solutions",
+  "heading": "Sifat va ishonch ustuvor yo‘nalishimiz",
+  "description": "MALBERT — poligrafiya sohasi uchun CMYK kraskalar va rulon mahsulotlarini taklif qiluvchi zamonaviy kompaniya. Biz mijozlarimizga sifatli mahsulot va ishonchli hamkorlikni taqdim etishga intilamiz.",
+  "accent": "Sifatli mahsulot — kuchli hamkorlik."
+},
+
+"partners": {
+  "eyebrow": "Hamkorlarimiz",
+  "title": "Biz bilan birga rivojlaning",
+  "description": "Ishonchli hamkorlik — barqaror rivojlanishning muhim qismidir."
+}
 }

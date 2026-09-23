@@ -1,1 +1,5 @@
 export {default as Home} from "./home"
+export {default as Products} from "./products.jsx"
+export {default as About} from "./about.jsx"
+export {default as Partners} from "./partners.jsx"
+export {default as Contact} from "./contact.jsx"

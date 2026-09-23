@@ -2,133 +2,47 @@ import { HeroBg } from "@/assets";
 import { ArrowRight, ShieldCheck, Truck, Settings2 } from "lucide-react";
 
 import { useTranslation } from "react-i18next";
+import { Button } from "./ui/button";
 
 const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    <section
-      className="
-        relative
-        min-h-[500px]
-        overflow-hidden
-
-        sm:min-h-[500px]
-
-        md:min-h-[520px]
-
-        lg:min-h-[540px]
-      "
-    >
+    <section className="relative min-h-[500px] overflow-hidden sm:min-h-[500px] md:min-h-[520px] lg:min-h-[540px]">
       {/* Background Image */}
       <img
         src={HeroBg}
         alt="MALBERT printing production"
-        className="
-          absolute inset-0
-          h-full w-full
-          object-cover
-          object-[65%_center]
-
-          sm:object-[68%_center]
-
-          md:object-[70%_center]
-
-          lg:object-center
-        "
+        className="absolute inset-0 h-full w-full object-cover object-[65%_center]
+           sm:object-[68%_center] md:object-[70%_center] lg:object-center"
       />
 
       {/* Overlay */}
       <div
-        className="
-          absolute inset-0
-          bg-gradient-to-r
-          from-[#00345f]/90
-          via-[#00345f]/55
-          to-transparent
-
-          sm:from-[#00345f]/90
-          sm:via-[#00345f]/50
-          sm:to-transparent
-        "
+        className="absolute inset-0 bg-gradient-to-r  from-[#00345f]/90 via-[#00345f]/55 to-transparent
+           sm:from-[#00345f]/90 sm:via-[#00345f]/50 sm:to-transparent"
       />
 
       {/* Content */}
       <div
-        className="
-          relative z-10
-          mx-auto flex
-          min-h-[500px]
-          max-w-7xl
-          items-center
-          px-4
-
-          sm:min-h-[500px]
-          sm:px-6
-
-          md:min-h-[520px]
-          md:px-8
-
-          lg:min-h-[540px]
-          lg:px-6
-        "
+        className="relative z-10 mx-auto flex min-h-[500px] max-w-7xl items-center px-4 sm:min-h-[500px]
+          sm:px-6 md:min-h-[520px] md:px-8 lg:min-h-[540px] lg:px-6"
       >
-        <div
-          className="
-            w-full
-            max-w-[480px]
-
-            sm:max-w-[520px]
-
-            md:max-w-[580px]
-
-            lg:max-w-xl
-          "
-        >
+        <div className="w-full max-w-[480px] sm:max-w-[520px] md:max-w-[580px] lg:max-w-xl">
           {/* Eyebrow */}
           <span
-            className="
-              mb-4
-              block
-              text-[8px]
-              font-semibold
-              uppercase
-              tracking-[0.2em]
-              text-white/80
-
-              sm:mb-5
-              sm:text-[9px]
-              sm:tracking-[0.23em]
-
-              md:text-[10px]
-
-              lg:text-[11px]
-              lg:tracking-[0.25em]
-            "
+            className=" mb-4 block text-[8px] font-semibold uppercase tracking-[0.2em] text-white/80
+ sm:mb-5 sm:text-[9px] sm:tracking-[0.23em] md:text-[10px]
+ lg:text-[11px] lg:tracking-[0.25em]"
           >
             {t("hero.eyebrow")}
           </span>
 
           {/* Heading */}
           <h1
-            className="
-              max-w-[360px]
-              text-3xl
-              font-bold
-              leading-[1.08]
-              tracking-tight
-              text-white
+            className=" max-w-[360px] text-3xl font-bold leading-[1.08] tracking-tight text-white
+ sm:max-w-[450px] sm:text-4xl md:max-w-[520px] md:text-[44px] lg:max-w-xl lg:text-5xl">
 
-              sm:max-w-[450px]
-              sm:text-4xl
-
-              md:max-w-[520px]
-              md:text-[44px]
-
-              lg:max-w-xl
-              lg:text-5xl
-            "
-          >
             <span className="text-secondary">CMYK</span>{" "}
             {t("hero.title").replace("CMYK ", "")}
           </h1>
@@ -174,40 +88,20 @@ const Hero = () => {
             "
           >
             {/* Products */}
-            <button
-              className="
-                inline-flex
-                items-center
-                justify-center
-                gap-2
-                rounded-md
-                bg-secondary
-                px-5
-                py-2.5
-                text-xs
-                font-semibold
-                text-gray-900
-                transition-all
-                duration-200
-                hover:bg-secondary/90
-
-                sm:px-6
-                sm:py-3
-                sm:text-sm
-              "
-            >
-              {t("hero.productsButton")}
-
-              <ArrowRight size={15} className="sm:h-[17px] sm:w-[17px]" />
-            </button>
+            <Button
+  className="inline-flex items-center justify-center gap-2 rounded-md bg-secondary px-5 py-2.5 text-xs font-semibold text-gray-900 transition-all duration-200 hover:bg-secondary/90 sm:px-6 sm:py-3 sm:text-sm"
+>
+  {t("hero.productsButton")}
+  <ArrowRight size={15} className="arrow-move sm:h-[17px] sm:w-[17px]" />
+</Button>
 
             {/* About */}
-            <button
-              className="inline-flex items-center justify-center gap-2 rounded-md border border-white/40
-                bg-white/5 px-5 py-2.5 text-xs font-medium  text-white backdrop-blur-sm transition-all
-                duration-200  hover:bg-white/10 sm:px-6 sm:py-3 sm:text-sm">
-              {t("hero.aboutButton")}
-            </button>
+            <Button
+  variant="outline"
+  className="inline-flex items-center justify-center gap-2 rounded-md border-white/40 bg-white/5 px-5 py-2.5 text-xs font-medium text-white backdrop-blur-sm transition-all duration-200 hover:bg-white/10 hover:text-white sm:px-6 sm:py-3 sm:text-sm"
+>
+  {t("hero.aboutButton")}
+</Button>
           </div>
 
           {/* Features */}
