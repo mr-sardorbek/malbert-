@@ -8,7 +8,7 @@
     "request": "Bog‘lanish"
   },
 
-   "hero": {
+  "hero": {
     "eyebrow": "Poligrafiya sohasida ishonchli hamkor",
     "title": "CMYK kraskalar va etiketka rulonlari",
     "description": "Sifatli bosma mahsulotlari bilan brendingizni keyingi bosqichga olib chiqing.",
@@ -22,25 +22,43 @@
     }
   },
   "products": {
-  "title": "Bizning mahsulotlar",
-  "description": "Biznesingiz uchun sifatli va zamonaviy poligrafiya yechimlari.",
-  "details": "Batafsil",
-  "contact": "Bog‘lanish",
-  "loading": "Yuklanmoqda..."
+    "title": "Bizning mahsulotlar",
+    "description": "Biznesingiz uchun sifatli va zamonaviy poligrafiya yechimlari.",
+    "details": "Batafsil",
+    "contact": "Bog‘lanish",
+    "loading": "Yuklanmoqda..."
+  },
+
+  "about": {
+    "eyebrow": "Biz haqimizda",
+    "title": "Poligrafiya uchun sifatli yechimlar",
+    "subtitle": "MALBERT — Flexo Solutions",
+    "heading": "Sifat va ishonch ustuvor yo‘nalishimiz",
+    "description": "MALBERT — poligrafiya sohasi uchun CMYK kraskalar va rulon mahsulotlarini taklif qiluvchi zamonaviy kompaniya. Biz mijozlarimizga sifatli mahsulot va ishonchli hamkorlikni taqdim etishga intilamiz.",
+    "accent": "Sifatli mahsulot — kuchli hamkorlik."
+  },
+
+  "partners": {
+    "eyebrow": "Hamkorlarimiz",
+    "title": "Biz bilan birga rivojlaning",
+    "description": "Ishonchli hamkorlik — barqaror rivojlanishning muhim qismidir."
+  },
+
+  "contact": {
+  "title": "Biz bilan bog‘laning",
+  "description": "Savollaringiz yoki takliflaringiz bo‘lsa, biz bilan bog‘laning.",
+  "name": "Ismingiz",
+  "phone": "Telefon raqamingiz",
+  "message": "Izoh",
+  "submit": "So‘rov yuborish",
+  "location": "Bizning manzilimiz"
 },
 
-"about": {
-  "eyebrow": "Biz haqimizda",
-  "title": "Poligrafiya uchun sifatli yechimlar",
-  "subtitle": "MALBERT — Flexo Solutions",
-  "heading": "Sifat va ishonch ustuvor yo‘nalishimiz",
-  "description": "MALBERT — poligrafiya sohasi uchun CMYK kraskalar va rulon mahsulotlarini taklif qiluvchi zamonaviy kompaniya. Biz mijozlarimizga sifatli mahsulot va ishonchli hamkorlikni taqdim etishga intilamiz.",
-  "accent": "Sifatli mahsulot — kuchli hamkorlik."
-},
-
-"partners": {
-  "eyebrow": "Hamkorlarimiz",
-  "title": "Biz bilan birga rivojlaning",
-  "description": "Ishonchli hamkorlik — barqaror rivojlanishning muhim qismidir."
+"footer": {
+  "description": "Poligrafiya sohasi uchun sifatli va ishonchli yechimlar.",
+  "navigation": "Navigatsiya",
+  "follow": "Bizni kuzating",
+   "copyright": "© 2026 MALBERT",
+  "rights": "Barcha huquqlar himoyalangan."
 }
 }

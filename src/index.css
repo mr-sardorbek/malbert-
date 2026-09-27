@@ -205,3 +205,23 @@ body {
     -webkit-backdrop-filter: blur(10px);
   }
 }
+
+@keyframes partnerFloating {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.partner-float {
+  animation: partnerFloating 4s ease-in-out infinite;
+  will-change: transform;
+}
+
+.partner-float:hover {
+  animation-play-state: paused;
+}

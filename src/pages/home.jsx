@@ -1,15 +1,16 @@
 
 import Hero from "@/components/hero"
-import { About, Partners, Products } from "."
+import { About, Contact, Partners, Products } from "."
 
 
 const Home = () => {
   return (
-    <div>
+    <div >
       <Hero/>
       <About />
       <Products/>
       <Partners />
+      <Contact />
     </div>
   )
 }
