@@ -4,6 +4,7 @@ import { fetchProducts } from "@/features/products/productsSlice";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { motion } from "motion/react";
 
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -35,9 +36,25 @@ const Products = () => {
   }
 
   return (
-    <section className="bg-background px-4 py-16 sm:px-6 md:py-20">
+    <section
+      id="products"
+      className="bg-background px-4 py-16 sm:px-6 md:py-20"
+    >
       <div className="mx-auto max-w-7xl">
-        <div className="mb-10 text-center">
+        {/* Section Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 35 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.7,
+            ease: "easeOut",
+          }}
+          viewport={{
+            once: true,
+            amount: 0.3,
+          }}
+          className="mb-10 text-center"
+        >
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             {t("products.title")}
           </h2>
@@ -45,12 +62,24 @@ const Products = () => {
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-muted-foreground sm:text-base">
             {t("products.description")}
           </p>
-        </div>
+        </motion.div>
 
+        {/* Products Grid */}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((product) => (
-            <div
+            <motion.div
               key={product.id}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.6,
+                delay: product.id * 0.08,
+                ease: "easeOut",
+              }}
+              viewport={{
+                once: true,
+                amount: 0.15,
+              }}
               className="group relative overflow-hidden rounded-2xl border border-border bg-card transition-all duration-500 hover:-translate-y-2 hover:shadow-xl"
             >
               <div className="relative h-52 overflow-hidden bg-surface sm:h-56">
@@ -91,10 +120,11 @@ const Products = () => {
                   />
                 </Button>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
+        {/* Product Modal */}
         {selectedProduct && (
           <div
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4 backdrop-blur-sm"
@@ -136,15 +166,10 @@ const Products = () => {
                     {selectedProduct.description}
                   </p>
 
-                  <Button
-                    className="mt-6 cursor-pointer bg-primary transition-all duration-300 hover:bg-primary-hover hover:shadow-md"
-                  >
+                  <Button className="mt-6 cursor-pointer bg-primary transition-all duration-300 hover:bg-primary-hover hover:shadow-md">
                     {t("products.contact")}
 
-                    <ArrowRight
-                      size={16}
-                      className="ml-1 transition-transform duration-300"
-                    />
+                    <ArrowRight size={16} className="ml-1" />
                   </Button>
                 </div>
               </div>
