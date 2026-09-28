@@ -33,8 +33,10 @@ const AnnounceBar = () => {
           className="ml-auto flex items-cente gap-2 sm:gap-3 md:gap-4">
           {/* Instagram */}
           <a
-            href="#"
+             href="https://www.instagram.com/malbert.uz/"
             aria-label="Instagram"
+            target="_blank"
+rel="noopener noreferrer"
             className="hidden transition-opacity hover:opacity-70 sm:block"
           >
             <FaInstagram size={13} />
@@ -42,7 +44,7 @@ const AnnounceBar = () => {
 
           {/* Telegram */}
           <a
-            href="#"
+            href="https://t.me/malbertuz"
             aria-label="Telegram"
             className="hidden transition-opacity hover:opacity-70 sm:block"
           >

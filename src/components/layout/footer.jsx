@@ -1,4 +1,4 @@
-import { Logo } from "@/assets";
+import { LogoOq } from "@/assets";
 import { navLinks } from "@/data/navigation";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -15,7 +15,7 @@ const Footer = () => {
           
           <div className="sm:col-span-2 lg:col-span-1 lg:ml-7">
             <img
-              src={Logo}
+              src={LogoOq}
               alt="MALBERT"
               className="h-8 w-auto object-contain"
             />
@@ -50,15 +50,17 @@ const Footer = () => {
 
             <div className="mt-4 flex items-center gap-3">
               <a
-                href="#"
-                aria-label="Instagram"
-                className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-white/15 bg-white/10 text-white transition-all duration-300 hover:-translate-y-1 hover:bg-white/20 hover:shadow-md"
-              >
-                <FaInstagram size={17} />
-              </a>
+  href="https://www.instagram.com/malbert.uz/"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Instagram"
+  className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-white/15 bg-white/10 text-white transition-all duration-300 hover:-translate-y-1 hover:bg-white/20 hover:shadow-md"
+>
+  <FaInstagram size={17} />
+</a>
 
               <a
-                href="#"
+                href="https://t.me/malbertuz"
                 aria-label="Telegram"
                 className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-white/15 bg-white/10 text-white transition-all duration-300 hover:-translate-y-1 hover:bg-white/20 hover:shadow-md"
               >

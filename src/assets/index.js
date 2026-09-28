@@ -1,4 +1,5 @@
 export {default as Logo} from "./logo.png"
+export {default as LogoOq} from "./logo-oq.png"
 export {default as HeroBg} from "./malbert-hero.png"
 export {default as AboutImg} from "./company-malbert.png"
 export {default as Microsoft} from "./partners/MSFT_BIG.png"
