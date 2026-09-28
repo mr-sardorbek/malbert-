@@ -9,7 +9,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="bg-surface px-4 py-16 sm:px-6 md:py-20">
-      <div className="mx-auto max-w-[1536px]">
+      <div className="mx-auto max-w-7xl">
         {/* Section Heading */}
         <motion.div
           initial={{ opacity: 0, y: 35 }}
