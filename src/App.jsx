@@ -5,8 +5,8 @@ import { Home } from "./pages";
 const App = () => {
   return (
     <BrowserRouter>
-      <header className="sticky top-0 z-50">
         <AnnounceBar />
+      <header className="sticky top-0 z-50">
         <Navbar />
       </header>
 

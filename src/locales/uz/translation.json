@@ -51,7 +51,15 @@
   "phone": "Telefon raqamingiz",
   "message": "Izoh",
   "submit": "So‘rov yuborish",
-  "location": "Bizning manzilimiz"
+  "location": "Bizning manzilimiz",
+
+  "addressTitle": "Manzil",
+  "address": "Toshkent shahar, Mirzo Ulug‘bek tumani, Chingeldi mahallasi, Bog‘bon 8-uy",
+  "workingHoursTitle": "Ish vaqti",
+  "workingHours": "09:00 - 18:00",
+  "workingDays": "Dushanba - Shanba",
+  "phoneTitle": "Bog‘lanish",
+  "phoneDescription": "Biz bilan bog‘laning"
 },
 
 "footer": {

@@ -16,6 +16,8 @@ const Navbar = () => {
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+  
 
   const { t, i18n } = useTranslation();
   const location = useLocation();
@@ -123,8 +125,44 @@ const Navbar = () => {
     };
   }, [location.pathname]);
 
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleNavbarScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY <= 80) {
+        setIsNavbarVisible(true);
+        lastScrollY = currentScrollY;
+        return;
+      }
+
+      if (currentScrollY > lastScrollY + 5) {
+        setIsNavbarVisible(false);
+        setIsLanguageOpen(false);
+        setIsMobileMenuOpen(false);
+      } else if (currentScrollY < lastScrollY - 5) {
+        setIsNavbarVisible(true);
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleNavbarScroll, {
+      passive: true,
+    });
+
+    return () => {
+      window.removeEventListener("scroll", handleNavbarScroll);
+    };
+  }, []);
+
   return (
-    <nav className="relative w-full  bg-background/80 backdrop-blur-lg">
+    <nav
+      className={`relative w-full bg-background/80 backdrop-blur-lg transition-transform duration-300 ease-out ${
+        isNavbarVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="mx-auto flex h-[80px] max-w-7xl items-center justify-between px-4 sm:px-5 md:px-6">
         {/* Logo */}
         <div className="pl-0 sm:pl-2 md:pl-3">
