@@ -3,15 +3,18 @@ import { MapPin, Phone } from "lucide-react";
 
 const AnnounceBar = () => {
   return (
-    <div className="w-full border-b border-primary-hover bg-primary ">
+    <div className="w-full border-b border-primary-hover bg-primary">
       <div
         className="relative mx-auto flex w-full max-w-7xl items-center justify-between px-3 h-8
-        text-[9px] text-white sm:h-9 sm:px-5 sm:text-[10px] md:px-6 md:text-[11px] lg:h-9">
-
+        text-[9px] text-white sm:h-9 sm:px-5 sm:text-[10px] md:px-6 md:text-[11px] lg:h-9"
+      >
         {/* Location */}
-        <div
-          className="flex items-center gap-1.5 whitespace-nowrap" >
-          <MapPin className="shrink-0" size={13} strokeWidth={1.8} />
+        <div className="flex items-center gap-1.5 whitespace-nowrap">
+          <MapPin
+            className="shrink-0"
+            size={13}
+            strokeWidth={1.8}
+          />
 
           <span className="hidden xs:inline sm:inline">
             Toshkent, O‘zbekiston
@@ -19,24 +22,23 @@ const AnnounceBar = () => {
         </div>
 
         {/* Center */}
-        <div
-          className="absolute left-1/2 -translate-x-1/2 whitespace-nowrap">
+        <div className="absolute left-1/2 -translate-x-1/2 whitespace-nowrap">
           <span
             className="text-[7px] font-medium tracking-[0.25em] sm:text-[8px] sm:tracking-[0.3em] md:text-[9px]
-             md:tracking-[0.4em]">
+            md:tracking-[0.4em]"
+          >
             FLEXO SOLUTIONS
           </span>
         </div>
 
         {/* Right */}
-        <div
-          className="ml-auto flex items-cente gap-2 sm:gap-3 md:gap-4">
+        <div className="ml-auto flex items-center gap-2 sm:gap-3 md:gap-4">
           {/* Instagram */}
           <a
-             href="https://www.instagram.com/malbert.uz/"
+            href="https://www.instagram.com/malbert.uz/"
             aria-label="Instagram"
             target="_blank"
-rel="noopener noreferrer"
+            rel="noopener noreferrer"
             className="hidden transition-opacity hover:opacity-70 sm:block"
           >
             <FaInstagram size={13} />
@@ -46,6 +48,8 @@ rel="noopener noreferrer"
           <a
             href="https://t.me/malbertuz"
             aria-label="Telegram"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden transition-opacity hover:opacity-70 sm:block"
           >
             <FaTelegramPlane size={13} />
@@ -58,7 +62,6 @@ rel="noopener noreferrer"
               h-3.5
               w-px
               bg-white/30
-
               sm:block
             "
           />
@@ -75,13 +78,16 @@ rel="noopener noreferrer"
               hover:opacity-80
             "
           >
-            <Phone className="shrink-0" size={13} strokeWidth={1.8} />
+            <Phone
+              className="shrink-0"
+              size={13}
+              strokeWidth={1.8}
+            />
 
             {/* Phone number */}
             <span
               className="
                 hidden
-
                 sm:inline
               "
             >

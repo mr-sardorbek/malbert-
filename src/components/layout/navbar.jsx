@@ -17,7 +17,6 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [isNavbarVisible, setIsNavbarVisible] = useState(true);
-  
 
   const { t, i18n } = useTranslation();
   const location = useLocation();
@@ -221,7 +220,9 @@ const Navbar = () => {
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+              onClick={() =>
+                setIsLanguageOpen(!isLanguageOpen)
+              }
               className="h-8 w-8 cursor-pointer rounded-lg bg-surface hover:bg-border sm:h-9 sm:w-9"
               aria-label="Language"
             >
@@ -234,7 +235,9 @@ const Navbar = () => {
                   <Button
                     key={lang.code}
                     variant="ghost"
-                    onClick={() => changeLanguage(lang.code)}
+                    onClick={() =>
+                      changeLanguage(lang.code)
+                    }
                     className={`h-auto w-full cursor-pointer justify-start gap-3 rounded-lg px-3 py-2 text-xs ${
                       language === lang.code
                         ? "bg-surface text-primary"
@@ -266,7 +269,9 @@ const Navbar = () => {
           <Button
             variant="ghost"
             size="icon"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            onClick={() =>
+              setIsMobileMenuOpen(!isMobileMenuOpen)
+            }
             className="h-8 w-8 cursor-pointer rounded-lg hover:bg-surface lg:hidden"
             aria-label="Menu"
           >

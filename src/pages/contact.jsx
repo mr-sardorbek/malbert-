@@ -14,8 +14,11 @@ const Contact = () => {
     : "Toshkent shahar, Mirzo Ulug‘bek tumani, Chingeldi mahallasi, Bog‘bon 8-uy";
 
   return (
-    <section id="contact" className="bg-background px-4 py-16 sm:px-6 md:py-20">
-      <div className="mx-auto max-w-7xl">
+    <section
+      id="contact"
+      className="bg-background mt-[-260px] px-4 py-16 sm:px-6 md:py-20 min-[1441px]:flex min-[1441px]:min-h-[880px] min-[1441px]:items-center"
+    >
+      <div className="mx-auto w-full max-w-7xl">
         <div className="grid gap-6 lg:grid-cols-2">
           {/* Left Side - Heading + Form */}
           <motion.div
