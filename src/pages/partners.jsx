@@ -131,7 +131,10 @@ const Partners = () => {
                     once: true,
                     amount: 0.2,
                   }}
-                  className={`group flex h-28 w-36 cursor-pointer items-center justify-center rounded-2xl border border-border bg-white/80 p-6 shadow-[0_14px_30px_rgba(21,87,166,0.08)] backdrop-blur-md transition-all duration-500 hover:-translate-y-3 hover:scale-105 hover:shadow-[0_22px_40px_rgba(21,87,166,0.14)] ${rotations[index]} ${offsets[index]}`}
+                  className={`group flex h-28 w-36 cursor-pointer items-center justify-center rounded-2xl border border-border 
+                    bg-white/80 p-6 shadow-[0_14px_30px_rgba(21,87,166,0.08)] backdrop-blur-md transition-all duration-500 
+                    hover:-translate-y-3 hover:scale-105 hover:shadow-[0_22px_40px_rgba(21,87,166,0.14)] ${rotations[index]} 
+                    ${offsets[index]}`}
                 >
                   <img
                     src={partner.logo}
