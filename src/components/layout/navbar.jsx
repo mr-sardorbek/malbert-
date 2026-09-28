@@ -124,8 +124,8 @@ const Navbar = () => {
   }, [location.pathname]);
 
   return (
-    <nav className="relative w-full border-b border-border bg-background">
-      <div className="mx-auto flex h-[58px] max-w-7xl items-center justify-between px-4 sm:px-5 md:px-6">
+    <nav className="relative w-full  bg-background/80 backdrop-blur-lg">
+      <div className="mx-auto flex h-[80px] max-w-7xl items-center justify-between px-4 sm:px-5 md:px-6">
         {/* Logo */}
         <div className="pl-0 sm:pl-2 md:pl-3">
           <img

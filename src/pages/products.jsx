@@ -40,7 +40,7 @@ const Products = () => {
       id="products"
       className="bg-background px-4 py-16 sm:px-6 md:py-20"
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl bg-white p-6 rounded-4xl">
         {/* Section Heading */}
         <motion.div
           initial={{ opacity: 0, y: 35 }}
@@ -80,7 +80,8 @@ const Products = () => {
                 once: true,
                 amount: 0.15,
               }}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-card transition-all duration-500 hover:-translate-y-2 hover:shadow-xl"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card transition-all duration-500 
+              hover:-translate-y-2 hover:shadow-[0_18px_40px_rgba(21,87,166,0.16)]"
             >
               <div className="relative h-52 overflow-hidden bg-surface sm:h-56">
                 <img

@@ -8,7 +8,7 @@ const Contact = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="contact" className="bg-surface px-4 py-16 sm:px-6 md:py-20">
+    <section id="contact" className="bg-background px-4 py-16 sm:px-6 md:py-20">
       <div className="mx-auto max-w-7xl">
         {/* Section Heading */}
         <motion.div
@@ -46,24 +46,25 @@ const Contact = () => {
               once: true,
               amount: 0.2,
             }}
-            className="rounded-2xl border border-border bg-background p-6 sm:p-8"
+            className="rounded-2xl  bg-white p-6 sm:p-8"
           >
             <form className="space-y-4">
               <Input
                 type="text"
                 placeholder={t("contact.name")}
-                className="h-12 cursor-text rounded-xl bg-surface"
+                 className="h-12 cursor-text rounded-xl border border-border bg-background transition-all duration-300 focus-visible:!border-secondary focus-visible:!ring-2 focus-visible:!ring-secondary/20"
               />
 
               <Input
                 type="tel"
                 placeholder={t("contact.phone")}
-                className="h-12 cursor-text rounded-xl bg-surface"
+                 className="h-12 cursor-text rounded-xl border border-border bg-background transition-all duration-300 focus-visible:!border-secondary focus-visible:!ring-2 focus-visible:!ring-secondary/20"
               />
 
               <textarea
                 placeholder={t("contact.message")}
-                className="min-h-32 w-full resize-none rounded-xl border border-border bg-surface px-4 py-3 text-sm text-foreground outline-none transition-all duration-300 placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/10"
+                className="min-h-32 w-full resize-none rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground 
+                outline-none transition-all duration-300 placeholder:text-muted-foreground focus:border-secondary focus:ring-2 focus:ring-secondary/20"
               />
 
               <Button
@@ -93,7 +94,7 @@ const Contact = () => {
               once: true,
               amount: 0.2,
             }}
-            className="relative h-[360px] overflow-hidden rounded-2xl border border-border bg-background shadow-sm transition-all duration-300 hover:shadow-md sm:h-[420px] lg:h-full lg:min-h-[460px]"
+            className="relative h-[360px] overflow-hidden rounded-2xl border border-8 border-white bg-background  transition-all duration-300  lg:h-full lg:min-h-[460px]"
           >
             <div className="absolute left-4 top-4 z-10 rounded-xl bg-background/90 px-4 py-2 text-sm font-semibold text-foreground shadow-md backdrop-blur-md">
               {t("contact.location")}
