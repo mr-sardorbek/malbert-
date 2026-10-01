@@ -90,7 +90,7 @@ const Preloader = () => {
             scaleX: 1,
           }}
           transition={{
-            delay: 1.25,
+            delay: 1.15,
             duration: 0.8,
             ease: [0.22, 1, 0.36, 1],
           }}
