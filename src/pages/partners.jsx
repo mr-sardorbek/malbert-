@@ -1,14 +1,11 @@
-import {
-  Brother,
-  Canon,
-  Epson,
+
+import { useTranslation } from "react-i18next";
+import { motion } from "motion/react";
+import { Epson, Canon, Brother,
   HP,
   Microsoft,
   TSC,
-  Zebra,
-} from "@/assets";
-import { useTranslation } from "react-i18next";
-import { motion } from "motion/react";
+  Zebra, } from "@/assets";
 
 const partners = [
   {
@@ -19,7 +16,7 @@ const partners = [
   {
     id: 2,
     name: "Canon",
-    logo: Canon,
+    logo: Canon
   },
   {
     id: 3,
@@ -54,9 +51,9 @@ const Partners = () => {
   return (
     <section
       id="partners"
-      className="overflow-hidden bg-background mt-[-220px] px-4 py-16 sm:px-6 md:py-20 min-[1441px]:flex min-[1441px]:min-h-[880px] min-[1441px]:items-center"
+      className=" overflow-hidden bg-background px-4 py-16 sm:px-6 md:py-20"
     >
-      <div className="mx-auto w-full max-w-7xl">
+      <div className="mx-auto max-w-7xl">
         {/* Section Heading */}
         <motion.div
           initial={{ opacity: 0, y: 35 }}
@@ -131,7 +128,10 @@ const Partners = () => {
                     once: true,
                     amount: 0.2,
                   }}
-                  className={`group flex h-28 w-36 cursor-pointer items-center justify-center rounded-2xl border border-border bg-white/80 p-6 shadow-[0_14px_30px_rgba(21,87,166,0.08)] backdrop-blur-md transition-all duration-500 hover:-translate-y-3 hover:scale-105 hover:shadow-[0_22px_40px_rgba(21,87,166,0.14)] ${rotations[index]} ${offsets[index]}`}
+                  className={`group flex h-28 w-36 cursor-pointer items-center justify-center rounded-2xl border border-border 
+                    bg-white/80 p-6 shadow-[0_14px_30px_rgba(21,87,166,0.08)] backdrop-blur-md transition-all duration-500 
+                    hover:-translate-y-3 hover:scale-105 hover:shadow-[0_22px_40px_rgba(21,87,166,0.14)] ${rotations[index]} 
+                    ${offsets[index]}`}
                 >
                   <img
                     src={partner.logo}

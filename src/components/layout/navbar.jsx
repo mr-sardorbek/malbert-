@@ -162,18 +162,18 @@ const Navbar = () => {
         isNavbarVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="mx-auto flex h-[80px] max-w-7xl items-center justify-between px-4 sm:px-5 md:px-6">
+      <div className="mx-auto flex h-[80px] max-w-7xl items-center justify-between px-4 sm:px-5 md:px-6 min-[1441px]:max-w-[1536px] min-[1441px]:px-8">
         {/* Logo */}
         <div className="pl-0 sm:pl-2 md:pl-3">
           <img
             src={Logo}
             alt="MALBERT"
-            className="h-7 w-auto object-contain sm:h-8 md:h-8"
+            className="h-7 w-auto object-contain sm:h-8 md:h-8 min-[1441px]:h-9"
           />
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-6 lg:flex xl:gap-7">
+        <nav className="hidden items-center gap-6 lg:flex xl:gap-7 min-[1441px]:gap-8">
           {navLinks.map((link) => {
             const sectionId = getSectionId(link);
 
@@ -191,7 +191,7 @@ const Navbar = () => {
                       ? activeSection === sectionId
                       : isActive;
 
-                  return `group relative px-1 py-2 text-[12px] font-medium transition-colors duration-200 xl:text-[13px] ${
+                  return `group relative px-1 py-2 text-[12px] font-medium transition-colors duration-200 xl:text-[13px] min-[1441px]:text-sm ${
                     isSectionActive
                       ? "text-primary"
                       : "text-foreground hover:text-primary"
@@ -214,7 +214,7 @@ const Navbar = () => {
         </nav>
 
         {/* Actions */}
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex items-center gap-2 sm:gap-3 min-[1441px]:gap-4">
           {/* Language */}
           <div className="relative">
             <Button
@@ -223,7 +223,7 @@ const Navbar = () => {
               onClick={() =>
                 setIsLanguageOpen(!isLanguageOpen)
               }
-              className="h-8 w-8 cursor-pointer rounded-lg bg-surface hover:bg-border sm:h-9 sm:w-9"
+              className="h-8 w-8 cursor-pointer rounded-lg bg-surface hover:bg-border sm:h-9 sm:w-9 min-[1441px]:h-10 min-[1441px]:w-10"
               aria-label="Language"
             >
               <span className={`fi fi-${language}`} />
@@ -255,13 +255,13 @@ const Navbar = () => {
           {/* Request Button */}
           <Button
             onClick={handleRequestClick}
-            className="hidden cursor-pointer bg-primary px-5 py-4 text-xs font-medium transition-all duration-300 hover:bg-primary-hover hover:shadow-md lg:inline-flex"
+            className="hidden cursor-pointer bg-primary px-5 py-4 text-xs font-medium transition-all duration-300 hover:bg-primary-hover hover:shadow-md lg:inline-flex min-[1441px]:px-6 min-[1441px]:py-5 min-[1441px]:text-sm"
           >
             <span>{t("nav.request")}</span>
 
             <ArrowRight
               size={16}
-              className="ml-1 arrow-move"
+              className="ml-1 arrow-move min-[1441px]:h-[18px] min-[1441px]:w-[18px]"
             />
           </Button>
 
@@ -287,7 +287,7 @@ const Navbar = () => {
       {/* Mobile / Tablet Menu */}
       {isMobileMenuOpen && (
         <div className="absolute left-0 top-full z-40 w-full border-b border-border bg-background shadow-lg lg:hidden">
-          <div className="mx-auto max-w-7xl px-4 py-4 sm:px-5 md:px-6">
+          <div className="mx-auto max-w-7xl px-4 py-4 sm:px-5 md:px-6 min-[1441px]:max-w-[1536px] min-[1441px]:px-8">
             <div className="flex flex-col">
               {navLinks.map((link) => {
                 const sectionId = getSectionId(link);

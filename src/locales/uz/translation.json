@@ -59,7 +59,9 @@
   "workingHours": "09:00 - 18:00",
   "workingDays": "Dushanba - Shanba",
   "phoneTitle": "Bog‘lanish",
-  "phoneDescription": "Biz bilan bog‘laning"
+  "phoneDescription": "Biz bilan bog‘laning",
+  "sending": "Yuborilmoqda...",
+  "success": "So‘rovingiz muvaffaqiyatli yuborildi!"
 },
 
 "footer": {

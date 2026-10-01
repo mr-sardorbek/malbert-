@@ -8,9 +8,9 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-background px-4 py-16 sm:px-6 md:py-20 min-[1441px]:flex min-[1441px]:min-h-[880px] min-[1441px]:items-center"
+      className="bg-background px-4 py-16 sm:px-6 md:py-20"
     >
-      <div className="mx-auto w-full max-w-7xl rounded-4xl bg-white p-6">
+      <div className="mx-auto max-w-7xl bg-white p-6 rounded-4xl">
         {/* Section Title */}
         <motion.div
           initial={{ opacity: 0, y: 35 }}

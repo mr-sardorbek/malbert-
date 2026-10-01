@@ -3,8 +3,15 @@ import { Input } from "@/components/ui/input";
 import { ArrowRight, Clock3, MapPin, Phone } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { motion } from "motion/react";
+import { useState } from "react";
+import { toast } from "sonner";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const { t, i18n } = useTranslation();
 
   const isRussian = i18n.language === "ru";
@@ -13,12 +20,44 @@ const Contact = () => {
     ? "г. Ташкент, Мирзо-Улугбекский район, махалля Чингельди, дом 8, ул. Богбон"
     : "Toshkent shahar, Mirzo Ulug‘bek tumani, Chingeldi mahallasi, Bog‘bon 8-uy";
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          phone: `+998${phone.replace(/\s/g, "")}`,
+          message,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Xatolik yuz berdi");
+      }
+
+      toast.success(t("contact.success"));
+
+      setName("");
+      setPhone("");
+      setMessage("");
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
-    <section
-      id="contact"
-      className="bg-background mt-[-260px] px-4 py-16 sm:px-6 md:py-20 min-[1441px]:flex min-[1441px]:min-h-[880px] min-[1441px]:items-center"
-    >
-      <div className="mx-auto w-full max-w-7xl">
+    <section id="contact" className="bg-background px-4 py-16 sm:px-6 md:py-20">
+      <div className="mx-auto max-w-7xl">
         <div className="grid gap-6 lg:grid-cols-2">
           {/* Left Side - Heading + Form */}
           <motion.div
@@ -46,34 +85,48 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <form className="mt-10 space-y-4">
+            <form onSubmit={handleSubmit} className="mt-10 space-y-4">
               <Input
                 type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 placeholder={t("contact.name")}
                 className="h-12 cursor-text rounded-xl border border-border bg-background transition-all duration-300 focus-visible:!border-secondary focus-visible:!ring-2 focus-visible:!ring-secondary/20"
               />
 
-              <Input
-                type="tel"
-                placeholder={t("contact.phone")}
-                className="h-12 cursor-text rounded-xl border border-border bg-background transition-all duration-300 focus-visible:!border-secondary focus-visible:!ring-2 focus-visible:!ring-secondary/20"
-              />
+              <div className="flex h-12 overflow-hidden rounded-xl border border-border bg-background transition-all duration-300 focus-within:border-secondary focus-within:ring-2 focus-within:ring-secondary/20">
+                <span className="flex items-center border-r border-border px-4 text-sm text-muted-foreground">
+                  +998
+                </span>
 
+                <Input
+                  type="tel"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  placeholder="90 123 45 67"
+                  className="h-full rounded-none border-0 bg-transparent focus-visible:ring-0"
+                />
+              </div>
               <textarea
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 placeholder={t("contact.message")}
                 className="min-h-32 w-full resize-none rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition-all duration-300 placeholder:text-muted-foreground focus:border-secondary focus:ring-2 focus:ring-secondary/20"
               />
 
               <Button
                 type="submit"
-                className="h-12 w-full cursor-pointer rounded-xl bg-secondary text-sm font-semibold text-gray-900 transition-all duration-200 hover:bg-secondary/90 hover:shadow-md"
+                disabled={isSubmitting}
+                className="h-12 w-full cursor-pointer rounded-xl bg-secondary text-sm font-semibold text-gray-900 transition-all duration-200 hover:bg-secondary/90 hover:shadow-md disabled:cursor-not-allowed disabled:opacity-70"
               >
-                {t("contact.submit")}
+                {isSubmitting ? t("contact.sending") : t("contact.submit")}
 
-                <ArrowRight
-                  size={16}
-                  className="ml-1 arrow-move transition-transform duration-300"
-                />
+                {!isSubmitting && (
+                  <ArrowRight
+                    size={16}
+                    className="ml-1 arrow-move transition-transform duration-300"
+                  />
+                )}
               </Button>
             </form>
           </motion.div>
