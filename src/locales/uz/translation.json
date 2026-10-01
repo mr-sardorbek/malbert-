@@ -61,7 +61,11 @@
   "phoneTitle": "Bog‘lanish",
   "phoneDescription": "Biz bilan bog‘laning",
   "sending": "Yuborilmoqda...",
-  "success": "So‘rovingiz muvaffaqiyatli yuborildi!"
+  "success": "So‘rovingiz muvaffaqiyatli yuborildi!",
+  "validationName": "Ismingizni kiriting",
+"validationPhone": "Telefon raqamingizni to‘liq kiriting",
+"validationMessage": "Xabaringizni kiriting",
+"error": "Xatolik yuz berdi"
 },
 
 "footer": {

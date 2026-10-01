@@ -164,7 +164,14 @@ const Hero = () => {
                 ease: "easeOut",
               }}
             >
-              <Button className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-secondary px-5 py-2.5 text-xs font-semibold text-gray-900 transition-all duration-300 hover:bg-secondary/90 hover:shadow-md sm:w-auto sm:px-6 sm:py-3 sm:text-sm">
+              <Button
+                onClick={() =>
+                  document.getElementById("products")?.scrollIntoView({
+                    behavior: "smooth",
+                  })
+                }
+                className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-secondary px-5 py-2.5 text-xs font-semibold text-gray-900 transition-all duration-300 hover:bg-secondary/90 hover:shadow-md sm:w-auto sm:px-6 sm:py-3 sm:text-sm"
+              >
                 {t("hero.productsButton")}
 
                 <ArrowRight
@@ -185,8 +192,15 @@ const Hero = () => {
               }}
             >
               <Button
+                onClick={() =>
+                  document.getElementById("about")?.scrollIntoView({
+                    behavior: "smooth",
+                  })
+                }
                 variant="outline"
-                className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-md border-white/40 bg-white/5 px-5 py-2.5 text-xs font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:text-white hover:shadow-md sm:w-auto sm:px-6 sm:py-3 sm:text-sm"
+                className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-md border-white/40 bg-white/5 px-5 
+                py-2.5 text-xs font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:text-white 
+                hover:shadow-md sm:w-auto sm:px-6 sm:py-3 sm:text-sm"
               >
                 {t("hero.aboutButton")}
               </Button>

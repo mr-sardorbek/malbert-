@@ -63,7 +63,11 @@
   "phoneTitle": "Телефон",
   "phoneDescription": "Свяжитесь с нами",
   "sending": "Отправка...",
-  "success": "Ваш запрос успешно отправлен!"
+  "success": "Ваш запрос успешно отправлен!",
+  "validationName": "Введите ваше имя",
+"validationPhone": "Введите полный номер телефона",
+"validationMessage": "Введите ваше сообщение",
+"error": "Произошла ошибка"
 },
 
 "footer": {

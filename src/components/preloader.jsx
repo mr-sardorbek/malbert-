@@ -80,14 +80,13 @@ const Preloader = () => {
         />
 
         {/* L B E R T */}
-      {/* L B E R T */}
 <motion.div
-  className="flex items-center gap-3"
+  className="flex items-center ml-[-7px] gap-3"
   initial={{
     opacity: 0,
     x: -35,
     scaleX: 0.75,
-    transformOrigin: "left center",
+    transformOrigin: "center right",
   }}
   animate={{
     opacity: 1,

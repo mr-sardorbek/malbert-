@@ -25,7 +25,7 @@ const About = () => {
           }}
           className="mb-10 text-center"
         >
-          <h2 className="mx-auto mt-3 max-w-3xl text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl md:text-5xl">
+         <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             {t("about.title")}
           </h2>
         </motion.div>

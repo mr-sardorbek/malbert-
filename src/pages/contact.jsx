@@ -21,40 +21,58 @@ const Contact = () => {
     : "Toshkent shahar, Mirzo Ulug‘bek tumani, Chingeldi mahallasi, Bog‘bon 8-uy";
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    setIsSubmitting(true);
+  const cleanPhone = phone.replace(/\s/g, "");
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          phone: `+998${phone.replace(/\s/g, "")}`,
-          message,
-        }),
-      });
+  if (!name.trim()) {
+  toast.error(t("contact.validationName"));
+  return;
+}
 
-      const data = await response.json();
+if (cleanPhone.length !== 9) {
+  toast.error(t("contact.validationPhone"));
+  return;
+}
 
-      if (!response.ok) {
-        throw new Error(data.message || "Xatolik yuz berdi");
-      }
+if (!message.trim()) {
+  toast.error(t("contact.validationMessage"));
+  return;
+}
 
-      toast.success(t("contact.success"));
+  setIsSubmitting(true);
 
-      setName("");
-      setPhone("");
-      setMessage("");
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setIsSubmitting(false);
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: name.trim(),
+        phone: `+998${cleanPhone}`,
+        message: message.trim(),
+      }),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.message || "Xatolik yuz berdi");
     }
-  };
+
+    toast.success(t("contact.success"));
+
+    setName("");
+    setPhone("");
+    setMessage("");
+  } catch (error) {
+  console.error(error);
+  toast.error(error.message || t("contact.error"));
+} finally {
+    setIsSubmitting(false);
+  }
+};
   return (
     <section id="contact" className="bg-background px-4 py-16 sm:px-6 md:py-20">
       <div className="mx-auto max-w-7xl">
@@ -184,13 +202,18 @@ const Contact = () => {
             </div>
 
             <div>
-              <h3 className="text-sm font-semibold text-foreground">
+              <h className="text-sm font-semibold text-foreground">
                 {t("contact.addressTitle")}
-              </h3>
+              </h>
 
-              <p className="mt-1 text-sm leading-5 text-muted-foreground">
+              <a
+                href="https://yandex.com/maps/?ll=69.458803%2C41.332500&z=16&pt=69.458803%2C41.332500%2Cpm2rdm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-1 block cursor-pointer text-sm leading-5 text-muted-foreground transition-colors duration-300 hover:text-primary"
+              >
                 {t("contact.address")}
-              </p>
+              </a>
             </div>
           </div>
 
