@@ -45,11 +45,11 @@ const Hero = () => {
       className="relative min-h-[500px] overflow-hidden sm:min-h-[500px] md:min-h-[520px] lg:min-h-[640px] min-[1441px]:min-h-[880px]"
     >
       {/* Background Image */}
-      <img
-        src={Mbg}
-        alt="MALBERT printing production"
-        className="absolute inset-0 h-full w-full object-cover object-[85%_center] sm:object-[68%_center] md:object-[70%_center] lg:object-center"
-      />
+    <img 
+  src={Mbg} 
+  alt="MALBERT printing production" 
+  className="absolute inset-0 h-full w-full object-cover object-[85%_center] sm:object-[68%_center] md:object-[70%_center] lg:object-center lg:scale-[1.04]" 
+/>
       
 
       {/* Content */}
