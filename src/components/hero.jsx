@@ -42,7 +42,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-[500px] overflow-hidden sm:min-h-[500px] md:min-h-[520px] lg:min-h-[640px] min-[1441px]:min-h-[900px]"
+      className="relative min-h-[500px] overflow-hidden sm:min-h-[500px] md:min-h-[520px] lg:min-h-[640px] min-[1441px]:min-h-[980px]"
     >
       {/* Background Image */}
       <img
