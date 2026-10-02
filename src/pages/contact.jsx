@@ -12,6 +12,12 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const [errors, setErrors] = useState({
+    name: false,
+    phone: false,
+    message: false,
+  });
+
   const { t, i18n } = useTranslation();
 
   const isRussian = i18n.language === "ru";
@@ -21,58 +27,73 @@ const Contact = () => {
     : "Toshkent shahar, Mirzo Ulug‘bek tumani, Chingeldi mahallasi, Bog‘bon 8-uy";
 
   const handleSubmit = async (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  const cleanPhone = phone.replace(/\s/g, "");
+    const cleanPhone = phone.replace(/\s/g, "");
 
-  if (!name.trim()) {
-  toast.error(t("contact.validationName"));
-  return;
-}
+    const newErrors = {
+      name: !name.trim(),
+      phone: cleanPhone.length !== 9,
+      message: !message.trim(),
+    };
 
-if (cleanPhone.length !== 9) {
-  toast.error(t("contact.validationPhone"));
-  return;
-}
+    setErrors(newErrors);
 
-if (!message.trim()) {
-  toast.error(t("contact.validationMessage"));
-  return;
-}
-
-  setIsSubmitting(true);
-
-  try {
-    const response = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: name.trim(),
-        phone: `+998${cleanPhone}`,
-        message: message.trim(),
-      }),
-    });
-
-    const data = await response.json();
-
-    if (!response.ok) {
-      throw new Error(data.message || "Xatolik yuz berdi");
+    if (newErrors.name) {
+      toast.error(t("contact.validationName"));
+      return;
     }
 
-    toast.success(t("contact.success"));
+    if (newErrors.phone) {
+      toast.error(t("contact.validationPhone"));
+      return;
+    }
 
-    setName("");
-    setPhone("");
-    setMessage("");
-  } catch (error) {
-  console.error(error);
-  toast.error(error.message || t("contact.error"));
-} finally {
-    setIsSubmitting(false);
-  }
-};
+    if (newErrors.message) {
+      toast.error(t("contact.validationMessage"));
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: name.trim(),
+          phone: `+998${cleanPhone}`,
+          message: message.trim(),
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Xatolik yuz berdi");
+      }
+
+      toast.success(t("contact.success"));
+
+      setName("");
+      setPhone("");
+      setMessage("");
+
+      setErrors({
+        name: false,
+        phone: false,
+        message: false,
+      });
+    } catch (error) {
+      console.error(error);
+      toast.error(error.message || t("contact.error"));
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="bg-background px-4 py-16 sm:px-6 md:py-20">
       <div className="mx-auto max-w-7xl">
@@ -107,12 +128,28 @@ if (!message.trim()) {
               <Input
                 type="text"
                 value={name}
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => {
+                  setName(e.target.value);
+                  setErrors((prev) => ({
+                    ...prev,
+                    name: false,
+                  }));
+                }}
                 placeholder={t("contact.name")}
-                className="h-12 cursor-text rounded-xl border border-border bg-background transition-all duration-300 focus-visible:!border-secondary focus-visible:!ring-2 focus-visible:!ring-secondary/20"
+                className={`h-12 cursor-text rounded-xl border bg-background transition-all duration-300 ${
+                  errors.name
+                    ? "border-red-500 focus-visible:!border-red-500 focus-visible:!ring-2 focus-visible:!ring-red-500/20"
+                    : "border-border focus-visible:!border-secondary focus-visible:!ring-2 focus-visible:!ring-secondary/20"
+                }`}
               />
 
-              <div className="flex h-12 overflow-hidden rounded-xl border border-border bg-background transition-all duration-300 focus-within:border-secondary focus-within:ring-2 focus-within:ring-secondary/20">
+              <div
+                className={`flex h-12 overflow-hidden rounded-xl border bg-background transition-all duration-300 ${
+                  errors.phone
+                    ? "border-red-500 focus-within:border-red-500 focus-within:ring-2 focus-within:ring-red-500/20"
+                    : "border-border focus-within:border-secondary focus-within:ring-2 focus-within:ring-secondary/20"
+                }`}
+              >
                 <span className="flex items-center border-r border-border px-4 text-sm text-muted-foreground">
                   +998
                 </span>
@@ -120,16 +157,33 @@ if (!message.trim()) {
                 <Input
                   type="tel"
                   value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
+                  onChange={(e) => {
+                    setPhone(e.target.value);
+                    setErrors((prev) => ({
+                      ...prev,
+                      phone: false,
+                    }));
+                  }}
                   placeholder="90 123 45 67"
                   className="h-full rounded-none border-0 bg-transparent focus-visible:ring-0"
                 />
               </div>
+
               <textarea
                 value={message}
-                onChange={(e) => setMessage(e.target.value)}
+                onChange={(e) => {
+                  setMessage(e.target.value);
+                  setErrors((prev) => ({
+                    ...prev,
+                    message: false,
+                  }));
+                }}
                 placeholder={t("contact.message")}
-                className="min-h-32 w-full resize-none rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition-all duration-300 placeholder:text-muted-foreground focus:border-secondary focus:ring-2 focus:ring-secondary/20"
+                className={`min-h-32 w-full resize-none rounded-xl border bg-background px-4 py-3 text-sm text-foreground outline-none transition-all duration-300 placeholder:text-muted-foreground ${
+                  errors.message
+                    ? "border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/20"
+                    : "border-border focus:border-secondary focus:ring-2 focus:ring-secondary/20"
+                }`}
               />
 
               <Button
@@ -202,9 +256,9 @@ if (!message.trim()) {
             </div>
 
             <div>
-              <h className="text-sm font-semibold text-foreground">
+              <h3 className="text-sm font-semibold text-foreground">
                 {t("contact.addressTitle")}
-              </h>
+              </h3>
 
               <a
                 href="https://yandex.com/maps/?ll=69.458803%2C41.332500&z=16&pt=69.458803%2C41.332500%2Cpm2rdm"

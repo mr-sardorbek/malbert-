@@ -51,7 +51,7 @@ const Preloader = () => {
           className="mx-2 h-16 w-auto object-contain sm:mx-2.5 sm:h-20 md:mx-3 md:h-24 lg:h-28"
           initial={{
             opacity: 0,
-            x: 55,
+            x: 45,
             scale: 0.75,
           }}
           animate={{

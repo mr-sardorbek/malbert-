@@ -1,4 +1,4 @@
-import { HeroBg } from "@/assets";
+import { Mbg } from "@/assets";
 import {
   ArrowRight,
   ShieldCheck,
@@ -46,13 +46,11 @@ const Hero = () => {
     >
       {/* Background Image */}
       <img
-        src={HeroBg}
+        src={Mbg}
         alt="MALBERT printing production"
-        className="absolute inset-0 h-full w-full object-cover object-[65%_center] sm:object-[68%_center] md:object-[70%_center] lg:object-center"
+        className="absolute inset-0 h-full w-full object-cover object-[85%_center] sm:object-[68%_center] md:object-[70%_center] lg:object-center"
       />
-
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#00345f]/90 via-[#00345f]/55 to-transparent sm:from-[#00345f]/90 sm:via-[#00345f]/50 sm:to-transparent" />
+      
 
       {/* Content */}
       <div className="relative z-10 mx-auto flex min-h-[500px] max-w-7xl items-center px-4 sm:min-h-[500px] sm:px-6 md:min-h-[520px] md:px-8 lg:min-h-[640px] lg:px-6 min-[1441px]:min-h-[880px]">
