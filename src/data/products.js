@@ -1,40 +1,40 @@
 import { Colors, Flekso, Gupka, Rakel, Rulon, Tesa } from "@/assets";
 
 export const products = [
-    {
+  {
     id: 1,
-    title: "Flekso bosma uchun barcha turdagi materiallar",
-    description: "Har bir material o‘zining xususiyatiga ko‘ra turli xil mahsulotlar va qadoqlash turlarida qo‘llaniladi. Material tanlovi bosma sifati, tashqi ko‘rinishi va mahsulot talablariga qarab belgilanadi.",
+    titleKey: "products.items.rolls.title",
+    descriptionKey: "products.items.rolls.description",
     image: Rulon,
   },
-   {
+  {
     id: 2,
-    title: "Flekso bosma uchun Led UV bo'yoqlar",
-    description: "Led UV bo'yoqlar flexo pechatda yuqori sifatli va tez quriydigan bosma olish uchun qo'llaniladi. Led UV nuri ta'sirida tez qotadi, ranglari yorqin va aniq chiqadi.",
+    titleKey: "products.items.uvColors.title",
+    descriptionKey: "products.items.uvColors.description",
     image: Colors,
   },
-   {
+  {
     id: 3,
-    title: "Tesa skotchi",
-    description: "Bosma jarayonida mustahkam yopishish va barqaror natijani ta’minlaydi.",
+    titleKey: "products.items.tesa.title",
+    descriptionKey: "products.items.tesa.description",
     image: Tesa,
   },
-   {
+  {
     id: 4,
-    title: "Pantone katalogi",
-    description: "Flekso bosmada ranglarni aniq tanlash va solishtirish uchun ishlatiladigan ranglar katalogi.",
+    titleKey: "products.items.pantone.title",
+    descriptionKey: "products.items.pantone.description",
     image: Flekso,
   },
-   {
+  {
     id: 5,
-    title: "Rakel",
-    description: "Flekso bosmada boʼyoqni aniloks valdan klishega bir tekis uzatish uchun ishlatiladigan maxsus pichoq.",
+    titleKey: "products.items.rakel.title",
+    descriptionKey: "products.items.rakel.description",
     image: Rakel,
   },
-   {
+  {
     id: 6,
-    title: "Tozalovchi vositalar",
-    description: "Flekso uskunalari va ishchi qismlarni bo‘yoq hamda boshqa qoldiqlardan tozalash uchun ishlatiladi.",
+    titleKey: "products.items.cleaning.title",
+    descriptionKey: "products.items.cleaning.description",
     image: Gupka,
   },
-]
+];

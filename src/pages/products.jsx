@@ -13,9 +13,9 @@ const Products = () => {
   return (
     <section
       id="products"
-      className="bg-background px-4 py-16 sm:px-6 md:py-20"
+      className="bg-background px-4 py-16 sm:px-6  md:py-10"
     >
-      <div className="mx-auto max-w-7xl bg-white p-6 rounded-4xl">
+      <div className="mx-auto max-w-7xl rounded-4xl bg-white p-6">
         {/* Section Heading */}
         <motion.div
           initial={{ opacity: 0, y: 35 }}
@@ -55,24 +55,23 @@ const Products = () => {
                 once: true,
                 amount: 0.15,
               }}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-card transition-all duration-500 
-              hover:-translate-y-2 hover:shadow-[0_18px_40px_rgba(21,87,166,0.16)]"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_18px_40px_rgba(21,87,166,0.16)]"
             >
               <div className="relative h-52 overflow-hidden bg-surface sm:h-56">
                 <img
                   src={product.image}
-                  alt={product.title}
+                  alt={t(product.titleKey)}
                   className="h-full w-full object-contain p-3 transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
 
               <div className="p-5">
                 <h3 className="mt-2 text-lg font-semibold leading-6 text-foreground transition-colors duration-300 group-hover:text-primary">
-                  {product.title}
+                  {t(product.titleKey)}
                 </h3>
 
                 <p className="mt-2 line-clamp-2 text-sm leading-5 text-muted-foreground">
-                  {product.description}
+                  {t(product.descriptionKey)}
                 </p>
 
                 <Button
@@ -116,18 +115,18 @@ const Products = () => {
                 <div className="flex min-h-64 items-center justify-center bg-surface p-6">
                   <img
                     src={selectedProduct.image}
-                    alt={selectedProduct.title}
+                    alt={t(selectedProduct.titleKey)}
                     className="max-h-72 w-full object-contain"
                   />
                 </div>
 
                 <div className="p-6 sm:p-8">
                   <h3 className="mt-3 text-2xl font-bold text-foreground">
-                    {selectedProduct.title}
+                    {t(selectedProduct.titleKey)}
                   </h3>
 
                   <p className="mt-4 text-sm leading-6 text-muted-foreground">
-                    {selectedProduct.description}
+                    {t(selectedProduct.descriptionKey)}
                   </p>
 
                   <Button className="mt-6 cursor-pointer bg-primary transition-all duration-300 hover:bg-primary-hover hover:shadow-md">

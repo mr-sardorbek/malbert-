@@ -26,7 +26,34 @@
     "description": "Biznesingiz uchun sifatli va zamonaviy poligrafiya yechimlari.",
     "details": "Batafsil",
     "contact": "Bog‘lanish",
-    "loading": "Yuklanmoqda..."
+    "loading": "Yuklanmoqda...",
+
+    "items": {
+      "rolls": {
+        "title": "Flekso bosma uchun barcha turdagi materiallar",
+        "description": "Har bir material o‘zining xususiyatiga ko‘ra turli xil mahsulotlar va qadoqlash turlarida qo‘llaniladi. Material tanlovi bosma sifati, tashqi ko‘rinishi va mahsulot talablariga qarab belgilanadi."
+      },
+      "uvColors": {
+        "title": "Flekso bosma uchun LED UV bo‘yoqlar",
+        "description": "LED UV bo‘yoqlar flexo pechatda yuqori sifatli va tez quriydigan bosma olish uchun qo‘llaniladi. LED UV nuri ta’sirida tez qotadi, ranglari yorqin va aniq chiqadi."
+      },
+      "tesa": {
+        "title": "Tesa skotchi",
+        "description": "Bosma jarayonida mustahkam yopishish va barqaror natijani ta’minlaydi."
+      },
+      "pantone": {
+        "title": "Pantone katalogi",
+        "description": "Flekso bosmada ranglarni aniq tanlash va solishtirish uchun ishlatiladigan ranglar katalogi."
+      },
+      "rakel": {
+        "title": "Rakel",
+        "description": "Flekso bosmada bo‘yoqni aniloks valdan klishega bir tekis uzatish uchun ishlatiladigan maxsus pichoq."
+      },
+      "cleaning": {
+        "title": "Tozalovchi vositalar",
+        "description": "Flekso uskunalari va ishchi qismlarni bo‘yoq hamda boshqa qoldiqlardan tozalash uchun ishlatiladi."
+      }
+    }
   },
 
   "about": {
@@ -45,34 +72,34 @@
   },
 
   "contact": {
-  "title": "Biz bilan bog‘laning",
-  "description": "Savollaringiz yoki takliflaringiz bo‘lsa, biz bilan bog‘laning.",
-  "name": "Ismingiz",
-  "phone": "Telefon raqamingiz",
-  "message": "Izoh",
-  "submit": "So‘rov yuborish",
-  "location": "Bizning manzilimiz",
+    "title": "Biz bilan bog‘laning",
+    "description": "Savollaringiz yoki takliflaringiz bo‘lsa, biz bilan bog‘laning.",
+    "name": "Ismingiz",
+    "phone": "Telefon raqamingiz",
+    "message": "Izoh",
+    "submit": "So‘rov yuborish",
+    "location": "Bizning manzilimiz",
 
-  "addressTitle": "Manzil",
-  "address": "Toshkent shahar, Mirzo Ulug‘bek tumani, Chingeldi mahallasi, Bog‘bon 8-uy",
-  "workingHoursTitle": "Ish vaqti",
-  "workingHours": "09:00 - 18:00",
-  "workingDays": "Dushanba - Shanba",
-  "phoneTitle": "Bog‘lanish",
-  "phoneDescription": "Biz bilan bog‘laning",
-  "sending": "Yuborilmoqda...",
-  "success": "So‘rovingiz muvaffaqiyatli yuborildi!",
-  "validationName": "Ismingizni kiriting",
-"validationPhone": "Telefon raqamingizni to‘liq kiriting",
-"validationMessage": "Xabaringizni kiriting",
-"error": "Xatolik yuz berdi"
-},
+    "addressTitle": "Manzil",
+    "address": "Toshkent shahar, Mirzo Ulug‘bek tumani, Chingeldi mahallasi, Bog‘bon 8-uy",
+    "workingHoursTitle": "Ish vaqti",
+    "workingHours": "09:00 - 18:00",
+    "workingDays": "Dushanba - Shanba",
+    "phoneTitle": "Bog‘lanish",
+    "phoneDescription": "Biz bilan bog‘laning",
+    "sending": "Yuborilmoqda...",
+    "success": "So‘rovingiz muvaffaqiyatli yuborildi!",
+    "validationName": "Ismingizni kiriting",
+    "validationPhone": "Telefon raqamingizni to‘liq kiriting",
+    "validationMessage": "Xabaringizni kiriting",
+    "error": "Xatolik yuz berdi"
+  },
 
-"footer": {
-  "description": "Poligrafiya sohasi uchun sifatli va ishonchli yechimlar.",
-  "navigation": "Navigatsiya",
-  "follow": "Bizni kuzating",
-   "copyright": "© 2026 MALBERT",
-  "rights": "Barcha huquqlar himoyalangan."
-}
+  "footer": {
+    "description": "Poligrafiya sohasi uchun sifatli va ishonchli yechimlar.",
+    "navigation": "Navigatsiya",
+    "follow": "Bizni kuzating",
+    "copyright": "© 2026 MALBERT",
+    "rights": "Barcha huquqlar himoyalangan."
+  }
 }

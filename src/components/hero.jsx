@@ -1,10 +1,5 @@
 import { Mbg } from "@/assets";
-import {
-  ArrowRight,
-  ShieldCheck,
-  Truck,
-  Settings2,
-} from "lucide-react";
+import { ArrowRight, ShieldCheck, Truck, Settings2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Button } from "./ui/button";
 import { motion } from "motion/react";
@@ -45,12 +40,14 @@ const Hero = () => {
       className="relative min-h-[500px] overflow-hidden sm:min-h-[500px] md:min-h-[520px] lg:min-h-[640px] min-[1441px]:h-[calc(100dvh-116px)]"
     >
       {/* Background Image */}
+
       <img
         src={Mbg}
         alt="MALBERT printing production"
         className="absolute inset-0 h-full w-full object-cover object-[85%_center] sm:object-[68%_center] md:object-[70%_center] lg:object-center"
       />
 
+      <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/30" />
       {/* Content */}
       <div className="relative z-10 mx-auto flex min-h-[500px] max-w-7xl items-center px-4 sm:min-h-[500px] sm:px-6 md:min-h-[520px] md:px-8 lg:min-h-[640px] lg:px-6 min-[1441px]:h-full">
         <div className="w-full max-w-[480px] sm:max-w-[520px] md:max-w-[580px] lg:max-w-xl">
