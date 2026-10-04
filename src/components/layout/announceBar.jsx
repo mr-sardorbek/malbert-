@@ -13,7 +13,7 @@ const AnnounceBar = () => {
         min-[1800px]:max-w-[1760px] min-[1800px]:px-6"
       >
         {/* Location */}
-        <div className="flex items-center gap-1.5 whitespace-nowrap">
+        <div className="flex items-center gap-1.5 whitespace-nowrap ">
           <MapPin
             className="shrink-0"
             size={13}

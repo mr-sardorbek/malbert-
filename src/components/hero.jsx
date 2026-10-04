@@ -48,8 +48,9 @@ const Hero = () => {
       />
 
       <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/30" />
+
       {/* Content */}
-      <div className="relative z-10 mx-auto flex min-h-[500px] max-w-7xl items-center px-4 sm:min-h-[500px] sm:px-6 md:min-h-[520px] md:px-8 lg:min-h-[640px] lg:px-6 min-[1441px]:h-full">
+      <div className="relative z-10 mx-auto flex min-h-[500px] w-full max-w-[1360px] items-center px-4 sm:min-h-[500px] sm:px-6 md:min-h-[520px] md:px-8 lg:min-h-[640px] lg:px-6 min-[1441px]:h-full min-[1800px]:max-w-[1760px] min-[1800px]:px-6">
         <div className="w-full max-w-[480px] sm:max-w-[520px] md:max-w-[580px] lg:max-w-xl">
           {/* Eyebrow */}
           <motion.span
@@ -65,7 +66,7 @@ const Hero = () => {
           </motion.span>
 
           {/* Heading */}
-          <h1 className="max-w-[360px] text-3xl font-bold leading-[1.08] tracking-tight text-white sm:max-w-[450px] sm:text-4xl md:max-w-[520px] md:text-[44px] lg:max-w-xl lg:text-5xl min-[1441px]:text-6xl">
+          <h1 className="max-w-[360px] text-3xl font-bold leading-[1.08] tracking-tight text-white sm:max-w-[450px] sm:text-4xl md:max-w-[520px] md:text-[44px] lg:max-w-xl lg:text-5xl min-[1441px]:text-6xl min-[1800px]:max-w-[700px] min-[1800px]:text-7xl">
             {/* CMYK */}
             <motion.span
               initial={{
@@ -126,7 +127,7 @@ const Hero = () => {
               delay: 0.55,
               ease: "easeOut",
             }}
-            className="mt-4 max-w-[340px] text-xs leading-5 text-white/80 sm:mt-5 sm:max-w-[430px] sm:text-sm sm:leading-6 md:max-w-[500px] md:text-[15px] lg:text-base min-[1441px]:max-w-[600px] min-[1441px]:text-lg min-[1441px]:leading-7"
+            className="mt-4 max-w-[340px] text-xs leading-5 text-white/80 sm:mt-5 sm:max-w-[430px] sm:text-sm sm:leading-6 md:max-w-[500px] md:text-[15px] lg:text-base min-[1441px]:max-w-[600px] min-[1441px]:text-lg min-[1441px]:leading-7 min-[1800px]:max-w-[680px] min-[1800px]:text-xl min-[1800px]:leading-8"
           >
             {t("hero.description")}
           </motion.p>
@@ -164,13 +165,13 @@ const Hero = () => {
                     behavior: "smooth",
                   })
                 }
-                className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-secondary px-5 py-2.5 text-xs font-semibold text-gray-900 transition-all duration-300 hover:bg-secondary/90 hover:shadow-md sm:w-auto sm:px-6 sm:py-3 sm:text-sm min-[1441px]:text-lg"
+                className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-secondary px-5 py-2.5 text-xs font-semibold text-gray-900 transition-all duration-300 hover:bg-secondary/90 hover:shadow-md sm:w-auto sm:px-6 sm:py-3 sm:text-sm min-[1441px]:text-lg min-[1800px]:px-7 min-[1800px]:py-3.5 min-[1800px]:text-xl"
               >
                 {t("hero.productsButton")}
 
                 <ArrowRight
                   size={15}
-                  className="arrow-move sm:h-[17px] sm:w-[17px]"
+                  className="arrow-move sm:h-[17px] sm:w-[17px] min-[1800px]:h-5 min-[1800px]:w-5"
                 />
               </Button>
             </motion.div>
@@ -192,7 +193,7 @@ const Hero = () => {
                   })
                 }
                 variant="outline"
-                className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-md border-white/40 bg-white/5 px-5 py-2.5 text-xs font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:text-white hover:shadow-md sm:w-auto sm:px-6 sm:py-3 sm:text-sm min-[1441px]:text-lg"
+                className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-md border-white/40 bg-white/5 px-5 py-2.5 text-xs font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:text-white hover:shadow-md sm:w-auto sm:px-6 sm:py-3 sm:text-sm min-[1441px]:text-lg min-[1800px]:px-7 min-[1800px]:py-3.5 min-[1800px]:text-xl"
               >
                 {t("hero.aboutButton")}
               </Button>
