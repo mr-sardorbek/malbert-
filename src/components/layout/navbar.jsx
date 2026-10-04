@@ -161,7 +161,8 @@ const Navbar = () => {
         isNavbarVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="mx-auto flex h-[80px] w-full max-w-[1360px] items-center justify-between px-4 sm:px-6 md:px-8 lg:px-6 min-[1441px]:h-[88px]">
+      
+      <div className="mx-auto flex h-[80px] w-full max-w-[1360px] items-center justify-between px-4 sm:px-6 md:px-8 lg:px-6 min-[1441px]:h-[88px] min-[1800px]:max-w-none min-[1800px]:px-6">
         {/* Logo */}
         <div className="pl-0 sm:pl-2 md:pl-3">
           <img
