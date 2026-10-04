@@ -8,9 +8,9 @@ const AnnounceBar = () => {
         className="relative mx-auto flex h-8 w-full max-w-[1360px] items-center justify-between px-4 text-[9px] text-white
         sm:h-9 sm:px-6 sm:text-[10px]
         md:px-8 md:text-[11px]
-        lg:h-9 lg:px-6
+        lg:h-9 lg:px-8
         min-[1441px]:h-9
-        min-[1800px]:max-w-[1760px] min-[1800px]:px-6"
+        min-[1800px]:max-w-[1760px] min-[1800px]:px-8"
       >
         {/* Location */}
         <div className="flex items-center gap-1.5 whitespace-nowrap ">

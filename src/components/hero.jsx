@@ -40,7 +40,6 @@ const Hero = () => {
       className="relative min-h-[500px] top-14 overflow-hidden sm:min-h-[500px] md:min-h-[520px] lg:min-h-[640px] min-[1441px]:h-[calc(100dvh-116px)]"
     >
       {/* Background Image */}
-
       <img
         src={Mbg}
         alt="MALBERT printing production"
@@ -51,7 +50,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 mx-auto flex min-h-[500px] w-full max-w-[1360px] items-center px-4 sm:min-h-[500px] sm:px-6 md:min-h-[520px] md:px-8 lg:min-h-[640px] lg:px-6 min-[1441px]:h-full min-[1800px]:max-w-[1760px] min-[1800px]:px-6">
-        <div className="w-full max-w-[480px] sm:max-w-[520px] md:max-w-[580px] lg:max-w-xl">
+        <div className="w-full max-w-[480px] sm:max-w-[520px] md:max-w-[580px] lg:max-w-xl min-[1800px]:max-w-[820px]">
           {/* Eyebrow */}
           <motion.span
             initial={{ opacity: 0, y: 18 }}
@@ -60,13 +59,13 @@ const Hero = () => {
               duration: 0.6,
               ease: "easeOut",
             }}
-            className="mb-4 block text-[8px] font-semibold uppercase tracking-[0.2em] text-white/80 sm:mb-5 sm:text-[9px] sm:tracking-[0.23em] md:text-[10px] lg:text-[11px] lg:tracking-[0.25em]"
+            className="mb-4 block text-[8px] font-semibold uppercase tracking-[0.2em] text-white/80 sm:mb-5 sm:text-[9px] sm:tracking-[0.23em] md:text-[10px] lg:text-[11px] lg:tracking-[0.25em] min-[1800px]:text-[13px] min-[1800px]:tracking-[0.3em]"
           >
             {t("hero.eyebrow")}
           </motion.span>
 
           {/* Heading */}
-          <h1 className="max-w-[360px] text-3xl font-bold leading-[1.08] tracking-tight text-white sm:max-w-[450px] sm:text-4xl md:max-w-[520px] md:text-[44px] lg:max-w-xl lg:text-5xl min-[1441px]:text-6xl min-[1800px]:max-w-[700px] min-[1800px]:text-7xl">
+          <h1 className="max-w-[360px] text-3xl font-bold leading-[1.08] tracking-tight text-white sm:max-w-[450px] sm:text-4xl md:max-w-[520px] md:text-[44px] lg:max-w-xl lg:text-5xl min-[1441px]:text-6xl min-[1800px]:max-w-[820px] min-[1800px]:text-8xl">
             {/* CMYK */}
             <motion.span
               initial={{
@@ -127,7 +126,7 @@ const Hero = () => {
               delay: 0.55,
               ease: "easeOut",
             }}
-            className="mt-4 max-w-[340px] text-xs leading-5 text-white/80 sm:mt-5 sm:max-w-[430px] sm:text-sm sm:leading-6 md:max-w-[500px] md:text-[15px] lg:text-base min-[1441px]:max-w-[600px] min-[1441px]:text-lg min-[1441px]:leading-7 min-[1800px]:max-w-[680px] min-[1800px]:text-xl min-[1800px]:leading-8"
+            className="mt-4 max-w-[340px] text-xs leading-5 text-white/80 sm:mt-5 sm:max-w-[430px] sm:text-sm sm:leading-6 md:max-w-[500px] md:text-[15px] lg:text-base min-[1441px]:max-w-[600px] min-[1441px]:text-lg min-[1441px]:leading-7 min-[1800px]:mt-6 min-[1800px]:max-w-[760px] min-[1800px]:text-2xl min-[1800px]:leading-9"
           >
             {t("hero.description")}
           </motion.p>
@@ -147,7 +146,7 @@ const Hero = () => {
               delay: 0.7,
               ease: "easeOut",
             }}
-            className="mt-6 flex flex-col items-stretch gap-2 xs:flex-row sm:mt-7 sm:flex-row sm:items-center sm:gap-3"
+            className="mt-6 flex flex-col items-stretch gap-2 xs:flex-row sm:mt-7 sm:flex-row sm:items-center sm:gap-3 min-[1800px]:mt-8 min-[1800px]:gap-4"
           >
             {/* Products */}
             <motion.div
@@ -165,13 +164,13 @@ const Hero = () => {
                     behavior: "smooth",
                   })
                 }
-                className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-secondary px-5 py-2.5 text-xs font-semibold text-gray-900 transition-all duration-300 hover:bg-secondary/90 hover:shadow-md sm:w-auto sm:px-6 sm:py-3 sm:text-sm min-[1441px]:text-lg min-[1800px]:px-7 min-[1800px]:py-3.5 min-[1800px]:text-xl"
+                className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-secondary px-5 py-2.5 text-xs font-semibold text-gray-900 transition-all duration-300 hover:bg-secondary/90 hover:shadow-md sm:w-auto sm:px-6 sm:py-3 sm:text-sm min-[1441px]:text-lg min-[1800px]:px-9 min-[1800px]:py-4 min-[1800px]:text-2xl"
               >
                 {t("hero.productsButton")}
 
                 <ArrowRight
                   size={15}
-                  className="arrow-move sm:h-[17px] sm:w-[17px] min-[1800px]:h-5 min-[1800px]:w-5"
+                  className="arrow-move sm:h-[17px] sm:w-[17px] min-[1800px]:h-6 min-[1800px]:w-6"
                 />
               </Button>
             </motion.div>
@@ -193,7 +192,7 @@ const Hero = () => {
                   })
                 }
                 variant="outline"
-                className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-md border-white/40 bg-white/5 px-5 py-2.5 text-xs font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:text-white hover:shadow-md sm:w-auto sm:px-6 sm:py-3 sm:text-sm min-[1441px]:text-lg min-[1800px]:px-7 min-[1800px]:py-3.5 min-[1800px]:text-xl"
+                className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-md border-white/40 bg-white/5 px-5 py-2.5 text-xs font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:text-white hover:shadow-md sm:w-auto sm:px-6 sm:py-3 sm:text-sm min-[1441px]:text-lg min-[1800px]:px-9 min-[1800px]:py-4 min-[1800px]:text-2xl"
               >
                 {t("hero.aboutButton")}
               </Button>
