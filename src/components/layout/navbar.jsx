@@ -9,7 +9,6 @@ import { ArrowRight, Menu, X } from "lucide-react";
 const Navbar = () => {
   const [language, setLanguage] = useState(() => {
     const savedLanguage = localStorage.getItem("language");
-
     return savedLanguage === "ru" ? "ru" : "uz";
   });
 
@@ -157,23 +156,23 @@ const Navbar = () => {
   }, []);
 
   return (
-  <nav
-  className={`absolute left-0 z-50 w-full rounded-3xl bg-background/80 backdrop-blur-lg transition-transform duration-300 ease-out ${
-    isNavbarVisible ? "translate-y-0" : "-translate-y-full"
-  }`}
->
-      <div className="mx-auto flex h-[80px] max-w-7xl items-center justify-between px-4 sm:px-5 md:px-6 min-[1441px]:max-w-[1536px] min-[1441px]:px-8">
+    <nav
+      className={`absolute left-0 top-0 z-50 w-full rounded-b-3xl bg-background/80 backdrop-blur-lg transition-transform duration-300 ease-out ${
+        isNavbarVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
+      <div className="mx-auto flex h-[80px] w-full max-w-7xl items-center justify-between px-4 sm:px-6 md:px-8 lg:px-6 min-[1441px]:h-[88px]">
         {/* Logo */}
         <div className="pl-0 sm:pl-2 md:pl-3">
           <img
             src={Logo}
             alt="MALBERT"
-            className="h-7 w-auto object-contain sm:h-8 md:h-8 min-[1441px]:h-9"
+            className="h-7 w-auto object-contain sm:h-8 md:h-8 min-[1441px]:h-10"
           />
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-6 lg:flex xl:gap-7 min-[1441px]:gap-8">
+        <nav className="hidden items-center gap-6 lg:flex xl:gap-7 min-[1441px]:gap-10">
           {navLinks.map((link) => {
             const sectionId = getSectionId(link);
 
@@ -191,7 +190,7 @@ const Navbar = () => {
                       ? activeSection === sectionId
                       : isActive;
 
-                  return `group relative px-1 py-2 text-[12px] font-medium transition-colors duration-200 xl:text-[13px] min-[1441px]:text-sm ${
+                  return `group relative px-1 py-2 text-[12px] font-medium transition-colors duration-200 xl:text-[13px] min-[1441px]:text-[15px] ${
                     isSectionActive
                       ? "text-primary"
                       : "text-foreground hover:text-primary"
@@ -223,7 +222,7 @@ const Navbar = () => {
               onClick={() =>
                 setIsLanguageOpen(!isLanguageOpen)
               }
-              className="h-8 w-8 cursor-pointer rounded-lg bg-surface hover:bg-border sm:h-9 sm:w-9 min-[1441px]:h-10 min-[1441px]:w-10"
+              className="h-8 w-8 cursor-pointer rounded-lg bg-surface hover:bg-border sm:h-9 sm:w-9 min-[1441px]:h-11 min-[1441px]:w-11"
               aria-label="Language"
             >
               <span className={`fi fi-${language}`} />
@@ -255,7 +254,7 @@ const Navbar = () => {
           {/* Request Button */}
           <Button
             onClick={handleRequestClick}
-            className="hidden cursor-pointer bg-primary px-5 py-4 text-xs font-medium transition-all duration-300 hover:bg-primary-hover hover:shadow-md lg:inline-flex min-[1441px]:px-6 min-[1441px]:py-5 min-[1441px]:text-sm"
+            className="hidden cursor-pointer bg-primary px-5 py-4 text-xs font-medium transition-all duration-300 hover:bg-primary-hover hover:shadow-md lg:inline-flex min-[1441px]:px-7 min-[1441px]:py-5 min-[1441px]:text-[15px]"
           >
             <span>{t("nav.request")}</span>
 
