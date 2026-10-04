@@ -161,7 +161,7 @@ const Navbar = () => {
         isNavbarVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="mx-auto flex h-[80px] w-full max-w-7xl items-center justify-between px-4 sm:px-6 md:px-8 lg:px-6 min-[1441px]:h-[88px]">
+      <div className="mx-auto flex h-[80px] w-full max-w-[1440px] items-center justify-between px-4 sm:px-6 md:px-8 lg:px-6 min-[1441px]:h-[88px]">
         {/* Logo */}
         <div className="pl-0 sm:pl-2 md:pl-3">
           <img
@@ -286,7 +286,7 @@ const Navbar = () => {
       {/* Mobile / Tablet Menu */}
       {isMobileMenuOpen && (
         <div className="absolute left-0 top-full z-40 w-full border-b border-border bg-background shadow-lg lg:hidden">
-          <div className="mx-auto max-w-7xl px-4 py-4 sm:px-5 md:px-6 min-[1441px]:max-w-[1536px] min-[1441px]:px-8">
+          <div className="mx-auto max-w-[1440px] px-4 py-4 sm:px-5 md:px-6">
             <div className="flex flex-col">
               {navLinks.map((link) => {
                 const sectionId = getSectionId(link);
