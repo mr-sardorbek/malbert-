@@ -10,7 +10,7 @@ const AnnounceBar = () => {
         md:px-8 md:text-[11px]
         lg:h-9 lg:px-8
         min-[1441px]:h-9
-        min-[1800px]:max-w-[1560px] min-[1800px]:px-8"
+        min-[1800px]:max-w-[1360px] min-[1800px]:px-8"
       >
         {/* Location */}
         <div className="flex items-center gap-1.5 whitespace-nowrap ">
