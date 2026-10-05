@@ -5,7 +5,7 @@ const AnnounceBar = () => {
   return (
     <div className="w-full border-b border-primary-hover bg-primary">
       <div
-        className="relative mx-auto flex h-8 w-full max-w-[1360px] items-center justify-between px-4 text-[9px] text-white
+        className="relative mx-auto flex h-8 w-full max-w-[1260px] items-center justify-between px-4 text-[9px] text-white
         sm:h-9 sm:px-6 sm:text-[10px]
         md:px-8 md:text-[11px]
         lg:h-9 lg:px-8

@@ -49,7 +49,7 @@ const Hero = () => {
       <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-black/75 via-black/55 to-black/30" />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto flex min-h-[500px] w-full max-w-[1360px] items-center px-4 sm:min-h-[500px] sm:px-6 md:min-h-[520px] md:px-8 lg:min-h-[640px] lg:px-6 min-[1441px]:h-full min-[1800px]:max-w-[1760px] min-[1800px]:px-6">
+      <div className="relative z-10 mx-auto flex min-h-[500px] w-full max-w-[1260px] items-center px-4 sm:min-h-[500px] sm:px-6 md:min-h-[520px] md:px-8 lg:min-h-[640px] lg:px-6 min-[1441px]:h-full min-[1800px]:max-w-[1760px] min-[1800px]:px-6">
         <div className="w-full max-w-[480px] sm:max-w-[520px] md:max-w-[580px] lg:max-w-xl min-[1800px]:max-w-[980px]">
           {/* Eyebrow */}
           <motion.span

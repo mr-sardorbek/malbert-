@@ -10,7 +10,7 @@ const About = () => {
       id="about"
       className="bg-background mt-18  px-4 py-16 sm:px-6 md:py-20"
     >
-      <div className="mx-auto  w-full max-w-[1360px] rounded-4xl bg-white p-6 min-[1800px]:max-w-[1760px] min-[1800px]:p-8">
+      <div className="mx-auto  w-full max-w-[1260px] rounded-4xl bg-white p-6 min-[1800px]:max-w-[1760px] min-[1800px]:p-8">
         {/* Section Title */}
         <motion.div
           initial={{ opacity: 0, y: 35 }}
