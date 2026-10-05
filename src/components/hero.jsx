@@ -37,223 +37,228 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-[500px] top-22  overflow-hidden rounded-3xl sm:min-h-[500px] md:min-h-[520px] lg:min-h-[640px] min-[1441px]:h-[calc(100dvh-116px)]"
+      className="mt-26"
     >
-      {/* Background Image */}
-      <img
-        src={Mbg}
-        alt="MALBERT printing production"
-        className="absolute inset-0 h-full w-full rounded-3xl object-cover object-[85%_center] sm:object-[68%_center] md:object-[70%_center] lg:object-center"
-      />
+      {/* Hero */}
+      <div
+        className="relative mb-[-27px]  min-h-[500px] overflow-hidden rounded-4xl sm:min-h-[500px] md:min-h-[520px] lg:min-h-[570px] min-[1441px]:h-[calc(100dvh-180px)]"
+      >
+        {/* Background Image */}
+        <img
+          src={Mbg}
+          alt="MALBERT printing production"
+          className="absolute inset-0 h-full w-full rounded-3xl object-cover object-[85%_center] sm:object-[68%_center] md:object-[70%_center] lg:object-center"
+        />
 
-      <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-black/75 via-black/55 to-black/30" />
+        <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-black/75 via-black/55 to-black/30" />
 
-      {/* Content */}
-      <div className="relative z-10 mx-auto flex min-h-[500px] w-full max-w-[1260px] items-center px-4 sm:min-h-[500px] sm:px-6 md:min-h-[520px] md:px-8 lg:min-h-[640px] lg:px-6 min-[1441px]:h-full min-[1800px]:max-w-[1360px] min-[1800px]:px-6">
-        <div className="w-full max-w-[480px] sm:max-w-[520px] md:max-w-[580px] lg:max-w-xl min-[1800px]:max-w-[980px]">
-          {/* Eyebrow */}
-          <motion.span
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.6,
-              ease: "easeOut",
-            }}
-            className="mb-4 block text-[8px] font-semibold uppercase tracking-[0.2em] text-white/80 sm:mb-5 sm:text-[9px] sm:tracking-[0.23em] md:text-[10px] lg:text-[11px] lg:tracking-[0.25em] min-[1800px]:mb-6 min-[1800px]:text-[15px] min-[1800px]:tracking-[0.32em]"
-          >
-            {t("hero.eyebrow")}
-          </motion.span>
-
-          {/* Heading */}
-          <h1 className="max-w-[360px] text-3xl font-bold leading-[1.08] tracking-tight text-white sm:max-w-[450px] sm:text-4xl md:max-w-[520px] md:text-[44px] lg:max-w-xl lg:text-5xl min-[1441px]:text-6xl min-[1800px]:max-w-[980px] min-[1800px]:text-9xl">
-            {/* CMYK */}
+        {/* Content */}
+        <div className="relative z-10  mx-auto flex min-h-[500px] w-full max-w-[1260px] items-center px-4 sm:min-h-[500px] sm:px-6 md:min-h-[520px] md:px-8 lg:min-h-[640px] lg:px-6 min-[1441px]:h-full min-[1800px]:max-w-[1360px] min-[1800px]:px-6">
+          <div className="w-full max-w-[480px] sm:max-w-[520px] md:max-w-[580px] lg:max-w-xl min-[1800px]:max-w-[980px]">
+            {/* Eyebrow */}
             <motion.span
-              initial={{
-                opacity: 0,
-                x: -25,
-                scale: 0.92,
-              }}
-              animate={{
-                opacity: 1,
-                x: 0,
-                scale: 1,
-              }}
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.7,
-                delay: 0.15,
-                ease: [0.22, 1, 0.36, 1],
+                duration: 0.6,
+                ease: "easeOut",
               }}
-              className="mr-2 inline-block origin-left text-secondary"
+              className="mb-4 block text-[8px] font-semibold uppercase tracking-[0.2em] text-white/80 sm:mb-5 sm:text-[9px] sm:tracking-[0.23em] md:text-[10px] lg:text-[11px] lg:tracking-[0.25em] min-[1800px]:mb-6 min-[1800px]:text-[15px] min-[1800px]:tracking-[0.32em]"
             >
-              CMYK
+              {t("hero.eyebrow")}
             </motion.span>
 
-            {/* Main Title Reveal */}
-            <span className="inline-block overflow-hidden align-bottom">
+            {/* Heading */}
+            <h1 className="max-w-[360px] text-3xl font-bold leading-[1.08] tracking-tight text-white sm:max-w-[450px] sm:text-4xl md:max-w-[520px] md:text-[44px] lg:max-w-xl lg:text-5xl min-[1441px]:text-6xl min-[1800px]:max-w-[980px] min-[1800px]:text-9xl">
+              {/* CMYK */}
               <motion.span
                 initial={{
                   opacity: 0,
-                  y: "100%",
+                  x: -25,
+                  scale: 0.92,
                 }}
                 animate={{
                   opacity: 1,
-                  y: "0%",
+                  x: 0,
+                  scale: 1,
                 }}
                 transition={{
-                  duration: 0.8,
-                  delay: 0.28,
+                  duration: 0.7,
+                  delay: 0.15,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                className="inline-block"
+                className="mr-2 inline-block origin-left text-secondary"
               >
-                {title}
+                CMYK
               </motion.span>
-            </span>
-          </h1>
 
-          {/* Description */}
-          <motion.p
-            initial={{
-              opacity: 0,
-              y: 20,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            transition={{
-              duration: 0.7,
-              delay: 0.55,
-              ease: "easeOut",
-            }}
-            className="mt-4 max-w-[340px] text-xs leading-5 text-white/80 sm:mt-5 sm:max-w-[430px] sm:text-sm sm:leading-6 md:max-w-[500px] md:text-[15px] lg:text-base min-[1441px]:max-w-[600px] min-[1441px]:text-lg min-[1441px]:leading-7 min-[1800px]:mt-7 min-[1800px]:max-w-[850px] min-[1800px]:text-3xl min-[1800px]:leading-10"
-          >
-            {t("hero.description")}
-          </motion.p>
+              {/* Main Title Reveal */}
+              <span className="inline-block overflow-hidden align-bottom">
+                <motion.span
+                  initial={{
+                    opacity: 0,
+                    y: "100%",
+                  }}
+                  animate={{
+                    opacity: 1,
+                    y: "0%",
+                  }}
+                  transition={{
+                    duration: 0.8,
+                    delay: 0.28,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  className="inline-block"
+                >
+                  {title}
+                </motion.span>
+              </span>
+            </h1>
 
-          {/* Buttons */}
-          <motion.div
-            initial={{
-              opacity: 0,
-              y: 20,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            transition={{
-              duration: 0.6,
-              delay: 0.7,
-              ease: "easeOut",
-            }}
-            className="mt-6 flex flex-col items-stretch gap-2 xs:flex-row sm:mt-7 sm:flex-row sm:items-center sm:gap-3 min-[1800px]:mt-10 min-[1800px]:gap-5"
-          >
-            {/* Products */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.94 }}
-              animate={{ opacity: 1, scale: 1 }}
+            {/* Description */}
+            <motion.p
+              initial={{
+                opacity: 0,
+                y: 20,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
               transition={{
-                duration: 0.5,
-                delay: 0.78,
+                duration: 0.7,
+                delay: 0.55,
                 ease: "easeOut",
               }}
+              className="mt-4 max-w-[340px] text-xs leading-5 text-white/80 sm:mt-5 sm:max-w-[430px] sm:text-sm sm:leading-6 md:max-w-[500px] md:text-[15px] lg:text-base min-[1441px]:max-w-[600px] min-[1441px]:text-lg min-[1441px]:leading-7 min-[1800px]:mt-7 min-[1800px]:max-w-[850px] min-[1800px]:text-3xl min-[1800px]:leading-10"
             >
-              <Button
-                onClick={() =>
-                  document.getElementById("products")?.scrollIntoView({
-                    behavior: "smooth",
-                  })
-                }
-                className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-secondary px-5 py-2.5 text-xs font-semibold text-gray-900 transition-all duration-300 hover:bg-secondary/90 hover:shadow-md sm:w-auto sm:px-6 sm:py-3 sm:text-sm min-[1441px]:text-lg min-[1800px]:gap-3 min-[1800px]:px-11 min-[1800px]:py-5 min-[1800px]:text-3xl"
-              >
-                {t("hero.productsButton")}
+              {t("hero.description")}
+            </motion.p>
 
-                <ArrowRight
-                  size={15}
-                  className="arrow-move sm:h-[17px] sm:w-[17px] min-[1800px]:h-7 min-[1800px]:w-7"
+            {/* Buttons */}
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 20,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 0.6,
+                delay: 0.7,
+                ease: "easeOut",
+              }}
+              className="mt-6 flex flex-col items-stretch gap-2 xs:flex-row sm:mt-7 sm:flex-row sm:items-center sm:gap-3 min-[1800px]:mt-10 min-[1800px]:gap-5"
+            >
+              {/* Products */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.94 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.78,
+                  ease: "easeOut",
+                }}
+              >
+                <Button
+                  onClick={() =>
+                    document.getElementById("products")?.scrollIntoView({
+                      behavior: "smooth",
+                    })
+                  }
+                  className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-secondary px-5 py-2.5 text-xs font-semibold text-gray-900 transition-all duration-300 hover:bg-secondary/90 hover:shadow-md sm:w-auto sm:px-6 sm:py-3 sm:text-sm min-[1441px]:text-lg min-[1800px]:gap-3 min-[1800px]:px-11 min-[1800px]:py-5 min-[1800px]:text-3xl"
+                >
+                  {t("hero.productsButton")}
+
+                  <ArrowRight
+                    size={15}
+                    className="arrow-move sm:h-[17px] sm:w-[17px] min-[1800px]:h-7 min-[1800px]:w-7"
+                  />
+                </Button>
+              </motion.div>
+
+              {/* About */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.94 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.9,
+                  ease: "easeOut",
+                }}
+              >
+                <Button
+                  onClick={() =>
+                    document.getElementById("about")?.scrollIntoView({
+                      behavior: "smooth",
+                    })
+                  }
+                  variant="outline"
+                  className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-md border-white/40 bg-white/5 px-5 py-2.5 text-xs font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:text-white hover:shadow-md sm:w-auto sm:px-6 sm:py-3 sm:text-sm min-[1441px]:text-lg min-[1800px]:gap-3 min-[1800px]:px-11 min-[1800px]:py-5 min-[1800px]:text-3xl"
+                >
+                  {t("hero.aboutButton")}
+                </Button>
+              </motion.div>
+            </motion.div>
+
+            {/* Features */}
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={featureContainer}
+              className="mt-7 grid grid-cols-1 gap-4 border-t border-white/20 pt-5 sm:mt-9 sm:grid-cols-3 sm:gap-5 sm:pt-6 md:gap-7 lg:gap-8"
+            >
+              {/* Quality */}
+              <motion.div
+                variants={featureItem}
+                className="flex items-center gap-2.5"
+              >
+                <ShieldCheck
+                  size={18}
+                  strokeWidth={1.7}
+                  className="shrink-0 text-white sm:h-5 sm:w-5"
                 />
-              </Button>
-            </motion.div>
 
-            {/* About */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.94 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.5,
-                delay: 0.9,
-                ease: "easeOut",
-              }}
-            >
-              <Button
-                onClick={() =>
-                  document.getElementById("about")?.scrollIntoView({
-                    behavior: "smooth",
-                  })
-                }
-                variant="outline"
-                className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-md border-white/40 bg-white/5 px-5 py-2.5 text-xs font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:text-white hover:shadow-md sm:w-auto sm:px-6 sm:py-3 sm:text-sm min-[1441px]:text-lg min-[1800px]:gap-3 min-[1800px]:px-11 min-[1800px]:py-5 min-[1800px]:text-3xl"
+                <p className="text-[10px] font-medium text-white sm:text-xs">
+                  {t("hero.features.quality")}
+                </p>
+              </motion.div>
+
+              {/* Delivery */}
+              <motion.div
+                variants={featureItem}
+                className="flex items-center gap-2.5"
               >
-                {t("hero.aboutButton")}
-              </Button>
+                <Truck
+                  size={18}
+                  strokeWidth={1.7}
+                  className="shrink-0 text-white sm:h-5 sm:w-5"
+                />
+
+                <p className="text-[10px] font-medium text-white sm:text-xs">
+                  {t("hero.features.delivery")}
+                </p>
+              </motion.div>
+
+              {/* Technology */}
+              <motion.div
+                variants={featureItem}
+                className="flex items-center gap-2.5"
+              >
+                <Settings2
+                  size={18}
+                  strokeWidth={1.7}
+                  className="shrink-0 text-white sm:h-5 sm:w-5"
+                />
+
+                <p className="text-[10px] font-medium text-white sm:text-xs">
+                  {t("hero.features.technology")}
+                </p>
+              </motion.div>
             </motion.div>
-          </motion.div>
-
-          {/* Features */}
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={featureContainer}
-            className="mt-7 grid grid-cols-1 gap-4 border-t border-white/20 pt-5 sm:mt-9 sm:grid-cols-3 sm:gap-5 sm:pt-6 md:gap-7 lg:gap-8"
-          >
-            {/* Quality */}
-            <motion.div
-              variants={featureItem}
-              className="flex items-center gap-2.5"
-            >
-              <ShieldCheck
-                size={18}
-                strokeWidth={1.7}
-                className="shrink-0 text-white sm:h-5 sm:w-5"
-              />
-
-              <p className="text-[10px] font-medium text-white sm:text-xs">
-                {t("hero.features.quality")}
-              </p>
-            </motion.div>
-
-            {/* Delivery */}
-            <motion.div
-              variants={featureItem}
-              className="flex items-center gap-2.5"
-            >
-              <Truck
-                size={18}
-                strokeWidth={1.7}
-                className="shrink-0 text-white sm:h-5 sm:w-5"
-              />
-
-              <p className="text-[10px] font-medium text-white sm:text-xs">
-                {t("hero.features.delivery")}
-              </p>
-            </motion.div>
-
-            {/* Technology */}
-            <motion.div
-              variants={featureItem}
-              className="flex items-center gap-2.5"
-            >
-              <Settings2
-                size={18}
-                strokeWidth={1.7}
-                className="shrink-0 text-white sm:h-5 sm:w-5"
-              />
-
-              <p className="text-[10px] font-medium text-white sm:text-xs">
-                {t("hero.features.technology")}
-              </p>
-            </motion.div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
