@@ -37,11 +37,11 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="mt-26"
+      className="mt-27"
     >
       {/* Hero */}
       <div
-        className="relative mb-[-27px]  min-h-[500px] overflow-hidden rounded-4xl sm:min-h-[500px] md:min-h-[520px] lg:min-h-[570px] min-[1441px]:h-[calc(100dvh-180px)]"
+        className="relative mb-[-26px]  min-h-[500px] overflow-hidden rounded-4xl sm:min-h-[500px] md:min-h-[520px] lg:min-h-[570px] min-[1441px]:h-[calc(100dvh-180px)]"
       >
         {/* Background Image */}
         <img

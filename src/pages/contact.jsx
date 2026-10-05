@@ -99,7 +99,7 @@ const Contact = () => {
       id="contact"
       className="bg-background px-4 py-16 sm:px-6 md:py-20"
     >
-      <div className="mx-auto w-full max-w-[1260px] min-[1800px]:max-w-[1460px]">
+      <div className="mx-auto w-full max-w-[1260px] min-[1800px]:max-w-[1360px]">
         <div className="grid gap-6 lg:grid-cols-2 min-[1800px]:gap-8">
           {/* Left Side - Heading + Form */}
           <motion.div

@@ -56,7 +56,7 @@ const Partners = () => {
       id="partners"
       className="overflow-hidden bg-background px-4 py-16 sm:px-6 md:py-20"
     >
-      <div className="mx-auto w-full max-w-[1260px] min-[1800px]:max-w-[1360px] min-[1800px]:px-6">
+      <div className="mx-auto w-full max-w-[1260px] min-[1800px]:max-w-[1260px] min-[1800px]:px-6">
         {/* Section Heading */}
         <motion.div
           initial={{ opacity: 0, y: 35 }}
