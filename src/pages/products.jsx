@@ -13,9 +13,9 @@ const Products = () => {
   return (
     <section
       id="products"
-      className="bg-background px-4 py-16 sm:px-6  md:py-10"
+      className="bg-background px-4 py-16 sm:px-6 md:py-10"
     >
-      <div className="mx-auto max-w-7xl rounded-4xl bg-white p-6">
+      <div className="mx-auto w-full max-w-[1360px] rounded-4xl bg-white p-6 min-[1800px]:max-w-[1760px] min-[1800px]:p-8">
         {/* Section Heading */}
         <motion.div
           initial={{ opacity: 0, y: 35 }}
@@ -28,19 +28,19 @@ const Products = () => {
             once: true,
             amount: 0.3,
           }}
-          className="mb-10 text-center"
+          className="mb-10 text-center min-[1800px]:mb-12"
         >
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl min-[1800px]:text-5xl">
             {t("products.title")}
           </h2>
 
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-muted-foreground sm:text-base">
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-muted-foreground sm:text-base min-[1800px]:max-w-3xl min-[1800px]:text-lg min-[1800px]:leading-8">
             {t("products.description")}
           </p>
         </motion.div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 min-[1800px]:gap-8">
           {products.map((product) => (
             <motion.div
               key={product.id}
@@ -57,33 +57,33 @@ const Products = () => {
               }}
               className="group relative overflow-hidden rounded-2xl border border-border bg-card transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_18px_40px_rgba(21,87,166,0.16)]"
             >
-              <div className="relative h-52 overflow-hidden bg-surface sm:h-56">
+              <div className="relative h-52 overflow-hidden bg-surface sm:h-56 min-[1800px]:h-64">
                 <img
                   src={product.image}
                   alt={t(product.titleKey)}
-                  className="h-full w-full object-contain p-3 transition-transform duration-500 group-hover:scale-110"
+                  className="h-full w-full object-contain p-3 transition-transform duration-500 group-hover:scale-110 min-[1800px]:p-5"
                 />
               </div>
 
-              <div className="p-5">
-                <h3 className="mt-2 text-lg font-semibold leading-6 text-foreground transition-colors duration-300 group-hover:text-primary">
+              <div className="p-5 min-[1800px]:p-6">
+                <h3 className="mt-2 text-lg font-semibold leading-6 text-foreground transition-colors duration-300 group-hover:text-primary min-[1800px]:text-xl min-[1800px]:leading-7">
                   {t(product.titleKey)}
                 </h3>
 
-                <p className="mt-2 line-clamp-2 text-sm leading-5 text-muted-foreground">
+                <p className="mt-2 line-clamp-2 text-sm leading-5 text-muted-foreground min-[1800px]:text-base min-[1800px]:leading-7">
                   {t(product.descriptionKey)}
                 </p>
 
                 <Button
                   variant="ghost"
                   onClick={() => setSelectedProduct(product)}
-                  className="mt-4 h-9 cursor-pointer rounded-full bg-primary/5 px-4 text-sm font-semibold text-primary transition-all duration-300 hover:bg-primary hover:text-white"
+                  className="mt-4 h-9 cursor-pointer rounded-full bg-primary/5 px-4 text-sm font-semibold text-primary transition-all duration-300 hover:bg-primary hover:text-white min-[1800px]:mt-5 min-[1800px]:h-11 min-[1800px]:px-5 min-[1800px]:text-base"
                 >
                   {t("products.details")}
 
                   <ArrowRight
                     size={15}
-                    className="ml-1 transition-transform duration-300 group-hover:translate-x-1"
+                    className="ml-1 transition-transform duration-300 group-hover:translate-x-1 min-[1800px]:h-[18px] min-[1800px]:w-[18px]"
                   />
                 </Button>
               </div>
