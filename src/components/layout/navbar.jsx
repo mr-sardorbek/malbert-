@@ -168,12 +168,12 @@ const Navbar = () => {
           <img
             src={Logo}
             alt="MALBERT"
-            className="h-7 w-auto object-contain sm:h-8 md:h-8 min-[1441px]:h-10"
+            className="h-7 w-auto object-contain sm:h-8 md:h-10 min-[1441px]:h-14"
           />
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-6 lg:flex xl:gap-7 min-[1441px]:gap-10">
+        <nav className="hidden items-center gap-6 lg:flex xl:gap-13 min-[1441px]:gap-17">
           {navLinks.map((link) => {
             const sectionId = getSectionId(link);
 
@@ -191,7 +191,7 @@ const Navbar = () => {
                       ? activeSection === sectionId
                       : isActive;
 
-                  return `group relative px-1 py-2 text-[12px] font-medium transition-colors duration-200 xl:text-[13px] min-[1441px]:text-[15px] ${
+                  return `group relative px-1 py-2 text-[12px] font-medium transition-colors duration-200 xl:text-[15px] min-[1441px]:text-[19px] ${
                     isSectionActive
                       ? "text-primary"
                       : "text-foreground hover:text-primary"
