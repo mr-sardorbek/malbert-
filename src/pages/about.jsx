@@ -8,9 +8,9 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-background px-4 py-16 sm:px-6 md:py-20"
+      className="bg-background mt-18  px-4 py-16 sm:px-6 md:py-20"
     >
-      <div className="mx-auto max-w-7xl bg-white p-6 rounded-4xl">
+      <div className="mx-auto  w-full max-w-[1360px] rounded-4xl bg-white p-6 min-[1800px]:max-w-[1760px] min-[1800px]:p-8">
         {/* Section Title */}
         <motion.div
           initial={{ opacity: 0, y: 35 }}
@@ -23,15 +23,15 @@ const About = () => {
             once: true,
             amount: 0.3,
           }}
-          className="mb-10 text-center"
+          className="mb-10 text-center min-[1800px]:mb-12"
         >
-         <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl min-[1800px]:text-5xl">
             {t("about.title")}
           </h2>
         </motion.div>
 
         {/* About Content */}
-        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12 min-[1800px]:gap-16">
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -66,21 +66,21 @@ const About = () => {
               once: true,
               amount: 0.2,
             }}
-            className="max-w-xl"
+            className="max-w-xl min-[1800px]:max-w-2xl"
           >
-            <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary sm:text-xs">
+            <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary sm:text-xs min-[1800px]:text-sm">
               {t("about.subtitle")}
             </span>
 
-            <h3 className="mt-3 text-2xl font-bold leading-tight tracking-tight text-foreground sm:text-3xl">
+            <h3 className="mt-3 text-2xl font-bold leading-tight tracking-tight text-foreground sm:text-3xl min-[1800px]:text-5xl">
               {t("about.heading")}
             </h3>
 
-            <p className="mt-5 text-sm leading-7 text-muted-foreground sm:text-base">
+            <p className="mt-5 text-sm leading-7 text-muted-foreground sm:text-base min-[1800px]:mt-6 min-[1800px]:text-xl min-[1800px]:leading-9">
               {t("about.description")}
             </p>
 
-            <p className="mt-5 border-l-2 border-secondary pl-4 text-sm font-medium leading-6 text-foreground">
+            <p className="mt-5 border-l-2 border-secondary pl-4 text-sm font-medium leading-6 text-foreground min-[1800px]:mt-6 min-[1800px]:pl-5 min-[1800px]:text-lg min-[1800px]:leading-8">
               {t("about.accent")}
             </p>
           </motion.div>

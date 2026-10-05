@@ -173,7 +173,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-6 lg:flex xl:gap-13 min-[1441px]:gap-17">
+        <nav className="hidden items-center gap-6 lg:flex xl:gap-11 min-[1441px]:gap-17">
           {navLinks.map((link) => {
             const sectionId = getSectionId(link);
 
