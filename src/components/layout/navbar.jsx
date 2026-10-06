@@ -157,10 +157,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`absolute left-0 top-0 z-50 w-full rounded-b-3xl bg-white backdrop-blur-lg transition-transform duration-300 ease-out ${
-        isNavbarVisible ? "translate-y-0" : "-translate-y-full"
-      }`}
-    >
+  className={`absolute left-2 right-2 top-[-110px] z-50 rounded-b-3xl bg-white backdrop-blur-lg transition-transform duration-300 ease-out ${
+    isNavbarVisible ? "translate-y-0" : "-translate-y-full"
+  }`}
+>
       
       <div className="mx-auto flex h-[80px] w-full max-w-[1260px] items-center justify-between px-4 sm:px-6 md:px-8 lg:px-6 min-[1441px]:h-[88px] min-[1800px]:max-w-[1360px] min-[1800px]:px-6">
         {/* Logo */}

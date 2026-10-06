@@ -41,13 +41,13 @@ const Hero = () => {
     >
       {/* Hero */}
       <div
-        className="relative mb-[-26px]  min-h-[500px] overflow-hidden rounded-4xl sm:min-h-[500px] md:min-h-[520px] lg:min-h-[570px] min-[1441px]:h-[calc(100dvh-180px)]"
+        className="relative mb-[-26px] m-2  min-h-[500px] overflow-hidden  sm:min-h-[500px] md:min-h-[20px] lg:min-h-[610px] min-[1441px]:h-[calc(100dvh-180px)]"
       >
         {/* Background Image */}
         <img
           src={Mbg}
           alt="MALBERT printing production"
-          className="absolute inset-0 h-full w-full rounded-3xl object-cover object-[85%_center] sm:object-[68%_center] md:object-[70%_center] lg:object-center"
+          className="absolute inset-0 h-full w-full rounded-4xl object-cover object-[85%_center] sm:object-[68%_center] md:object-[70%_center] lg:object-center"
         />
 
         <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-black/75 via-black/55 to-black/30" />

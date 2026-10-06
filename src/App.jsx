@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { AnnounceBar, Footer, Navbar } from "./components/layout";
+import {  Footer, Navbar } from "./components/layout";
 import { Home } from "./pages";
 import Preloader from "./components/preloader";
 import { Toaster } from "sonner";
@@ -27,7 +27,7 @@ const App = () => {
         <Preloader />
       ) : (
         <>
-          <AnnounceBar />
+         
 
           <header className="sticky top-0 z-50">
             <Navbar />
