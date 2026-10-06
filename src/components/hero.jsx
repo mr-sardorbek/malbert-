@@ -41,7 +41,7 @@ const Hero = () => {
     >
       {/* Hero */}
       <div
-        className="relative mb-[-26px] m-2  min-h-[500px] overflow-hidden  sm:min-h-[500px] md:min-h-[20px] lg:min-h-[610px] min-[1441px]:h-[calc(100dvh-180px)]"
+        className="relative mb-[-26px] m-2 min-h-[500px] overflow-hidden sm:min-h-[500px] md:min-h-[560px] lg:min-h-[610px] min-[1441px]:h-[calc(100dvh-140px)]"
       >
         {/* Background Image */}
         <img
@@ -50,10 +50,10 @@ const Hero = () => {
           className="absolute inset-0 h-full w-full rounded-4xl object-cover object-[85%_center] sm:object-[68%_center] md:object-[70%_center] lg:object-center"
         />
 
-        <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-black/75 via-black/55 to-black/30" />
+        <div className="absolute inset-0 rounded-4xl bg-gradient-to-r from-black/75 via-black/55 to-black/30" />
 
         {/* Content */}
-        <div className="relative z-10  mx-auto flex min-h-[500px] w-full max-w-[1260px] items-center px-4 sm:min-h-[500px] sm:px-6 md:min-h-[520px] md:px-8 lg:min-h-[640px] lg:px-6 min-[1441px]:h-full min-[1800px]:max-w-[1360px] min-[1800px]:px-6">
+        <div className="relative z-10 mx-auto flex min-h-[500px] w-full max-w-[1260px] items-center px-4 sm:min-h-[500px] sm:px-6 md:min-h-[520px] md:px-8 lg:min-h-[640px] lg:px-6 min-[1441px]:h-full min-[1800px]:max-w-[1360px] min-[1800px]:px-6">
           <div className="w-full max-w-[480px] sm:max-w-[520px] md:max-w-[580px] lg:max-w-xl min-[1800px]:max-w-[980px]">
             {/* Eyebrow */}
             <motion.span

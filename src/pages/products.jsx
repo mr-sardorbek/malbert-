@@ -55,9 +55,10 @@ const Products = () => {
                 once: true,
                 amount: 0.15,
               }}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-card transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_18px_40px_rgba(21,87,166,0.16)]"
+              className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_18px_40px_rgba(21,87,166,0.16)]"
             >
-              <div className="relative h-52 overflow-hidden bg-surface sm:h-56 min-[1800px]:h-64">
+              {/* Image */}
+              <div className="relative h-52 shrink-0 overflow-hidden bg-surface sm:h-56 min-[1800px]:h-64">
                 <img
                   src={product.image}
                   alt={t(product.titleKey)}
@@ -65,27 +66,33 @@ const Products = () => {
                 />
               </div>
 
-              <div className="p-5 min-[1800px]:p-6">
-                <h3 className="mt-2 text-lg font-semibold leading-6 text-foreground transition-colors duration-300 group-hover:text-primary min-[1800px]:text-xl min-[1800px]:leading-7">
+              {/* Content */}
+              <div className="flex flex-1 flex-col p-5 min-[1800px]:p-6">
+                {/* Title */}
+                <h3 className="mt-2 min-h-[48px] text-lg font-semibold leading-6 text-foreground transition-colors duration-300 group-hover:text-primary min-[1800px]:min-h-[56px] min-[1800px]:text-xl min-[1800px]:leading-7">
                   {t(product.titleKey)}
                 </h3>
 
-                <p className="mt-2 line-clamp-2 text-sm leading-5 text-muted-foreground min-[1800px]:text-base min-[1800px]:leading-7">
+                {/* Description */}
+                <p className="mt-2 min-h-[40px] line-clamp-2 text-sm leading-5 text-muted-foreground min-[1800px]:min-h-[56px] min-[1800px]:text-base min-[1800px]:leading-7">
                   {t(product.descriptionKey)}
                 </p>
 
-                <Button
-                  variant="ghost"
-                  onClick={() => setSelectedProduct(product)}
-                  className="mt-4 h-9 cursor-pointer rounded-full bg-primary/5 px-4 text-sm font-semibold text-primary transition-all duration-300 hover:bg-primary hover:text-white min-[1800px]:mt-5 min-[1800px]:h-11 min-[1800px]:px-5 min-[1800px]:text-base"
-                >
-                  {t("products.details")}
+                {/* Button */}
+                <div className="mt-auto pt-4 min-[1800px]:pt-5">
+                  <Button
+                    variant="ghost"
+                    onClick={() => setSelectedProduct(product)}
+                    className="h-9 cursor-pointer rounded-full bg-primary/5 px-4 text-sm font-semibold text-primary transition-all duration-300 hover:bg-primary hover:text-white min-[1800px]:h-11 min-[1800px]:px-5 min-[1800px]:text-base"
+                  >
+                    {t("products.details")}
 
-                  <ArrowRight
-                    size={15}
-                    className="ml-1 transition-transform duration-300 group-hover:translate-x-1 min-[1800px]:h-[18px] min-[1800px]:w-[18px]"
-                  />
-                </Button>
+                    <ArrowRight
+                      size={15}
+                      className="ml-1 transition-transform duration-300 group-hover:translate-x-1 min-[1800px]:h-[18px] min-[1800px]:w-[18px]"
+                    />
+                  </Button>
+                </div>
               </div>
             </motion.div>
           ))}
