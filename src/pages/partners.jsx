@@ -1,13 +1,13 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "motion/react";
 import {
-  Epson,
-  Canon,
-  Brother,
-  HP,
   Microsoft,
-  TSC,
-  Zebra,
+  RisingPrint,
+  FabrikaUpakovki,
+  ChagayPlus,
+  PreiumFlex,
+  LFP,
+  DizaynPrint,
 } from "@/assets";
 
 const partners = [
@@ -19,32 +19,32 @@ const partners = [
   {
     id: 2,
     name: "Canon",
-    logo: Canon,
+    logo: DizaynPrint,
   },
   {
     id: 3,
     name: "HP",
-    logo: HP,
+    logo: ChagayPlus,
   },
   {
     id: 4,
     name: "Epson",
-    logo: Epson,
+    logo: LFP,
   },
   {
     id: 5,
     name: "Zebra",
-    logo: Zebra,
+    logo: PreiumFlex,
   },
   {
     id: 6,
     name: "TSC",
-    logo: TSC,
+    logo: FabrikaUpakovki,
   },
   {
     id: 7,
     name: "Brother",
-    logo: Brother,
+    logo: RisingPrint,
   },
 ];
 
@@ -139,7 +139,7 @@ const Partners = () => {
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="max-h-14 max-w-[110px] object-contain transition-transform duration-500 group-hover:scale-105 min-[1800px]:max-h-16 min-[1800px]:max-w-[135px]"
+                    className="max-h-18 max-w-[110px] object-contain transition-transform duration-500 group-hover:scale-105 min-[1800px]:max-h-16 min-[1800px]:max-w-[135px]"
                   />
                 </motion.div>
               </div>
