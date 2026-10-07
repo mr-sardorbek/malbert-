@@ -11,9 +11,10 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-white">
       <div className="mx-auto w-full max-w-[1360px] px-4 py-10 sm:px-6 sm:py-12 md:py-8 min-[1800px]:max-w-[1460px] min-[1800px]:px-6 min-[1800px]:py-10">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-[1.3fr_1fr_1fr] md:gap-6 lg:grid-cols-[1.3fr_1fr_1fr] lg:gap-8 min-[1800px]:gap-12">
+        <div className="grid grid-cols-2 gap-10 sm:grid-cols-2 md:grid-cols-[1.3fr_1fr_1fr] md:gap-6 lg:grid-cols-[1.3fr_1fr_1fr] lg:gap-8 min-[1800px]:gap-12">
           
-          <div className="sm:col-span-2 md:col-span-1 md:ml-0 lg:col-span-1 lg:ml-7 min-[1800px]:ml-0">
+          {/* Logo + Description */}
+          <div className="col-span-2 sm:col-span-2 md:col-span-1 md:ml-0 lg:col-span-1 lg:ml-7 min-[1800px]:ml-0">
             <img
               src={LogoOq}
               alt="MALBERT"
@@ -25,6 +26,7 @@ const Footer = () => {
             </p>
           </div>
 
+          {/* Navigation */}
           <div>
             <h3 className="text-sm font-semibold min-[1800px]:text-base">
               {t("footer.navigation")}
@@ -43,6 +45,7 @@ const Footer = () => {
             </nav>
           </div>
 
+          {/* Follow */}
           <div>
             <h3 className="text-sm font-semibold min-[1800px]:text-base">
               {t("footer.follow")}
@@ -106,6 +109,7 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Copyright */}
         <div className="mt-10 border-t border-white/10 pt-6 min-[1800px]:mt-12 min-[1800px]:pt-7">
           <div className="flex flex-col items-center justify-center gap-2 text-center sm:flex-row sm:gap-6">
             <p className="text-xs text-white/50 min-[1800px]:text-sm">
