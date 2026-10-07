@@ -127,7 +127,10 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <form onSubmit={handleSubmit} className="mt-10 space-y-4 min-[1800px]:mt-12 min-[1800px]:space-y-5">
+            <form
+              onSubmit={handleSubmit}
+              className="mt-10 space-y-4 min-[1800px]:mt-12 min-[1800px]:space-y-5"
+            >
               <Input
                 type="text"
                 value={name}
@@ -250,20 +253,20 @@ const Contact = () => {
             once: true,
             amount: 0.2,
           }}
-          className="mt-6 grid gap-4 md:grid-cols-3 min-[1800px]:mt-8 min-[1800px]:gap-6"
+          className="mt-6 grid gap-4 md:grid-cols-3 md:gap-3 min-[1800px]:mt-8 min-[1800px]:gap-6"
         >
           {/* Address */}
-          <div className="flex items-start gap-4 rounded-2xl bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(21,87,166,0.16)] min-[1800px]:rounded-3xl min-[1800px]:p-6">
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-secondary/15 text-secondary min-[1800px]:h-14 min-[1800px]:w-14 min-[1800px]:rounded-2xl">
+          <div className="flex items-start gap-4 rounded-2xl bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(21,87,166,0.16)] md:gap-2 md:p-3 lg:gap-4 lg:p-5 min-[1800px]:gap-4 min-[1800px]:rounded-3xl min-[1800px]:p-6">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-secondary/15 text-secondary md:h-8 md:w-8 lg:h-11 lg:w-11 min-[1800px]:h-14 min-[1800px]:w-14 min-[1800px]:rounded-2xl">
               <MapPin
                 size={20}
                 strokeWidth={1.8}
-                className="min-[1800px]:h-6 min-[1800px]:w-6"
+                className="md:h-4 md:w-4 lg:h-5 lg:w-5 min-[1800px]:h-6 min-[1800px]:w-6"
               />
             </div>
 
-            <div>
-              <h3 className="text-sm font-semibold text-foreground min-[1800px]:text-base">
+            <div className="min-w-0">
+              <h3 className="text-sm font-semibold text-foreground md:text-[11px] lg:text-sm min-[1800px]:text-base">
                 {t("contact.addressTitle")}
               </h3>
 
@@ -271,7 +274,7 @@ const Contact = () => {
                 href="https://yandex.com/maps/?ll=69.458803%2C41.332500&z=16&pt=69.458803%2C41.332500%2Cpm2rdm"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-1 block cursor-pointer text-sm leading-5 text-muted-foreground transition-colors duration-300 hover:text-primary min-[1800px]:text-base min-[1800px]:leading-7"
+                className="mt-1 block cursor-pointer text-sm leading-5 text-muted-foreground transition-colors duration-300 hover:text-primary md:text-[10px] md:leading-4 lg:text-sm lg:leading-5 min-[1800px]:text-base min-[1800px]:leading-7"
               >
                 {address}
               </a>
@@ -279,25 +282,25 @@ const Contact = () => {
           </div>
 
           {/* Working Hours */}
-          <div className="flex items-start gap-4 rounded-2xl bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(21,87,166,0.16)] min-[1800px]:rounded-3xl min-[1800px]:p-6">
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-secondary/15 text-secondary min-[1800px]:h-14 min-[1800px]:w-14 min-[1800px]:rounded-2xl">
+          <div className="flex items-start gap-4 rounded-2xl bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(21,87,166,0.16)] md:gap-2 md:p-3 lg:gap-4 lg:p-5 min-[1800px]:gap-4 min-[1800px]:rounded-3xl min-[1800px]:p-6">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-secondary/15 text-secondary md:h-8 md:w-8 lg:h-11 lg:w-11 min-[1800px]:h-14 min-[1800px]:w-14 min-[1800px]:rounded-2xl">
               <Clock3
                 size={20}
                 strokeWidth={1.8}
-                className="min-[1800px]:h-6 min-[1800px]:w-6"
+                className="md:h-4 md:w-4 lg:h-5 lg:w-5 min-[1800px]:h-6 min-[1800px]:w-6"
               />
             </div>
 
-            <div>
-              <h3 className="text-sm font-semibold text-foreground min-[1800px]:text-base">
+            <div className="min-w-0">
+              <h3 className="text-sm font-semibold text-foreground md:text-[11px] lg:text-sm min-[1800px]:text-base">
                 {t("contact.workingHoursTitle")}
               </h3>
 
-              <p className="mt-1 text-sm font-medium text-foreground min-[1800px]:text-base">
+              <p className="mt-1 text-sm font-medium text-foreground md:text-[10px] lg:text-sm min-[1800px]:text-base">
                 {t("contact.workingHours")}
               </p>
 
-              <p className="mt-1 text-xs text-muted-foreground min-[1800px]:text-sm">
+              <p className="mt-1 text-xs text-muted-foreground md:text-[9px] lg:text-xs min-[1800px]:text-sm">
                 {t("contact.workingDays")}
               </p>
             </div>
@@ -306,26 +309,26 @@ const Contact = () => {
           {/* Phone */}
           <a
             href="tel:+998901234567"
-            className="flex cursor-pointer items-start gap-4 rounded-2xl bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(21,87,166,0.16)] min-[1800px]:rounded-3xl min-[1800px]:p-6"
+            className="flex min-w-0 cursor-pointer items-start gap-4 rounded-2xl bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(21,87,166,0.16)] md:gap-2 md:p-3 lg:gap-4 lg:p-5 min-[1800px]:gap-4 min-[1800px]:rounded-3xl min-[1800px]:p-6"
           >
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-secondary/15 text-secondary min-[1800px]:h-14 min-[1800px]:w-14 min-[1800px]:rounded-2xl">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-secondary/15 text-secondary md:h-8 md:w-8 lg:h-11 lg:w-11 min-[1800px]:h-14 min-[1800px]:w-14 min-[1800px]:rounded-2xl">
               <Phone
                 size={20}
                 strokeWidth={1.8}
-                className="min-[1800px]:h-6 min-[1800px]:w-6"
+                className="md:h-4 md:w-4 lg:h-5 lg:w-5 min-[1800px]:h-6 min-[1800px]:w-6"
               />
             </div>
 
-            <div>
-              <h3 className="text-sm font-semibold text-foreground min-[1800px]:text-base">
+            <div className="min-w-0">
+              <h3 className="text-sm font-semibold text-foreground md:text-[11px] lg:text-sm min-[1800px]:text-base">
                 {t("contact.phoneTitle")}
               </h3>
 
-              <p className="mt-1 text-sm font-medium text-foreground min-[1800px]:text-base">
+              <p className="mt-1 text-sm font-medium text-foreground md:text-[10px] lg:text-sm min-[1800px]:text-base">
                 +998 90 123 45 67
               </p>
 
-              <p className="mt-1 text-xs text-muted-foreground min-[1800px]:text-sm">
+              <p className="mt-1 text-xs text-muted-foreground md:text-[9px] lg:text-xs min-[1800px]:text-sm">
                 {t("contact.phoneDescription")}
               </p>
             </div>
