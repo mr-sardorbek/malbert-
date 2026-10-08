@@ -89,6 +89,7 @@ const Navbar = () => {
     closeMobileMenu();
   };
 
+  // Active section
   useEffect(() => {
     if (location.pathname !== "/") {
       return;
@@ -123,6 +124,7 @@ const Navbar = () => {
     };
   }, [location.pathname]);
 
+  // Navbar scroll behavior
   useEffect(() => {
     let lastScrollY = window.scrollY;
 
@@ -155,13 +157,27 @@ const Navbar = () => {
     };
   }, []);
 
+  // Show Navbar when mouse reaches the top of the screen
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      if (event.clientY <= 80) {
+        setIsNavbarVisible(true);
+      }
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
   return (
     <nav
-  className={`absolute left-2 right-2 top-[-110px] z-50 rounded-b-3xl bg-white backdrop-blur-lg transition-transform duration-300 ease-out ${
-    isNavbarVisible ? "translate-y-0" : "-translate-y-full"
-  }`}
->
-      
+      className={`fixed left-2 right-2 top-0 z-50 rounded-b-3xl bg-white backdrop-blur-lg transition-transform duration-300 ease-out ${
+        isNavbarVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="mx-auto flex h-[80px] w-full max-w-[1260px] items-center justify-between px-4 sm:px-6 md:px-8 lg:px-6 min-[1441px]:h-[88px] min-[1800px]:max-w-[1360px] min-[1800px]:px-6">
         {/* Logo */}
         <div className="pl-0 sm:pl-2 md:pl-3">
