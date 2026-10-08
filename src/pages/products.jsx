@@ -58,7 +58,7 @@ const Products = () => {
               className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_18px_40px_rgba(21,87,166,0.16)]"
             >
               {/* Image */}
-              <div className="relative h-52 shrink-0 overflow-hidden bg-surface sm:h-56 min-[1800px]:h-64">
+              <div className="relative h-52 shrink-0 overflow-hidden bg-surface sm:h-56 min-[1800px]:h-72">
                 <img
                   src={product.image}
                   alt={t(product.titleKey)}
@@ -67,14 +67,14 @@ const Products = () => {
               </div>
 
               {/* Content */}
-              <div className="flex flex-1 flex-col p-5 min-[1800px]:p-6">
+              <div className="flex flex-1 flex-col p-4 min-[1800px]:p-6">
                 {/* Title */}
-                <h3 className="mt-2 min-h-[48px] text-lg font-semibold leading-6 text-foreground transition-colors duration-300 group-hover:text-primary min-[1800px]:min-h-[56px] min-[1800px]:text-xl min-[1800px]:leading-7">
+                <h3 className="min-h-[48px] text-lg font-semibold leading-6 text-foreground transition-colors duration-300 group-hover:text-primary min-[1800px]:min-h-[56px] min-[1800px]:text-xl min-[1800px]:leading-7">
                   {t(product.titleKey)}
                 </h3>
 
                 {/* Description */}
-                <p className="mt-2 min-h-[40px] line-clamp-2 text-sm leading-5 text-muted-foreground min-[1800px]:min-h-[56px] min-[1800px]:text-base min-[1800px]:leading-7">
+                <p className="mt-1 min-h-[40px] line-clamp-2 text-sm leading-5 text-muted-foreground min-[1800px]:min-h-[56px] min-[1800px]:text-base min-[1800px]:leading-7">
                   {t(product.descriptionKey)}
                 </p>
 
@@ -136,7 +136,16 @@ const Products = () => {
                     {t(selectedProduct.descriptionKey)}
                   </p>
 
-                  <Button className="mt-6 cursor-pointer bg-primary transition-all duration-300 hover:bg-primary-hover hover:shadow-md">
+                  <Button
+                    onClick={() => {
+                      setSelectedProduct(null);
+
+                      document.getElementById("contact")?.scrollIntoView({
+                        behavior: "smooth",
+                      });
+                    }}
+                    className="mt-6 cursor-pointer bg-primary transition-all duration-300 hover:bg-primary-hover hover:shadow-md"
+                  >
                     {t("products.contact")}
 
                     <ArrowRight size={16} className="ml-1" />
