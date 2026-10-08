@@ -37,23 +37,24 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="mt-27"
+      className="pt-[80px] min-[1441px]:pt-[88px]"
     >
       {/* Hero */}
       <div
-        className="relative mb-[-26px] m-2 min-h-[500px] overflow-hidden sm:min-h-[500px] md:min-h-[560px] lg:min-h-[610px] min-[1441px]:h-[calc(100dvh-140px)]"
-      >
-        {/* Background Image */}
-        <img
-          src={Mbg}
-          alt="MALBERT printing production"
-          className="absolute inset-0 h-full w-full rounded-4xl object-cover object-[85%_center] sm:object-[68%_center] md:object-[70%_center] lg:object-center"
-        />
+  className="relative m-2 mb-4 min-h-[500px] overflow-hidden rounded-4xl sm:min-h-[500px] md:min-h-[calc(100dvh-104px)] lg:min-h-[calc(100dvh-104px)] min-[1441px]:min-h-[calc(100dvh-104px)]"
+>
+  {/* Background Image */}
+  <img
+    src={Mbg}
+    alt="MALBERT printing production"
+    className="absolute inset-0 h-full w-full rounded-4xl object-cover object-[85%_center] sm:object-[68%_center] md:object-[70%_center] lg:object-center"
+  />
 
-        <div className="absolute inset-0 rounded-4xl bg-gradient-to-r from-black/75 via-black/55 to-black/30" />
+  <div className="absolute inset-0 rounded-4xl bg-gradient-to-r from-black/75 via-black/55 to-black/30" />
 
-        {/* Content */}
-        <div className="relative z-10 mx-auto flex min-h-[500px] w-full max-w-[1260px] items-center px-4 sm:min-h-[500px] sm:px-6 md:min-h-[520px] md:px-8 lg:min-h-[640px] lg:px-6 min-[1441px]:h-full min-[1800px]:max-w-[1360px] min-[1800px]:px-6">
+  {/* Content */}
+  <div className="relative z-10 mx-auto flex min-h-[500px] w-full max-w-[1260px] items-center px-4 sm:min-h-[500px] sm:px-6 md:min-h-[calc(100dvh-104px)] md:px-8 lg:min-h-[calc(100dvh-104px)] lg:px-6 min-[1441px]:min-h-[calc(100dvh-104px)]
+   min-[1800px]:max-w-[1360px] min-[1800px]:px-6">
           <div className="w-full max-w-[480px] sm:max-w-[520px] md:max-w-[580px] lg:max-w-xl min-[1800px]:max-w-[980px]">
             {/* Eyebrow */}
             <motion.span
@@ -150,7 +151,7 @@ const Hero = () => {
                 delay: 0.7,
                 ease: "easeOut",
               }}
-              className="mt-6 flex flex-col items-stretch gap-2 xs:flex-row sm:mt-7 sm:flex-row sm:items-center sm:gap-3 min-[1800px]:mt-10 min-[1800px]:gap-5"
+              className="mt-6 flex flex-col items-stretch gap-2 sm:mt-7 sm:flex-row sm:items-center sm:gap-3 min-[1800px]:mt-10 min-[1800px]:gap-5"
             >
               {/* Products */}
               <motion.div
