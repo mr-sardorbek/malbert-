@@ -214,7 +214,7 @@ const Navbar = () => {
               onClick={() =>
                 setIsLanguageOpen(!isLanguageOpen)
               }
-              className="h-8 w-8 cursor-pointer rounded-lg bg-surface border  sm:h-9 sm:w-9 min-[1441px]:h-11 min-[1441px]:w-11"
+              className="h-8 w-8 cursor-pointer rounded-lg bg-surface border-lg hover:bg-border sm:h-9 sm:w-9 min-[1441px]:h-11 min-[1441px]:w-11"
               aria-label="Language"
             >
               <span className={`fi fi-${language}`} />
@@ -246,7 +246,7 @@ const Navbar = () => {
           {/* Phone Number */}
 <a
   href="tel:+998781134040"
-  className="inline-flex h-10 shrink-0 items-center gap-2.5 rounded-full bg-surface border px-4 text-sm font-medium text-foreground transition-colors hover:bg-[#f0eeeb] sm:h-11 sm:gap-3 sm:px-5 sm:text-base lg:px-6 min-[1441px]:h-12 min-[1441px]:text-lg"
+  className="inline-flex h-10 shrink-0 items-center gap-2.5 rounded-full bg-surface border px-4 text-sm font-medium text-foreground transition-colors hover:bg-border sm:h-11 sm:gap-3 sm:px-5 sm:text-base lg:px-6 min-[1441px]:h-12 min-[1441px]:text-lg"
   aria-label="Call +998 78 113 40 40"
 >
   <Phone
