@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import "./i18n";
+import "@fontsource-variable/inter";
 import "flag-icons/css/flag-icons.min.css";
 import { Provider } from 'react-redux';
 import { store } from './store/store';

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
 
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -21,9 +21,8 @@ html {
 
 body {
   margin: 0;
-  font-family: "Inter", sans-serif;
+  font-family: "Inter Variable", sans-serif;
 }
-
 
 /* ========================================
    MALBERT COLORS
@@ -53,8 +52,8 @@ body {
 ======================================== */
 
 @theme inline {
-  --font-sans: "Inter", sans-serif;
-  --font-heading: "Inter", sans-serif;
+    --font-sans: "Inter Variable", sans-serif;
+  --font-heading: "Inter Variable", sans-serif;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
