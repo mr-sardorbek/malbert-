@@ -4,7 +4,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import { Button } from "../ui/button";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { ArrowRight, Menu, X } from "lucide-react";
+import { Phone, Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [language, setLanguage] = useState(() => {
@@ -65,27 +65,6 @@ const Navbar = () => {
     });
 
     setActiveSection(sectionId);
-    closeMobileMenu();
-  };
-
-  const handleRequestClick = () => {
-    if (location.pathname !== "/") {
-      window.location.href = "/#contact";
-      return;
-    }
-
-    const contactSection = document.getElementById("contact");
-
-    if (!contactSection) {
-      return;
-    }
-
-    contactSection.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-
-    setActiveSection("contact");
     closeMobileMenu();
   };
 
@@ -173,11 +152,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav
-      className={`fixed left-2 right-2 top-0 z-50 rounded-b-3xl bg-white backdrop-blur-lg transition-transform duration-300 ease-out ${
-        isNavbarVisible ? "translate-y-0" : "-translate-y-full"
-      }`}
-    >
+    <nav className="fixed left-2 right-2 top-0 z-50 rounded-b-3xl bg-white backdrop-blur-lg">
       <div className="mx-auto flex h-[80px] w-full max-w-[1260px] items-center justify-between px-4 sm:px-6 md:px-8 lg:px-6 min-[1441px]:h-[88px] min-[1800px]:max-w-[1360px] min-[1800px]:px-6">
         {/* Logo */}
         <div className="pl-0 sm:pl-2 md:pl-3">
@@ -189,7 +164,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-6 lg:flex xl:gap-11 min-[1441px]:gap-17">
+        <nav className="hidden items-center mt-2 gap-6 lg:flex xl:gap-11 min-[1441px]:gap-17">
           {navLinks.map((link) => {
             const sectionId = getSectionId(link);
 
@@ -267,19 +242,19 @@ const Navbar = () => {
               </div>
             )}
           </div>
-
-          {/* Request Button */}
-          <Button
-            onClick={handleRequestClick}
-            className="hidden cursor-pointer bg-primary px-5 py-4 text-xs font-medium transition-all duration-300 hover:bg-primary-hover hover:shadow-md lg:inline-flex min-[1441px]:px-7 min-[1441px]:py-5 min-[1441px]:text-[15px]"
-          >
-            <span>{t("nav.request")}</span>
-
-            <ArrowRight
-              size={16}
-              className="ml-1 arrow-move min-[1441px]:h-[18px] min-[1441px]:w-[18px]"
-            />
-          </Button>
+git
+          {/* Phone Number */}
+<a
+  href="tel:+998781134040"
+  className="inline-flex h-10 shrink-0 items-center gap-2.5 rounded-full bg-[#f8f7f5] px-4 text-sm font-medium text-foreground transition-colors hover:bg-[#f0eeeb] sm:h-11 sm:gap-3 sm:px-5 sm:text-base lg:px-6 min-[1441px]:h-12 min-[1441px]:text-lg"
+  aria-label="Call +998 78 113 40 40"
+>
+  <Phone
+    size={20}
+    className="shrink-0 sm:h-[21px] sm:w-[21px]"
+  />
+  <span className="whitespace-nowrap">78 113 40 40</span>
+</a>
 
           {/* Mobile Menu */}
           <Button
@@ -334,18 +309,6 @@ const Navbar = () => {
                 );
               })}
             </div>
-
-            <Button
-              onClick={handleRequestClick}
-              className="mt-4 w-full cursor-pointer bg-primary py-5 text-sm font-medium transition-all duration-300 hover:bg-primary-hover hover:shadow-md"
-            >
-              <span>{t("nav.request")}</span>
-
-              <ArrowRight
-                size={17}
-                className="ml-1 arrow-move"
-              />
-            </Button>
           </div>
         </div>
       )}
