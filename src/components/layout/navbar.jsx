@@ -242,7 +242,7 @@ const Navbar = () => {
               </div>
             )}
           </div>
-git
+
           {/* Phone Number */}
 <a
   href="tel:+998781134040"
