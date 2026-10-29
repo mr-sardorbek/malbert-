@@ -152,7 +152,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed left-2 right-2 top-0 z-50 rounded-b-3xl bg-white backdrop-blur-lg">
+    <nav className="fixed left-2 right-2 top-0 z-50 rounded-b-3xl border-b border-white/20 bg-white/75 backdrop-blur-xl">
       <div className="mx-auto flex h-[80px] w-full max-w-[1260px] items-center justify-between px-4 sm:px-6 md:px-8 lg:px-6 min-[1441px]:h-[88px] min-[1800px]:max-w-[1360px] min-[1800px]:px-6">
         {/* Logo */}
         <div className="pl-0 sm:pl-2 md:pl-3">
@@ -173,9 +173,7 @@ const Navbar = () => {
                 key={link.path}
                 to={link.path}
                 end={link.path === "/"}
-                onClick={(event) =>
-                  handleSectionClick(event, sectionId)
-                }
+                onClick={(event) => handleSectionClick(event, sectionId)}
                 className={({ isActive }) => {
                   const isSectionActive =
                     location.pathname === "/"
@@ -193,8 +191,7 @@ const Navbar = () => {
 
                 <span
                   className={`absolute bottom-1 left-1/2 h-[2px] -translate-x-1/2 bg-secondary transition-all duration-300 ${
-                    location.pathname === "/" &&
-                    activeSection === sectionId
+                    location.pathname === "/" && activeSection === sectionId
                       ? "w-full"
                       : "w-0 group-hover:w-full"
                   }`}
@@ -211,9 +208,7 @@ const Navbar = () => {
             <Button
               variant="ghost"
               size="icon"
-              onClick={() =>
-                setIsLanguageOpen(!isLanguageOpen)
-              }
+              onClick={() => setIsLanguageOpen(!isLanguageOpen)}
               className="h-8 w-8 cursor-pointer rounded-lg bg-surface border-lg hover:bg-border sm:h-9 sm:w-9 min-[1441px]:h-11 min-[1441px]:w-11"
               aria-label="Language"
             >
@@ -226,9 +221,7 @@ const Navbar = () => {
                   <Button
                     key={lang.code}
                     variant="ghost"
-                    onClick={() =>
-                      changeLanguage(lang.code)
-                    }
+                    onClick={() => changeLanguage(lang.code)}
                     className={`h-auto w-full cursor-pointer justify-start gap-3 rounded-lg px-3 py-2 text-xs ${
                       language === lang.code
                         ? "bg-surface text-primary"
@@ -244,33 +237,24 @@ const Navbar = () => {
           </div>
 
           {/* Phone Number */}
-<a
-  href="tel:+998781134040"
-  className="inline-flex h-10 shrink-0 items-center gap-2.5 rounded-full bg-surface border px-4 text-sm font-medium text-foreground transition-colors hover:bg-border sm:h-11 sm:gap-3 sm:px-5 sm:text-base lg:px-6 min-[1441px]:h-12 min-[1441px]:text-lg"
-  aria-label="Call +998 78 113 40 40"
->
-  <Phone
-    size={20}
-    className="shrink-0 sm:h-[21px] sm:w-[21px]"
-  />
-  <span className="whitespace-nowrap">78 113 40 40</span>
-</a>
+          <a
+            href="tel:+998781134040"
+            className="inline-flex h-10 shrink-0 items-center gap-2.5 rounded-full bg-surface border px-4 text-sm font-medium text-foreground transition-colors hover:bg-border sm:h-11 sm:gap-3 sm:px-5 sm:text-base lg:px-6 min-[1441px]:h-12 min-[1441px]:text-lg"
+            aria-label="Call +998 78 113 40 40"
+          >
+            <Phone size={20} className="shrink-0 sm:h-[21px] sm:w-[21px]" />
+            <span className="whitespace-nowrap">78 113 40 40</span>
+          </a>
 
           {/* Mobile Menu */}
           <Button
             variant="ghost"
             size="icon"
-            onClick={() =>
-              setIsMobileMenuOpen(!isMobileMenuOpen)
-            }
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="h-8 w-8 cursor-pointer rounded-lg hover:bg-surface lg:hidden"
             aria-label="Menu"
           >
-            {isMobileMenuOpen ? (
-              <X size={19} />
-            ) : (
-              <Menu size={19} />
-            )}
+            {isMobileMenuOpen ? <X size={19} /> : <Menu size={19} />}
           </Button>
         </div>
       </div>
@@ -288,9 +272,7 @@ const Navbar = () => {
                     key={link.path}
                     to={link.path}
                     end={link.path === "/"}
-                    onClick={(event) =>
-                      handleSectionClick(event, sectionId)
-                    }
+                    onClick={(event) => handleSectionClick(event, sectionId)}
                     className={({ isActive }) => {
                       const isSectionActive =
                         location.pathname === "/"

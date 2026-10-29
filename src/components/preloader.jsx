@@ -122,9 +122,9 @@ const Preloader = () => {
             duration: 0.6,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="absolute left-1/2 top-full mt-3 -translate-x-1/2 whitespace-nowrap text-[8px] font-semibold tracking-[0.25em] text-secondary sm:mt-3 sm:text-[10px] sm:tracking-[0.3em] md:text-[11px] md:tracking-[0.35em] lg:text-xs lg:tracking-[0.4em]"
+          className="absolute left-1/2 top-full mt-3 -translate-x-1/2 whitespace-nowrap text-[8px] font-semibold  text-secondary sm:mt-3 sm:text-[10px]  md:text-[11px]  lg:text-xs "
         >
-          ВЫ ПЕЧАТАЕТЕ, МЫ ВАС ПОДДЕРЖИВАЕМ!
+          ВЫ ПЕЧАТАЕТЕ,  МЫ ВАС ПОДДЕРЖИВАЕМ!
         </motion.div>
       </div>
     </motion.div>
