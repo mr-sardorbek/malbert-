@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 const Hero = () => {
   const { t } = useTranslation();
 
-  const title = t("hero.title").replace(/^CMYK\s*/, "");
+  const title = t("hero.title2").replace(/^CMYK\s*/, "");
 
   const featureContainer = {
     hidden: {},
@@ -35,29 +35,26 @@ const Hero = () => {
   };
 
   return (
-    <section
-      id="home"
-      className="pt-[80px] min-[1441px]:pt-[88px]"
-    >
+    <section id="home" className="pt-[80px] min-[1441px]:pt-[88px]">
       {/* Hero */}
-      <div
-  className="relative m-2 mb-4 min-h-[500px] overflow-hidden rounded-4xl sm:min-h-[500px] md:min-h-[calc(100dvh-104px)] lg:min-h-[calc(100dvh-104px)] min-[1441px]:min-h-[calc(100dvh-104px)]"
->
-  {/* Background Image */}
-  <img
-    src={Mbg}
-    alt="MALBERT printing production"
-    className="absolute inset-0 h-full w-full rounded-4xl object-cover object-[85%_center] sm:object-[68%_center] md:object-[70%_center] lg:object-center"
-  />
+      <div className="relative m-2 mb-4 min-h-[500px] overflow-hidden rounded-4xl sm:min-h-[500px] md:min-h-[calc(100dvh-104px)] lg:min-h-[calc(100dvh-104px)] min-[1441px]:min-h-[calc(100dvh-104px)]">
+        {/* Background Image */}
+        <img
+          src={Mbg}
+          alt="MALBERT printing production"
+          className="absolute inset-0 h-full w-full rounded-4xl  object-  object-[85%_center] sm:object-[68%_center] md:object-[70%_center] lg:object-center"
+        />
 
-  <div className="absolute inset-0 rounded-4xl bg-gradient-to-r from-black/75 via-black/55 to-black/30" />
+        {/* <div className="absolute inset-0 rounded-4xl bg-gradient-to-r from-black/75 via-black/55 to-black/30" /> */}
 
-  {/* Content */}
-  <div className="relative z-10 mx-auto flex min-h-[500px] w-full max-w-[1260px] items-center px-4 sm:min-h-[500px] sm:px-6 md:min-h-[calc(100dvh-104px)] md:px-8 lg:min-h-[calc(100dvh-104px)] lg:px-6 min-[1441px]:min-h-[calc(100dvh-104px)]
-   min-[1800px]:max-w-[1360px] min-[1800px]:px-6">
-          <div className="w-full max-w-[480px] sm:max-w-[520px] md:max-w-[580px] lg:max-w-xl min-[1800px]:max-w-[980px]">
+        {/* Content */}
+        <div
+          className="relative z-10 mx-auto flex min-h-[500px] w-full max-w-[1260px] items-center px-4 sm:min-h-[500px] sm:px-6 md:min-h-[calc(100dvh-104px)] md:px-8 lg:min-h-[calc(100dvh-104px)] lg:px-6 min-[1441px]:min-h-[calc(100dvh-104px)]
+   min-[1800px]:max-w-[1360px] min-[1800px]:px-6"
+        >
+          <div className="w-full max-w-[600px] sm:max-w-[680px] md:max-w-[760px] lg:max-w-[850px] min-[1441px]:max-w-[950px] min-[1800px]:max-w-[1100px]">
             {/* Eyebrow */}
-            <motion.span
+            {/* <motion.span
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
@@ -67,10 +64,20 @@ const Hero = () => {
               className="mb-4 block text-[8px] font-semibold uppercase tracking-[0.2em] text-white/80 sm:mb-5 sm:text-[9px] sm:tracking-[0.23em] md:text-[10px] lg:text-[11px] lg:tracking-[0.25em] min-[1800px]:mb-6 min-[1800px]:text-[15px] min-[1800px]:tracking-[0.32em]"
             >
               {t("hero.eyebrow")}
-            </motion.span>
+            </motion.span> */}
 
             {/* Heading */}
-            <h1 className="max-w-[360px] text-3xl font-bold leading-[1.08] tracking-tight text-white sm:max-w-[450px] sm:text-4xl md:max-w-[520px] md:text-[44px] lg:max-w-xl lg:text-5xl min-[1441px]:text-6xl min-[1800px]:max-w-[980px] min-[1800px]:text-9xl">
+            <h1
+  className="
+    w-full
+    text-3xl font-bold leading-[1.08] tracking-tight text-white
+    sm:text-4xl
+    md:text-[44px]
+    lg:text-5xl
+    min-[1441px]:text-6xl
+    min-[1800px]:text-8xl
+  "
+>
               {/* CMYK */}
               <motion.span
                 initial={{
@@ -90,34 +97,56 @@ const Hero = () => {
                 }}
                 className="mr-2 inline-block origin-left text-secondary"
               >
-                CMYK
+                {/* CMYK */}
               </motion.span>
 
               {/* Main Title Reveal */}
-              <span className="inline-block overflow-hidden align-bottom">
-                <motion.span
-                  initial={{
-                    opacity: 0,
-                    y: "100%",
-                  }}
-                  animate={{
-                    opacity: 1,
-                    y: "0%",
-                  }}
-                  transition={{
-                    duration: 0.8,
-                    delay: 0.28,
-                    ease: [0.22, 1, 0.36, 1],
-                  }}
-                  className="inline-block"
-                >
-                  {title}
-                </motion.span>
+              <span className="inline-block -translate-y-50 translate-x-[20px] overflow-hidden align-bottom">
+                {/* Main Title Reveal */}
+<motion.span
+  initial="hidden"
+  animate="visible"
+  variants={{
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.12,
+        delayChildren: 0.25,
+      },
+    },
+  }}
+  className="inline-block"
+>
+  {title.split(" ").map((word, index) => (
+    <motion.span
+      key={`${word}-${index}`}
+      variants={{
+        hidden: {
+          opacity: 0,
+          y: 35,
+          filter: "blur(30px)",
+        },
+        visible: {
+          opacity: 1,
+          y: 0,
+          filter: "blur(0px)",
+          transition: {
+            duration: 0.65,
+            ease: [0.22, 1, 0.36, 1],
+          },
+        },
+      }}
+      className="mr-[0.25em] inline-block text-[#4b90f2]"
+    >
+      {word}
+    </motion.span>
+  ))}
+</motion.span>
               </span>
             </h1>
 
             {/* Description */}
-            <motion.p
+            {/* <motion.p
               initial={{
                 opacity: 0,
                 y: 20,
@@ -134,10 +163,10 @@ const Hero = () => {
               className="mt-4 max-w-[340px] text-xs leading-5 text-white/80 sm:mt-5 sm:max-w-[430px] sm:text-sm sm:leading-6 md:max-w-[500px] md:text-[15px] lg:text-base min-[1441px]:max-w-[600px] min-[1441px]:text-lg min-[1441px]:leading-7 min-[1800px]:mt-7 min-[1800px]:max-w-[850px] min-[1800px]:text-3xl min-[1800px]:leading-10"
             >
               {t("hero.description")}
-            </motion.p>
+            </motion.p> */}
 
             {/* Buttons */}
-            <motion.div
+            {/* <motion.div
               initial={{
                 opacity: 0,
                 y: 20,
@@ -153,7 +182,7 @@ const Hero = () => {
               }}
               className="mt-6 flex flex-col items-stretch gap-2 sm:mt-7 sm:flex-row sm:items-center sm:gap-3 min-[1800px]:mt-10 min-[1800px]:gap-5"
             >
-              {/* Products */}
+             
               <motion.div
                 initial={{ opacity: 0, scale: 0.94 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -180,7 +209,7 @@ const Hero = () => {
                 </Button>
               </motion.div>
 
-              {/* About */}
+              
               <motion.div
                 initial={{ opacity: 0, scale: 0.94 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -202,16 +231,16 @@ const Hero = () => {
                   {t("hero.aboutButton")}
                 </Button>
               </motion.div>
-            </motion.div>
+            </motion.div> */}
 
             {/* Features */}
-            <motion.div
+            {/* <motion.div
               initial="hidden"
               animate="visible"
               variants={featureContainer}
               className="mt-7 grid grid-cols-1 gap-4 border-t border-white/20 pt-5 sm:mt-9 sm:grid-cols-3 sm:gap-5 sm:pt-6 md:gap-7 lg:gap-8"
             >
-              {/* Quality */}
+              
               <motion.div
                 variants={featureItem}
                 className="flex items-center gap-2.5"
@@ -227,7 +256,7 @@ const Hero = () => {
                 </p>
               </motion.div>
 
-              {/* Delivery */}
+           
               <motion.div
                 variants={featureItem}
                 className="flex items-center gap-2.5"
@@ -243,7 +272,7 @@ const Hero = () => {
                 </p>
               </motion.div>
 
-              {/* Technology */}
+            
               <motion.div
                 variants={featureItem}
                 className="flex items-center gap-2.5"
@@ -258,7 +287,7 @@ const Hero = () => {
                   {t("hero.features.technology")}
                 </p>
               </motion.div>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </div>
