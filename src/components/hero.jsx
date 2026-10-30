@@ -42,10 +42,11 @@ const Hero = () => {
         <img
           src={Mbg}
           alt="MALBERT printing production"
-          className="absolute inset-0 h-full w-full rounded-4xl  object-  object-[85%_center] sm:object-[68%_center] md:object-[70%_center] lg:object-center"
+          className="absolute inset-0 h-full w-full rounded-4xl  object-cover  object-[85%_center] sm:object-[68%_center] 
+          md:object-[75%_center] lg:object-center"
         />
 
-        {/* <div className="absolute inset-0 rounded-4xl bg-gradient-to-r from-black/75 via-black/55 to-black/30" /> */}
+       
 
         {/* Content */}
         <div
@@ -124,7 +125,7 @@ const Hero = () => {
         hidden: {
           opacity: 0,
           y: 35,
-          filter: "blur(30px)",
+          filter: "blur(25px)",
         },
         visible: {
           opacity: 1,
