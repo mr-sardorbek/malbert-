@@ -46,7 +46,7 @@ const Hero = () => {
           alt="MALBERT printing production"
           className="
             absolute inset-0 h-full w-full rounded-4xl
-            object-cover object-[90%_center]
+            object-cover object-[70%_center]
             sm:object-[48%_center]
             md:object-[50%_center]
             
