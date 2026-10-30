@@ -1,3 +1,4 @@
+
 import { Mbg } from "@/assets";
 import { ArrowRight, ShieldCheck, Truck, Settings2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -38,22 +39,47 @@ const Hero = () => {
     <section id="home" className="pt-[80px] min-[1441px]:pt-[88px]">
       {/* Hero */}
       <div className="relative m-2 mb-4 min-h-[500px] overflow-hidden rounded-4xl sm:min-h-[500px] md:min-h-[calc(100dvh-104px)] lg:min-h-[calc(100dvh-104px)] min-[1441px]:min-h-[calc(100dvh-104px)]">
+
         {/* Background Image */}
         <img
           src={Mbg}
           alt="MALBERT printing production"
-          className="absolute inset-0 h-full w-full rounded-4xl  object-cover  object-[85%_center] sm:object-[68%_center] 
-          md:object-[75%_center] lg:object-center"
+          className="
+            absolute inset-0 h-full w-full rounded-4xl
+            object-cover object-[85%_center]
+            sm:object-[68%_center]
+            md:object-[70%_center]
+            lg:object-center
+            min-[1441px]:max-[1799px]:object-fill
+            min-[1800px]:object-cover
+          "
         />
 
-       
+        {/* <div className="absolute inset-0 rounded-4xl bg-gradient-to-r from-black/75 via-black/55 to-black/30" /> */}
 
         {/* Content */}
         <div
-          className="relative z-10 mx-auto flex min-h-[500px] w-full max-w-[1260px] items-center px-4 sm:min-h-[500px] sm:px-6 md:min-h-[calc(100dvh-104px)] md:px-8 lg:min-h-[calc(100dvh-104px)] lg:px-6 min-[1441px]:min-h-[calc(100dvh-104px)]
-   min-[1800px]:max-w-[1360px] min-[1800px]:px-6"
+          className="
+            relative z-10 mx-auto flex min-h-[500px] w-full max-w-[1260px]
+            items-center px-4
+            sm:min-h-[500px] sm:px-6
+            md:min-h-[calc(100dvh-104px)] md:px-8
+            lg:min-h-[calc(100dvh-104px)] lg:px-6
+            min-[1441px]:min-h-[calc(100dvh-104px)]
+            min-[1800px]:max-w-[1360px] min-[1800px]:px-6
+            max-md:items-start max-md:pt-14
+          "
         >
-          <div className="w-full max-w-[600px] sm:max-w-[680px] md:max-w-[760px] lg:max-w-[850px] min-[1441px]:max-w-[950px] min-[1800px]:max-w-[1100px]">
+          <div
+            className="
+              w-full max-w-[600px]
+              sm:max-w-[680px]
+              md:max-w-[760px]
+              lg:max-w-[850px]
+              min-[1441px]:max-w-[950px]
+              min-[1800px]:max-w-[1100px]
+            "
+          >
             {/* Eyebrow */}
             {/* <motion.span
               initial={{ opacity: 0, y: 18 }}
@@ -69,16 +95,16 @@ const Hero = () => {
 
             {/* Heading */}
             <h1
-  className="
-    w-full
-    text-3xl font-bold leading-[1.08] tracking-tight text-white
-    sm:text-4xl
-    md:text-[44px]
-    lg:text-5xl
-    min-[1441px]:text-6xl
-    min-[1800px]:text-8xl
-  "
->
+              className="
+                w-full
+                text-2xl font-bold leading-[1.08] tracking-tight text-white
+                sm:text-3xl
+                md:text-4xl
+                lg:text-5xl
+                min-[1441px]:text-6xl
+                min-[1800px]:text-8xl
+              "
+            >
               {/* CMYK */}
               <motion.span
                 initial={{
@@ -102,47 +128,52 @@ const Hero = () => {
               </motion.span>
 
               {/* Main Title Reveal */}
-              <span className="inline-block -translate-y-50 translate-x-[20px] overflow-hidden align-bottom">
-                {/* Main Title Reveal */}
-<motion.span
-  initial="hidden"
-  animate="visible"
-  variants={{
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.12,
-        delayChildren: 0.25,
-      },
-    },
-  }}
-  className="inline-block"
->
-  {title.split(" ").map((word, index) => (
-    <motion.span
-      key={`${word}-${index}`}
-      variants={{
-        hidden: {
-          opacity: 0,
-          y: 35,
-          filter: "blur(25px)",
-        },
-        visible: {
-          opacity: 1,
-          y: 0,
-          filter: "blur(0px)",
-          transition: {
-            duration: 0.65,
-            ease: [0.22, 1, 0.36, 1],
-          },
-        },
-      }}
-      className="mr-[0.25em] inline-block text-[#4b90f2]"
-    >
-      {word}
-    </motion.span>
-  ))}
-</motion.span>
+              <span
+                className="
+                  inline-block -translate-y-50 translate-x-[20px]
+                  overflow-hidden align-bottom
+                  max-md:translate-x-0 max-md:translate-y-0
+                "
+              >
+                <motion.span
+                  initial="hidden"
+                  animate="visible"
+                  variants={{
+                    hidden: {},
+                    visible: {
+                      transition: {
+                        staggerChildren: 0.12,
+                        delayChildren: 0.25,
+                      },
+                    },
+                  }}
+                  className="inline-block"
+                >
+                  {title.split(" ").map((word, index) => (
+                    <motion.span
+                      key={`${word}-${index}`}
+                      variants={{
+                        hidden: {
+                          opacity: 0,
+                          y: 35,
+                          filter: "blur(25px)",
+                        },
+                        visible: {
+                          opacity: 1,
+                          y: 0,
+                          filter: "blur(0px)",
+                          transition: {
+                            duration: 0.65,
+                            ease: [0.22, 1, 0.36, 1],
+                          },
+                        },
+                      }}
+                      className="mr-[0.25em] inline-block text-[#4b90f2]"
+                    >
+                      {word}
+                    </motion.span>
+                  ))}
+                </motion.span>
               </span>
             </h1>
 
@@ -183,7 +214,6 @@ const Hero = () => {
               }}
               className="mt-6 flex flex-col items-stretch gap-2 sm:mt-7 sm:flex-row sm:items-center sm:gap-3 min-[1800px]:mt-10 min-[1800px]:gap-5"
             >
-             
               <motion.div
                 initial={{ opacity: 0, scale: 0.94 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -202,7 +232,6 @@ const Hero = () => {
                   className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-secondary px-5 py-2.5 text-xs font-semibold text-gray-900 transition-all duration-300 hover:bg-secondary/90 hover:shadow-md sm:w-auto sm:px-6 sm:py-3 sm:text-sm min-[1441px]:text-lg min-[1800px]:gap-3 min-[1800px]:px-11 min-[1800px]:py-5 min-[1800px]:text-3xl"
                 >
                   {t("hero.productsButton")}
-
                   <ArrowRight
                     size={15}
                     className="arrow-move sm:h-[17px] sm:w-[17px] min-[1800px]:h-7 min-[1800px]:w-7"
@@ -210,7 +239,6 @@ const Hero = () => {
                 </Button>
               </motion.div>
 
-              
               <motion.div
                 initial={{ opacity: 0, scale: 0.94 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -241,7 +269,6 @@ const Hero = () => {
               variants={featureContainer}
               className="mt-7 grid grid-cols-1 gap-4 border-t border-white/20 pt-5 sm:mt-9 sm:grid-cols-3 sm:gap-5 sm:pt-6 md:gap-7 lg:gap-8"
             >
-              
               <motion.div
                 variants={featureItem}
                 className="flex items-center gap-2.5"
@@ -251,13 +278,11 @@ const Hero = () => {
                   strokeWidth={1.7}
                   className="shrink-0 text-white sm:h-5 sm:w-5"
                 />
-
                 <p className="text-[10px] font-medium text-white sm:text-xs">
                   {t("hero.features.quality")}
                 </p>
               </motion.div>
 
-           
               <motion.div
                 variants={featureItem}
                 className="flex items-center gap-2.5"
@@ -267,13 +292,11 @@ const Hero = () => {
                   strokeWidth={1.7}
                   className="shrink-0 text-white sm:h-5 sm:w-5"
                 />
-
                 <p className="text-[10px] font-medium text-white sm:text-xs">
                   {t("hero.features.delivery")}
                 </p>
               </motion.div>
 
-            
               <motion.div
                 variants={featureItem}
                 className="flex items-center gap-2.5"
@@ -283,7 +306,6 @@ const Hero = () => {
                   strokeWidth={1.7}
                   className="shrink-0 text-white sm:h-5 sm:w-5"
                 />
-
                 <p className="text-[10px] font-medium text-white sm:text-xs">
                   {t("hero.features.technology")}
                 </p>
