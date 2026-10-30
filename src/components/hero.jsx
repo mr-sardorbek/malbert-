@@ -50,8 +50,8 @@ const Hero = () => {
             sm:object-[68%_center]
             md:object-[70%_center]
             lg:object-center
-            min-[1441px]:max-[1799px]:object-fill
-            min-[1800px]:object-[90%_center]
+            min-[1441px]:max-[1799px]:object-contain
+            min-[1800px]:object-contain
           "
         />
 
