@@ -51,11 +51,11 @@ const Hero = () => {
             md:object-[70%_center]
             lg:object-center
             min-[1441px]:max-[1799px]:object-fill
-            min-[1800px]:object-cover
+            min-[1800px]:object-contain
           "
         />
 
-        {/* <div className="absolute inset-0 rounded-4xl bg-gradient-to-r from-black/75 via-black/55 to-black/30" /> */}
+     
 
         {/* Content */}
         <div
