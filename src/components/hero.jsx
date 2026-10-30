@@ -51,7 +51,7 @@ const Hero = () => {
             md:object-[70%_center]
             lg:object-center
             min-[1441px]:max-[1799px]:object-center
-            min-[1800px]:object-center
+            
           "
         />
 
