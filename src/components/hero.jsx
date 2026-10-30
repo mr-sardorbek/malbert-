@@ -47,8 +47,8 @@ const Hero = () => {
           className="
             absolute inset-0 h-full w-full rounded-4xl
             object-cover object-[85%_center]
-            sm:object-[48%_center]
-            md:object-[58%_center]
+            sm:object-[68%_center]
+            md:object-[70%_center]
             
             
           "
