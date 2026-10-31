@@ -81,15 +81,72 @@ const Products = () => {
                 {/* Button */}
                 <div className="mt-auto pt-4 min-[1800px]:pt-5">
                   <Button
+                    type="button"
                     variant="ghost"
                     onClick={() => setSelectedProduct(product)}
-                    className="h-9 cursor-pointer rounded-full bg-primary/5 px-4 text-sm font-semibold text-primary transition-all duration-300 hover:bg-primary hover:text-white min-[1800px]:h-11 min-[1800px]:px-5 min-[1800px]:text-base"
+                    className="
+    group/button relative flex h-9 min-w-[145px]
+    cursor-pointer items-center justify-center
+    gap-2 overflow-hidden rounded-full
+    border border-primary/40
+    bg-transparent px-4 text-sm font-semibold text-primary
+    transition-all duration-[600ms]
+    ease-[cubic-bezier(0.23,1,0.32,1)]
+    hover:border-transparent hover:bg-transparent hover:text-white
+    active:scale-[0.95]
+    min-[1800px]:h-11 min-[1800px]:gap-3
+    min-[1800px]:px-5 min-[1800px]:text-base
+  "
                   >
-                    {t("products.details")}
-
+                    {/* Left Arrow */}
                     <ArrowRight
                       size={15}
-                      className="ml-1 transition-transform duration-300 group-hover:translate-x-1 min-[1800px]:h-[18px] min-[1800px]:w-[18px]"
+                      className="
+      absolute left-[-25%] z-[9] stroke-primary
+      transition-all duration-[800ms]
+      ease-[cubic-bezier(0.34,1.56,0.64,1)]
+      group-hover/button:left-4
+      group-hover/button:stroke-white
+      min-[1800px]:h-[18px] min-[1800px]:w-[18px]
+    "
+                    />
+
+                    {/* Text */}
+                    <span
+                      className="
+      relative z-[1] -translate-x-2 whitespace-nowrap
+      transition-transform duration-[800ms] ease-out
+      group-hover/button:translate-x-2
+    "
+                    >
+                      {t("products.details")}
+                    </span>
+
+                    {/* Animated Circle */}
+                    <span
+                      className="
+      absolute left-1/2 top-1/2
+      h-4 w-4 -translate-x-1/2 -translate-y-1/2
+      rounded-full bg-primary opacity-0
+      transition-all duration-[800ms]
+      ease-[cubic-bezier(0.19,1,0.22,1)]
+      group-hover/button:h-[220px]
+      group-hover/button:w-[220px]
+      group-hover/button:opacity-100
+    "
+                    />
+
+                    {/* Right Arrow */}
+                    <ArrowRight
+                      size={15}
+                      className="
+      absolute right-4 z-[9] stroke-primary
+      transition-all duration-[800ms]
+      ease-[cubic-bezier(0.34,1.56,0.64,1)]
+      group-hover/button:right-[-25%]
+      group-hover/button:stroke-white
+      min-[1800px]:h-[18px] min-[1800px]:w-[18px]
+    "
                     />
                   </Button>
                 </div>
@@ -123,7 +180,7 @@ const Products = () => {
                   <img
                     src={selectedProduct.image}
                     alt={t(selectedProduct.titleKey)}
-                    className="max-h-72 w-full object-contain"
+                    className="max-h-72 w-full object-cover"
                   />
                 </div>
 
@@ -137,6 +194,8 @@ const Products = () => {
                   </p>
 
                   <Button
+                    type="button"
+                    variant="ghost"
                     onClick={() => {
                       setSelectedProduct(null);
 
@@ -144,11 +203,70 @@ const Products = () => {
                         behavior: "smooth",
                       });
                     }}
-                    className="mt-6 cursor-pointer bg-primary transition-all duration-300 hover:bg-primary-hover hover:shadow-md"
+                    className="
+    group/button relative mt-6 flex h-9 min-w-[145px]
+    cursor-pointer items-center justify-center
+    gap-2 overflow-hidden rounded-full
+    border border-primary/40
+    bg-transparent px-4 text-sm font-semibold text-primary
+    transition-all duration-[600ms]
+    ease-[cubic-bezier(0.23,1,0.32,1)]
+    hover:border-transparent hover:bg-transparent hover:text-white
+    active:scale-[0.95]
+    min-[1800px]:h-11 min-[1800px]:gap-3
+    min-[1800px]:px-5 min-[1800px]:text-base
+  "
                   >
-                    {t("products.contact")}
+                    {/* Left Arrow */}
+                    <ArrowRight
+                      size={15}
+                      className="
+      absolute left-[-25%] z-[9] stroke-primary
+      transition-all duration-[800ms]
+      ease-[cubic-bezier(0.34,1.56,0.64,1)]
+      group-hover/button:left-4
+      group-hover/button:stroke-white
+      min-[1800px]:h-[18px] min-[1800px]:w-[18px]
+    "
+                    />
 
-                    <ArrowRight size={16} className="ml-1" />
+                    {/* Text */}
+                    <span
+                      className="
+      relative z-[1] -translate-x-2 whitespace-nowrap
+      transition-transform duration-[800ms] ease-out
+      group-hover/button:translate-x-2
+    "
+                    >
+                      {t("products.contact")}
+                    </span>
+
+                    {/* Animated Circle */}
+                    <span
+                      className="
+      absolute left-1/2 top-1/2
+      h-4 w-4 -translate-x-1/2 -translate-y-1/2
+      rounded-full bg-primary opacity-0
+      transition-all duration-[800ms]
+      ease-[cubic-bezier(0.19,1,0.22,1)]
+      group-hover/button:h-[220px]
+      group-hover/button:w-[220px]
+      group-hover/button:opacity-100
+    "
+                    />
+
+                    {/* Right Arrow */}
+                    <ArrowRight
+                      size={15}
+                      className="
+      absolute right-4 z-[9] stroke-primary
+      transition-all duration-[800ms]
+      ease-[cubic-bezier(0.34,1.56,0.64,1)]
+      group-hover/button:right-[-25%]
+      group-hover/button:stroke-white
+      min-[1800px]:h-[18px] min-[1800px]:w-[18px]
+    "
+                    />
                   </Button>
                 </div>
               </div>
