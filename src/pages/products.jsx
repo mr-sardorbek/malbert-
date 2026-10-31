@@ -58,7 +58,7 @@ const Products = () => {
               className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_18px_40px_rgba(21,87,166,0.16)]"
             >
               {/* Image */}
-              <div className="relative h-52 shrink-0 overflow-hidden bg-surface sm:h-56 min-[1800px]:h-72">
+              <div className="relative h-52 shrink-0 overflow-hidden bg-[#dee2fc] sm:h-56 min-[1800px]:h-72">
                 <img
                   src={product.image}
                   alt={t(product.titleKey)}

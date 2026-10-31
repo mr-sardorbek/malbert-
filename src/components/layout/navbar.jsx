@@ -5,6 +5,7 @@ import { Button } from "../ui/button";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Phone, Menu, X } from "lucide-react";
+import { motion } from "motion/react";
 
 const Navbar = () => {
   const [language, setLanguage] = useState(() => {
@@ -16,6 +17,7 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+  const [hoveredNav, setHoveredNav] = useState(null);
 
   const { t, i18n } = useTranslation();
   const location = useLocation();
@@ -163,43 +165,80 @@ const Navbar = () => {
           />
         </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden items-center mt-2 gap-6 lg:flex xl:gap-11 min-[1441px]:gap-17">
-          {navLinks.map((link) => {
-            const sectionId = getSectionId(link);
+{/* Desktop Navigation */}
+<nav
+  onMouseLeave={() => setHoveredNav(null)}
+  className="
+    hidden lg:flex mt-2 items-center gap-1
+    rounded-full border 
+    bg-gray-100 p-1.5
+    shadow-[0_8px_30px_rgba(50,80,120,0.06),inset_0_1px_2px_rgba(255,255,255,0.15)]
+    backdrop-blur-2xl
+    xl:gap-1.5
+    min-[1441px]:gap-2
+  "
+>
+  {navLinks.map((link) => {
+    const sectionId = getSectionId(link);
 
-            return (
-              <NavLink
-                key={link.path}
-                to={link.path}
-                end={link.path === "/"}
-                onClick={(event) => handleSectionClick(event, sectionId)}
-                className={({ isActive }) => {
-                  const isSectionActive =
-                    location.pathname === "/"
-                      ? activeSection === sectionId
-                      : isActive;
+    const isSectionActive =
+      location.pathname === "/"
+        ? activeSection === sectionId
+        : location.pathname === link.path;
 
-                  return `group relative px-1 py-2 text-[12px] font-medium transition-colors duration-200 xl:text-[15px] min-[1441px]:text-[19px] ${
-                    isSectionActive
-                      ? "text-primary"
-                      : "text-foreground hover:text-primary"
-                  }`;
-                }}
-              >
-                {t(`nav.${link.key}`)}
+    const isHighlighted = hoveredNav
+      ? hoveredNav === link.path
+      : isSectionActive;
 
-                <span
-                  className={`absolute bottom-1 left-1/2 h-[2px] -translate-x-1/2 bg-secondary transition-all duration-300 ${
-                    location.pathname === "/" && activeSection === sectionId
-                      ? "w-full"
-                      : "w-0 group-hover:w-full"
-                  }`}
-                />
-              </NavLink>
-            );
-          })}
-        </nav>
+    return (
+      <NavLink
+        key={link.path}
+        to={link.path}
+        end={link.path === "/"}
+        onMouseEnter={() => setHoveredNav(link.path)}
+        onClick={(event) => handleSectionClick(event, sectionId)}
+        className={`
+          relative isolate flex items-center justify-center
+          rounded-full px-4 py-2.5
+          text-[12px] font-medium
+          transition-colors duration-300
+          xl:px-5 xl:text-[15px]
+          min-[1441px]:px-6 min-[1441px]:py-3
+          min-[1441px]:text-[17px]
+          ${
+            isHighlighted
+              ? "text-primary"
+              : "text-foreground hover:text-primary"
+          }
+        `}
+      >
+        {isHighlighted && (
+          <motion.span
+            layoutId="malbert-liquid-indicator"
+            className="
+              absolute inset-0 -z-10 rounded-full
+              border 
+              
+              shadow-[0_3px_12px_rgba(60,90,130,0.08),inset_0_1px_2px_rgba(255,255,255,0.25)]
+              backdrop-blur-3xl
+            "
+            transition={{
+  type: "spring",
+  stiffness: 180,
+  damping: 28,
+  mass: 1.2,
+}}
+          />
+        )}
+
+        <span className="relative z-10 whitespace-nowrap">
+          {t(`nav.${link.key}`)}
+        </span>
+      </NavLink>
+    );
+  })}
+</nav>
+
 
         {/* Actions */}
         <div className="flex items-center gap-2 sm:gap-3 min-[1441px]:gap-4">
@@ -239,7 +278,8 @@ const Navbar = () => {
           {/* Phone Number */}
           <a
             href="tel:+998781134040"
-            className="inline-flex h-10 shrink-0 items-center gap-2.5 rounded-full bg-surface border px-4 text-sm font-medium text-foreground transition-colors hover:bg-border sm:h-11 sm:gap-3 sm:px-5 sm:text-base lg:px-6 min-[1441px]:h-12 min-[1441px]:text-lg"
+            className="inline-flex h-10 shrink-0 items-center gap-2.5 rounded-full bg-surface border px-4 text-sm font-medium 
+            text-foreground transition-colors hover:bg-border sm:h-11 sm:gap-3 sm:px-5 sm:text-base lg:px-6 min-[1441px]:h-12 min-[1441px]:text-lg"
             aria-label="Call +998 78 113 40 40"
           >
             <Phone size={20} className="shrink-0 sm:h-[21px] sm:w-[21px]" />
