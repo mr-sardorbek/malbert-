@@ -100,8 +100,8 @@ const Hero = () => {
                 sm:text-3xl
                 md:text-4xl
                 lg:text-5xl
-                min-[1441px]:text-7xl
-                min-[1800px]:text-[240px]
+                 min-[1441px]:text-[100px]
+    min-[1800px]:text-[150px]
               "
             >
               {/* CMYK */}
