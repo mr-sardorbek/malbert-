@@ -44,7 +44,7 @@ const Hero = () => {
           src={Mbg}
           alt="MALBERT printing production"
           className="
-            absolute inset-0  h-auto rounded-4xl w-auto
+            absolute inset-0  h-full rounded-4xl w-full
             object-cover object-[85%_center]
             sm:object-[68%_center]
             md:object-[70%_center]
