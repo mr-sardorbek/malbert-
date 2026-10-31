@@ -100,8 +100,8 @@ const Hero = () => {
                 sm:text-3xl
                 md:text-4xl
                 lg:text-5xl
-                min-[1441px]:text-6xl
-                min-[1800px]:text-8xl
+                min-[1441px]:text-7xl
+                min-[1800px]:text-9xl
               "
             >
               {/* CMYK */}
@@ -129,7 +129,8 @@ const Hero = () => {
               {/* Main Title Reveal */}
               <span
                 className="
-                  inline-block -translate-y-50 translate-x-[20px]
+                  inline-block -translate-y-50 translate-x-[20px] min-[1441px]:translate-y-[-20px]
+min-[1800px]:translate-y-[-35px]
                   overflow-hidden align-bottom
                   max-md:translate-x-0 max-md:translate-y-0
                 "
