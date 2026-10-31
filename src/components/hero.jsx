@@ -129,7 +129,7 @@ const Hero = () => {
               {/* Main Title Reveal */}
               <span
                 className="
-                  inline-block -translate-y-50 translate-x-[20px] min-[1441px]:translate-y-[-20px]
+                  inline-block -translate-y-50 translate-x-[20px] 
 min-[1800px]:translate-y-[-35px]
                   overflow-hidden align-bottom
                   max-md:translate-x-0 max-md:translate-y-0
