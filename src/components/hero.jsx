@@ -101,7 +101,7 @@ const Hero = () => {
                 md:text-4xl
                 lg:text-5xl
                 min-[1441px]:text-7xl
-                min-[1800px]:text-[140px]
+                min-[1800px]:text-[240px]
               "
             >
               {/* CMYK */}
@@ -130,7 +130,7 @@ const Hero = () => {
               <span
                 className="
                   inline-block -translate-y-50 translate-x-[20px] 
-min-[1800px]:-translate-y-90
+min-[1800px]:-translate-y-80
                   overflow-hidden align-bottom
                   max-md:translate-x-0 max-md:translate-y-0
                 "
