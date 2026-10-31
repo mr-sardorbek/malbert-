@@ -151,27 +151,32 @@ min-[1800px]:-translate-y-80
                 >
                   {title.split(" ").map((word, index) => (
                     <motion.span
-                      key={`${word}-${index}`}
-                      variants={{
-                        hidden: {
-                          opacity: 0,
-                          y: 35,
-                          filter: "blur(25px)",
-                        },
-                        visible: {
-                          opacity: 1,
-                          y: 0,
-                          filter: "blur(0px)",
-                          transition: {
-                            duration: 0.65,
-                            ease: [0.22, 1, 0.36, 1],
-                          },
-                        },
-                      }}
-                      className="mr-[0.25em] inline-block text-[#4b90f2]"
-                    >
-                      {word}
-                    </motion.span>
+  key={`${word}-${index}`}
+  variants={{
+    hidden: {
+      opacity: 0,
+      y: 35,
+      filter: "blur(25px)",
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      filter: "blur(0px)",
+      transition: {
+        duration: 0.65,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  }}
+  className="
+    mr-[0.25em] inline-block text-[#4b90f2]
+    text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+    min-[1441px]:text-[100px]
+    min-[1800px]:text-[150px]
+  "
+>
+  {word}
+</motion.span>
                   ))}
                 </motion.span>
               </span>
