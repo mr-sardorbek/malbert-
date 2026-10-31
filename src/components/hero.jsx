@@ -45,7 +45,7 @@ const Hero = () => {
           src={Mbg}
           alt="MALBERT printing production"
           className="
-            absolute inset-0 h-full w-full rounded-4xl
+            absolute inset-0  h-auto rounded-4xl w-auto
             object-cover object-[85%_center]
             sm:object-[68%_center]
             md:object-[70%_center]
@@ -97,12 +97,12 @@ const Hero = () => {
             <h1
               className="
                 w-full
-                text-2xl font-bold leading-[1.08] tracking-tight text-white
-                sm:text-3xl
-                md:text-4xl
-                lg:text-5xl
-                min-[1441px]:text-6xl
-                min-[1800px]:text-8xl
+                text-[15px] font-bold leading-[1.08] tracking-tight text-white
+                sm:text-[18px]
+                md:text-2xl
+               lg:text-5xl
+                min-[1441px]:text-7xl
+                min-[1800px]:text-9xl
               "
             >
               {/* CMYK */}
@@ -130,9 +130,9 @@ const Hero = () => {
               {/* Main Title Reveal */}
               <span
                 className="
-                  inline-block -translate-y-50 translate-x-[20px]
-                  overflow-hidden align-bottom
-                  max-md:translate-x-0 max-md:translate-y-0
+                 inline-block -translate-y-50 translate-x-[20px]
+max-md:-translate-y-2 max-md:translate-x-0
+min-[1800px]:-translate-y-35
                 "
               >
                 <motion.span

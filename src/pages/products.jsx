@@ -58,11 +58,11 @@ const Products = () => {
               className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_18px_40px_rgba(21,87,166,0.16)]"
             >
               {/* Image */}
-              <div className="relative h-52 shrink-0 overflow-hidden bg-[#dee2fc] sm:h-56 min-[1800px]:h-72">
+              <div className="relative h-52 shrink-0 overflow-hidden  sm:h-56 min-[1800px]:h-72">
                 <img
                   src={product.image}
                   alt={t(product.titleKey)}
-                  className="h-full w-full object-contain p-3 transition-transform duration-500 group-hover:scale-110 min-[1800px]:p-5"
+                  className="h-full w-full object-cover  transition-transform duration-500 group-hover:scale-110 min-[1800px]:p-5"
                 />
               </div>
 
@@ -119,7 +119,7 @@ const Products = () => {
               </Button>
 
               <div className="grid md:grid-cols-2">
-                <div className="flex min-h-64 items-center justify-center bg-surface p-6">
+                <div className="flex min-h-64 items-center justify-center  p-6">
                   <img
                     src={selectedProduct.image}
                     alt={t(selectedProduct.titleKey)}

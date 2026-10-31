@@ -165,39 +165,39 @@ const Navbar = () => {
           />
         </div>
 
-{/* Desktop Navigation */}
-<nav
-  onMouseLeave={() => setHoveredNav(null)}
-  className="
+        {/* Desktop Navigation */}
+        <nav
+          onMouseLeave={() => setHoveredNav(null)}
+          className="
     hidden lg:flex mt-2 items-center gap-1
     rounded-full border 
-    bg-gray-100 p-1.5
+    bg-surface p-1.5
     shadow-[0_8px_30px_rgba(50,80,120,0.06),inset_0_1px_2px_rgba(255,255,255,0.15)]
     backdrop-blur-2xl
     xl:gap-1.5
     min-[1441px]:gap-2
   "
->
-  {navLinks.map((link) => {
-    const sectionId = getSectionId(link);
+        >
+          {navLinks.map((link) => {
+            const sectionId = getSectionId(link);
 
-    const isSectionActive =
-      location.pathname === "/"
-        ? activeSection === sectionId
-        : location.pathname === link.path;
+            const isSectionActive =
+              location.pathname === "/"
+                ? activeSection === sectionId
+                : location.pathname === link.path;
 
-    const isHighlighted = hoveredNav
-      ? hoveredNav === link.path
-      : isSectionActive;
+            const isHighlighted = hoveredNav
+              ? hoveredNav === link.path
+              : isSectionActive;
 
-    return (
-      <NavLink
-        key={link.path}
-        to={link.path}
-        end={link.path === "/"}
-        onMouseEnter={() => setHoveredNav(link.path)}
-        onClick={(event) => handleSectionClick(event, sectionId)}
-        className={`
+            return (
+              <NavLink
+                key={link.path}
+                to={link.path}
+                end={link.path === "/"}
+                onMouseEnter={() => setHoveredNav(link.path)}
+                onClick={(event) => handleSectionClick(event, sectionId)}
+                className={`
           relative isolate flex items-center justify-center
           rounded-full px-4 py-2.5
           text-[12px] font-medium
@@ -211,34 +211,33 @@ const Navbar = () => {
               : "text-foreground hover:text-primary"
           }
         `}
-      >
-        {isHighlighted && (
-          <motion.span
-            layoutId="malbert-liquid-indicator"
-            className="
+              >
+                {isHighlighted && (
+                  <motion.span
+                    layoutId="malbert-liquid-indicator"
+                    className="
               absolute inset-0 -z-10 rounded-full
               border 
               
               shadow-[0_3px_12px_rgba(60,90,130,0.08),inset_0_1px_2px_rgba(255,255,255,0.25)]
               backdrop-blur-3xl
             "
-            transition={{
-  type: "spring",
-  stiffness: 180,
-  damping: 28,
-  mass: 1.2,
-}}
-          />
-        )}
+                    transition={{
+                      type: "spring",
+                      stiffness: 180,
+                      damping: 28,
+                      mass: 1.2,
+                    }}
+                  />
+                )}
 
-        <span className="relative z-10 whitespace-nowrap">
-          {t(`nav.${link.key}`)}
-        </span>
-      </NavLink>
-    );
-  })}
-</nav>
-
+                <span className="relative z-10 whitespace-nowrap">
+                  {t(`nav.${link.key}`)}
+                </span>
+              </NavLink>
+            );
+          })}
+        </nav>
 
         {/* Actions */}
         <div className="flex items-center gap-2 sm:gap-3 min-[1441px]:gap-4">
