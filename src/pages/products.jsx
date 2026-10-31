@@ -62,7 +62,7 @@ const Products = () => {
                 <img
                   src={product.image}
                   alt={t(product.titleKey)}
-                  className="h-full w-full object-cover  transition-transform duration-500 group-hover:scale-110 min-[1800px]:p-5"
+                  className="h-full w-full object-cover  transition-transform duration-500 group-hover:scale-110 "
                 />
               </div>
 
@@ -119,7 +119,7 @@ const Products = () => {
               </Button>
 
               <div className="grid md:grid-cols-2">
-                <div className="flex min-h-64 items-center justify-center  p-6">
+                <div className="flex min-h-64 items-center justify-center bg-surface p-6">
                   <img
                     src={selectedProduct.image}
                     alt={t(selectedProduct.titleKey)}
