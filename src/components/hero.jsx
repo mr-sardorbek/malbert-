@@ -1,4 +1,3 @@
-
 import { Mbg } from "@/assets";
 import { ArrowRight, ShieldCheck, Truck, Settings2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -97,12 +96,12 @@ const Hero = () => {
             <h1
               className="
                 w-full
-                text-[15px] font-bold leading-[1.08] tracking-tight text-white
-                sm:text-[18px]
-                md:text-2xl
-               lg:text-5xl
-                min-[1441px]:text-7xl
-                min-[1800px]:text-9xl
+                text-2xl font-bold leading-[1.08] tracking-tight text-white
+                sm:text-3xl
+                md:text-4xl
+                lg:text-5xl
+                min-[1441px]:text-6xl
+                min-[1800px]:text-8xl
               "
             >
               {/* CMYK */}
@@ -130,9 +129,9 @@ const Hero = () => {
               {/* Main Title Reveal */}
               <span
                 className="
-                 inline-block -translate-y-50 translate-x-[20px]
-max-md:-translate-y-2 max-md:translate-x-0
-min-[1800px]:-translate-y-35
+                  inline-block -translate-y-50 translate-x-[20px]
+                  overflow-hidden align-bottom
+                  max-md:translate-x-0 max-md:translate-y-0
                 "
               >
                 <motion.span
