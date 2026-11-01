@@ -1,4 +1,5 @@
-import { Mbg } from "@/assets";
+import { HeroMobile, Mbg } from "@/assets";
+
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Button } from "./ui/button";
@@ -16,18 +17,24 @@ const Hero = () => {
       className="pt-[80px] min-[1441px]:pt-[88px]"
     >
       <div className="relative m-2 mb-4 overflow-hidden rounded-3xl sm:rounded-4xl">
-        {/* Background image — o'zgarmagan */}
-        <img
-          src={Mbg}
-          alt="MALBERT printing production"
-          className="
-            absolute inset-0 h-full w-full
-            object-cover object-[85%_center]
-            sm:object-[68%_center]
-            md:object-[70%_center]
-            lg:object-center
-          "
-        />
+        {/* Mobile: yangi rasm. Tablet va desktop: mavjud Mbg */}
+        <picture>
+          <source
+            media="(max-width: 767px)"
+            srcSet={HeroMobile}
+          />
+
+          <img
+            src={Mbg}
+            alt="MALBERT printing production"
+            className="
+              absolute inset-0 h-full w-full
+              object-cover object-center
+              md:object-[70%_center]
+              lg:object-center
+            "
+          />
+        </picture>
 
         {/* Content */}
         <div
@@ -53,7 +60,7 @@ const Hero = () => {
               min-[1800px]:max-w-[1100px]
             "
           >
-            {/* Main title — o'zgarmagan */}
+            {/* Main title */}
             <h1
               className="
                 w-full
@@ -125,12 +132,12 @@ const Hero = () => {
               }}
               className="
                 mt-12 w-full min-w-0 max-w-[360px]
-                rounded-2xl border border-white/80
-                bg-white/90 p-4 backdrop-blur-sm
+                rounded-2xl border border-blue/30
+                bg-white/30 p-4 backdrop-blur-sm
                 sm:mt-14 sm:max-w-[420px] sm:p-5
-                lg:mt-16 lg:max-w-[480px]
+                lg:mt-26 lg:max-w-[480px]
                 lg:rounded-[20px] lg:p-6
-                min-[1800px]:mt-20 min-[1800px]:max-w-[560px]
+                min-[1800px]:mt-30 min-[1800px]:max-w-[560px]
               "
             >
               {/* Description */}
