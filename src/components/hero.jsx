@@ -1,4 +1,4 @@
-import { HeroMobile, Mbg } from "@/assets";
+import { HeroMobile,  HeroTablet,  Mbg } from "@/assets";
 
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -17,11 +17,16 @@ const Hero = () => {
       className="pt-[80px] min-[1441px]:pt-[88px]"
     >
       <div className="relative m-2 mb-4 overflow-hidden rounded-3xl sm:rounded-4xl">
-        {/* Mobile: yangi rasm. Tablet va desktop: mavjud Mbg */}
+        {/* Mobile, tablet va desktop uchun alohida rasmlar */}
         <picture>
           <source
             media="(max-width: 767px)"
             srcSet={HeroMobile}
+          />
+
+          <source
+            media="(min-width: 768px) and (max-width: 1023px)"
+            srcSet={HeroTablet}
           />
 
           <img
@@ -30,8 +35,6 @@ const Hero = () => {
             className="
               absolute inset-0 h-full w-full
               object-cover object-center
-              md:object-[70%_center]
-              lg:object-center
             "
           />
         </picture>
@@ -131,7 +134,7 @@ const Hero = () => {
                 ease: "easeOut",
               }}
               className="
-                mt-12 w-full min-w-0 max-w-[360px]
+                mt-60 w-full min-w-0 max-w-[360px]
                 rounded-2xl border border-blue/30
                 bg-white/30 p-4 backdrop-blur-sm
                 sm:mt-14 sm:max-w-[420px] sm:p-5
