@@ -44,7 +44,7 @@ const Hero = () => {
           className="
             relative z-10 mx-auto
             min-h-[500px] w-full max-w-[1260px]
-            px-5 py-10
+            px-5 py-12
             sm:min-h-[560px] sm:px-6 sm:py-12
             md:min-h-[calc(100dvh-104px)] md:px-8 md:py-14
             lg:px-6 lg:py-14
@@ -67,6 +67,7 @@ const Hero = () => {
             <h1
               className="
                 w-full
+                max-md:translate-y-16
                 text-2xl font-bold leading-[1.08] tracking-tight text-white
                 sm:text-3xl
                 md:text-4xl
@@ -146,7 +147,7 @@ const Hero = () => {
               {/* Description */}
               <p
                 className="
-                  break-words text-[13px] leading-[1.65] text-slate-800
+                  break-words text-[13px]  leading-[1.65] text-black
                   sm:text-sm
                   lg:text-base
                   min-[1800px]:text-lg
