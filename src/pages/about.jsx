@@ -341,7 +341,7 @@ const About = () => {
                   >
                     <HiArrowLongLeft
                       aria-hidden="true"
-                      className="size-6 transition-transform duration-300 group-hover:-translate-x-0.5 motion-reduce:transform-none"
+                      className="size-6 transition-transform cursor-pointer duration-300 group-hover:-translate-x-0.5 motion-reduce:transform-none"
                     />
                   </button>
 
@@ -358,7 +358,7 @@ const About = () => {
                   >
                     <HiArrowLongRight
                       aria-hidden="true"
-                      className="size-6 transition-transform duration-300 group-hover:translate-x-0.5 motion-reduce:transform-none"
+                      className="size-6 transition-transform cursor-pointer duration-300 group-hover:translate-x-0.5 motion-reduce:transform-none"
                     />
                   </button>
                 </div>

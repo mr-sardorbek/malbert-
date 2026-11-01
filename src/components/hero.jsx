@@ -1,77 +1,51 @@
 import { Mbg } from "@/assets";
-import { ArrowRight, ShieldCheck, Truck, Settings2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Button } from "./ui/button";
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 
 const Hero = () => {
   const { t } = useTranslation();
+  const reduceMotion = useReducedMotion();
 
   const title = t("hero.title2").replace(/^CMYK\s*/, "");
 
-  const featureContainer = {
-    hidden: {},
-    visible: {
-      transition: {
-        delayChildren: 0.9,
-        staggerChildren: 0.15,
-      },
-    },
-  };
-
-  const featureItem = {
-    hidden: {
-      opacity: 0,
-      y: 18,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-      },
-    },
-  };
-
   return (
-    <section id="home" className="pt-[80px] min-[1441px]:pt-[88px]">
-      {/* Hero */}
-      <div className="relative m-2 mb-4 min-h-[500px] overflow-hidden rounded-4xl sm:min-h-[500px] md:min-h-[calc(100dvh-104px)] lg:min-h-[calc(100dvh-104px)] min-[1441px]:min-h-[calc(100dvh-104px)]">
-
-        {/* Background Image */}
+    <section
+      id="home"
+      className="pt-[80px] min-[1441px]:pt-[88px]"
+    >
+      <div className="relative m-2 mb-4 overflow-hidden rounded-3xl sm:rounded-4xl">
+        {/* Background image — o'zgarmagan */}
         <img
           src={Mbg}
           alt="MALBERT printing production"
           className="
-            absolute inset-0  h-full rounded-4xl w-full
+            absolute inset-0 h-full w-full
             object-cover object-[85%_center]
             sm:object-[68%_center]
             md:object-[70%_center]
             lg:object-center
-            min-[1441px]:max-[1799px]:object-center
-            min-[1800px]:object-center
           "
         />
-
-     
 
         {/* Content */}
         <div
           className="
-            relative z-10 mx-auto flex min-h-[500px] w-full max-w-[1260px]
-            items-center px-4
-            sm:min-h-[500px] sm:px-6
-            md:min-h-[calc(100dvh-104px)] md:px-8
-            lg:min-h-[calc(100dvh-104px)] lg:px-6
-            min-[1441px]:min-h-[calc(100dvh-104px)]
-            min-[1800px]:max-w-[1360px] min-[1800px]:px-6
-            max-md:items-start max-md:pt-14
+            relative z-10 mx-auto
+            min-h-[500px] w-full max-w-[1260px]
+            px-5 py-10
+            sm:min-h-[560px] sm:px-6 sm:py-12
+            md:min-h-[calc(100dvh-104px)] md:px-8 md:py-14
+            lg:px-6 lg:py-14
+            min-[1800px]:max-w-[1360px]
+            min-[1800px]:py-16
           "
         >
           <div
             className="
-              w-full max-w-[600px]
+              flex w-full min-w-0 flex-col items-start
+              max-w-[600px]
               sm:max-w-[680px]
               md:max-w-[760px]
               lg:max-w-[850px]
@@ -79,20 +53,7 @@ const Hero = () => {
               min-[1800px]:max-w-[1100px]
             "
           >
-            {/* Eyebrow */}
-            {/* <motion.span
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.6,
-                ease: "easeOut",
-              }}
-              className="mb-4 block text-[8px] font-semibold uppercase tracking-[0.2em] text-white/80 sm:mb-5 sm:text-[9px] sm:tracking-[0.23em] md:text-[10px] lg:text-[11px] lg:tracking-[0.25em] min-[1800px]:mb-6 min-[1800px]:text-[15px] min-[1800px]:tracking-[0.32em]"
-            >
-              {t("hero.eyebrow")}
-            </motion.span> */}
-
-            {/* Heading */}
+            {/* Main title — o'zgarmagan */}
             <h1
               className="
                 w-full
@@ -104,37 +65,7 @@ const Hero = () => {
                 min-[1800px]:text-[240px]
               "
             >
-              {/* CMYK */}
-              <motion.span
-                initial={{
-                  opacity: 0,
-                  x: -25,
-                  scale: 0.92,
-                }}
-                animate={{
-                  opacity: 1,
-                  x: 0,
-                  scale: 1,
-                }}
-                transition={{
-                  duration: 0.7,
-                  delay: 0.15,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className="mr-2 inline-block origin-left text-secondary"
-              >
-                {/* CMYK */}
-              </motion.span>
-
-              {/* Main Title Reveal */}
-              <span
-                className="
-                  inline-block -translate-y-50 translate-x-[20px] 
-min-[1800px]:-translate-y-80
-                  overflow-hidden align-bottom
-                  max-md:translate-x-0 max-md:translate-y-0
-                "
-              >
+              <span className="block max-w-full overflow-hidden">
                 <motion.span
                   initial="hidden"
                   animate="visible"
@@ -177,8 +108,8 @@ min-[1800px]:-translate-y-80
               </span>
             </h1>
 
-            {/* Description */}
-            {/* <motion.p
+            {/* Pastroqda joylashgan ixcham panel */}
+            <motion.div
               initial={{
                 opacity: 0,
                 y: 20,
@@ -192,125 +123,113 @@ min-[1800px]:-translate-y-80
                 delay: 0.55,
                 ease: "easeOut",
               }}
-              className="mt-4 max-w-[340px] text-xs leading-5 text-white/80 sm:mt-5 sm:max-w-[430px] sm:text-sm sm:leading-6 md:max-w-[500px] md:text-[15px] lg:text-base min-[1441px]:max-w-[600px] min-[1441px]:text-lg min-[1441px]:leading-7 min-[1800px]:mt-7 min-[1800px]:max-w-[850px] min-[1800px]:text-3xl min-[1800px]:leading-10"
+              className="
+                mt-12 w-full min-w-0 max-w-[360px]
+                rounded-2xl border border-white/80
+                bg-white/90 p-4 backdrop-blur-sm
+                sm:mt-14 sm:max-w-[420px] sm:p-5
+                lg:mt-16 lg:max-w-[480px]
+                lg:rounded-[20px] lg:p-6
+                min-[1800px]:mt-20 min-[1800px]:max-w-[560px]
+              "
             >
-              {t("hero.description")}
-            </motion.p> */}
+              {/* Description */}
+              <p
+                className="
+                  break-words text-[13px] leading-[1.65] text-slate-800
+                  sm:text-sm
+                  lg:text-base
+                  min-[1800px]:text-lg
+                "
+              >
+                {t("hero.description")}
+              </p>
 
-            {/* Buttons */}
-            {/* <motion.div
-              initial={{
-                opacity: 0,
-                y: 20,
-              }}
-              animate={{
-                opacity: 1,
-                y: 0,
-              }}
-              transition={{
-                duration: 0.6,
-                delay: 0.7,
-                ease: "easeOut",
-              }}
-              className="mt-6 flex flex-col items-stretch gap-2 sm:mt-7 sm:flex-row sm:items-center sm:gap-3 min-[1800px]:mt-10 min-[1800px]:gap-5"
-            >
-              <motion.div
-                initial={{ opacity: 0, scale: 0.94 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                  duration: 0.5,
-                  delay: 0.78,
-                  ease: "easeOut",
-                }}
+              {/* Responsive tugmalar */}
+              <div
+                className="
+                  mt-4 flex flex-wrap items-center gap-2
+                  sm:mt-5 sm:gap-3
+                  lg:gap-4
+                "
               >
                 <Button
+                  type="button"
                   onClick={() =>
                     document.getElementById("products")?.scrollIntoView({
                       behavior: "smooth",
                     })
                   }
-                  className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-secondary px-5 py-2.5 text-xs font-semibold text-gray-900 transition-all duration-300 hover:bg-secondary/90 hover:shadow-md sm:w-auto sm:px-6 sm:py-3 sm:text-sm min-[1441px]:text-lg min-[1800px]:gap-3 min-[1800px]:px-11 min-[1800px]:py-5 min-[1800px]:text-3xl"
+                  className="
+                    inline-flex h-auto min-h-11
+                    min-w-0 flex-[1_1_125px] cursor-pointer
+                    items-center justify-center gap-2
+                    whitespace-normal rounded-[10px] border-0
+                    bg-secondary px-3 py-2.5
+                    text-center text-xs font-semibold leading-5
+                    text-gray-900 shadow-none
+                    transition-colors duration-300
+                    hover:bg-secondary/90
+                    focus-visible:ring-2 focus-visible:ring-primary
+                    focus-visible:ring-offset-2
+                    sm:flex-[0_1_auto] sm:px-4 sm:text-sm
+                    lg:px-5
+                    min-[1800px]:text-base
+                  "
                 >
                   {t("hero.productsButton")}
-                  <ArrowRight
-                    size={15}
-                    className="arrow-move sm:h-[17px] sm:w-[17px] min-[1800px]:h-7 min-[1800px]:w-7"
-                  />
-                </Button>
-              </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.94 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                  duration: 0.5,
-                  delay: 0.9,
-                  ease: "easeOut",
-                }}
-              >
+                  {/* Doimiy, yumshoq arrow animatsiyasi */}
+                  <motion.span
+                    aria-hidden="true"
+                    className="inline-flex shrink-0"
+                    animate={{
+                      x: reduceMotion ? 0 : [0, 4, 0],
+                    }}
+                    transition={
+                      reduceMotion
+                        ? { duration: 0 }
+                        : {
+                            duration: 1.4,
+                            repeat: Infinity,
+                            repeatDelay: 0.35,
+                            ease: "easeInOut",
+                          }
+                    }
+                  >
+                    <ArrowRight className="size-4" />
+                  </motion.span>
+                </Button>
+
+                {/* Biz haqimizda — iconsiz */}
                 <Button
+                  type="button"
+                  variant="ghost"
                   onClick={() =>
                     document.getElementById("about")?.scrollIntoView({
                       behavior: "smooth",
                     })
                   }
-                  variant="outline"
-                  className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-md border-white/40 bg-white/5 px-5 py-2.5 text-xs font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:text-white hover:shadow-md sm:w-auto sm:px-6 sm:py-3 sm:text-sm min-[1441px]:text-lg min-[1800px]:gap-3 min-[1800px]:px-11 min-[1800px]:py-5 min-[1800px]:text-3xl"
+                  className="
+                    inline-flex h-auto min-h-11
+                    min-w-0 flex-[1_1_110px] cursor-pointer
+                    items-center justify-center
+                    whitespace-normal rounded-[10px] border-0
+                    bg-transparent px-2 py-2.5
+                    text-center text-xs font-semibold leading-5
+                    text-slate-900 shadow-none
+                    transition-colors duration-300
+                    hover:bg-transparent hover:text-primary
+                    focus-visible:ring-2 focus-visible:ring-primary
+                    focus-visible:ring-offset-2
+                    sm:flex-[0_1_auto] sm:px-3 sm:text-sm
+                    min-[1800px]:text-base
+                  "
                 >
                   {t("hero.aboutButton")}
                 </Button>
-              </motion.div>
-            </motion.div> */}
-
-            {/* Features */}
-            {/* <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={featureContainer}
-              className="mt-7 grid grid-cols-1 gap-4 border-t border-white/20 pt-5 sm:mt-9 sm:grid-cols-3 sm:gap-5 sm:pt-6 md:gap-7 lg:gap-8"
-            >
-              <motion.div
-                variants={featureItem}
-                className="flex items-center gap-2.5"
-              >
-                <ShieldCheck
-                  size={18}
-                  strokeWidth={1.7}
-                  className="shrink-0 text-white sm:h-5 sm:w-5"
-                />
-                <p className="text-[10px] font-medium text-white sm:text-xs">
-                  {t("hero.features.quality")}
-                </p>
-              </motion.div>
-
-              <motion.div
-                variants={featureItem}
-                className="flex items-center gap-2.5"
-              >
-                <Truck
-                  size={18}
-                  strokeWidth={1.7}
-                  className="shrink-0 text-white sm:h-5 sm:w-5"
-                />
-                <p className="text-[10px] font-medium text-white sm:text-xs">
-                  {t("hero.features.delivery")}
-                </p>
-              </motion.div>
-
-              <motion.div
-                variants={featureItem}
-                className="flex items-center gap-2.5"
-              >
-                <Settings2
-                  size={18}
-                  strokeWidth={1.7}
-                  className="shrink-0 text-white sm:h-5 sm:w-5"
-                />
-                <p className="text-[10px] font-medium text-white sm:text-xs">
-                  {t("hero.features.technology")}
-                </p>
-              </motion.div>
-            </motion.div> */}
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>
