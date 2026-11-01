@@ -69,7 +69,8 @@ const Hero = () => {
                 w-full
                 max-md:translate-y-7
                 max-lg:translate-y-19
-                max-[1441]:translate-y-30
+                max-[1600px]:translate-y-6
+                max-[1800px]:translate-y-56
                 text-2xl font-bold leading-[1.08] tracking-tight text-white
                 sm:text-3xl
                 md:text-[42px]
@@ -143,7 +144,7 @@ const Hero = () => {
                 sm:mt-128 sm:max-w-[420px] sm:p-5
                 lg:mt-26 lg:max-w-[480px]
                 lg:rounded-[20px] lg:p-6
-                min-[1800px]:mt-30 min-[1800px]:max-w-[560px]
+                min-[1800px]:mt-20 min-[1800px]:max-w-[560px]
               "
             >
               {/* Description */}
