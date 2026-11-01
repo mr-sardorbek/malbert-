@@ -68,7 +68,8 @@ const Hero = () => {
               className="
                 w-full
                 max-md:translate-y-7
-                max-lg:translate-y-8
+                max-lg:translate-y-19
+                max-[1441]:translate-y-30
                 text-2xl font-bold leading-[1.08] tracking-tight text-white
                 sm:text-3xl
                 md:text-[42px]
@@ -139,7 +140,7 @@ const Hero = () => {
                 mt-60 w-full min-w-0 max-w-[360px]
                 rounded-2xl border border-blue/30
                 bg-white/30 p-4 backdrop-blur-sm
-                sm:mt-14 sm:max-w-[420px] sm:p-5
+                sm:mt-128 sm:max-w-[420px] sm:p-5
                 lg:mt-26 lg:max-w-[480px]
                 lg:rounded-[20px] lg:p-6
                 min-[1800px]:mt-30 min-[1800px]:max-w-[560px]
