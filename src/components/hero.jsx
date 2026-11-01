@@ -67,10 +67,11 @@ const Hero = () => {
             <h1
               className="
                 w-full
-                max-md:translate-y-16
+                max-md:translate-y-7
+                max-lg:translate-y-8
                 text-2xl font-bold leading-[1.08] tracking-tight text-white
                 sm:text-3xl
-                md:text-4xl
+                md:text-[42px]
                 lg:text-5xl
                 min-[1441px]:text-7xl
                 min-[1800px]:text-[240px]
@@ -160,8 +161,8 @@ const Hero = () => {
               <div
                 className="
                   mt-4 flex flex-wrap items-center gap-2
-                  sm:mt-5 sm:gap-3
-                  lg:gap-4
+                  sm:mt-5 sm:gap-9
+                  lg:gap-15
                 "
               >
                 <Button
