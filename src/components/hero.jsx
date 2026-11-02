@@ -1,6 +1,6 @@
 import { HeroMobile,  HeroTablet,  Mbg } from "@/assets";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowDown, ArrowRight, ArrowUpRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Button } from "./ui/button";
 import { motion, useReducedMotion } from "motion/react";
@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="pt-[80px] min-[1441px]:pt-[88px]"
+      className="pt-[80px] min-[1441px]:pt-[88px] scroll-mt-24"
     >
       <div className="relative m-2 mb-4 overflow-hidden rounded-3xl sm:rounded-4xl">
         {/* Mobile, tablet va desktop uchun alohida rasmlar */}
@@ -216,32 +216,78 @@ const Hero = () => {
                 </Button>
 
                 {/* Biz haqimizda — iconsiz */}
-                <Button
-                  type="button"
-                  variant="ghost"
-                  onClick={() =>
-                    document.getElementById("about")?.scrollIntoView({
-                      behavior: "smooth",
-                    })
-                  }
-                  className="
-                    inline-flex h-auto min-h-11
-                    min-w-0 flex-[1_1_110px] cursor-pointer
-                    items-center justify-center
-                    whitespace-normal rounded-[10px] border-0
-                    bg-transparent px-2 py-2.5
-                    text-center text-xs font-semibold leading-5
-                    text-slate-900 shadow-none
-                    transition-colors duration-300
-                    hover:bg-transparent hover:text-primary
-                    focus-visible:ring-2 focus-visible:ring-primary
-                    focus-visible:ring-offset-2
-                    sm:flex-[0_1_auto] sm:px-3 sm:text-sm
-                    min-[1800px]:text-base
-                  "
-                >
-                  {t("hero.aboutButton")}
-                </Button>
+          <Button
+  type="button"
+  onClick={() =>
+    document.getElementById("contact")?.scrollIntoView({
+      behavior: reduceMotion ? "auto" : "smooth",
+      block: "start",
+    })
+  }
+  className="
+    group/contact relative inline-flex
+    h-11 w-fit max-w-full shrink-0
+    cursor-pointer items-center justify-center
+    overflow-hidden rounded-full border-primary
+    bg-transparent py-1 pl-5 pr-14
+    text-xs font-semibold text-primary
+    shadow-none
+    transition-all duration-500
+    hover:bg-primary hover:text-white
+    hover:pl-14 hover:pr-5
+    focus-visible:bg-primary focus-visible:text-white
+    focus-visible:pl-14 focus-visible:pr-5
+    focus-visible:ring-2 focus-visible:ring-primary
+    focus-visible:ring-offset-2
+    sm:h-12 sm:text-sm
+    min-[1800px]:text-base
+    motion-reduce:transition-none
+  "
+>
+  <span className="relative z-10 whitespace-nowrap">
+    {t("nav.request")}
+  </span>
+
+  <span
+    aria-hidden="true"
+    className="
+      absolute right-2.5  top-1/2
+      flex size-9 -translate-y-1/2
+      items-center justify-center rounded-full
+      bg-transparent text-primary
+      transition-all duration-500
+      group-hover/contact:right-[calc(100%-40px)]
+      group-hover/contact:rotate-45
+      group-hover/contact:text-white
+      group-focus-visible/contact:right-[calc(100%-40px)]
+      group-focus-visible/contact:rotate-45
+      group-focus-visible/contact:text-white
+      sm:size-10
+      sm:group-hover/contact:right-[calc(100%-44px)]
+      sm:group-focus-visible/contact:right-[calc(100%-44px)]
+      motion-reduce:transition-none
+    "
+  >
+    <motion.span
+      className="inline-flex"
+      animate={{
+        x: reduceMotion ? 0 : [0, 4, 0],
+      }}
+      transition={
+        reduceMotion
+          ? { duration: 0 }
+          : {
+              duration: 1.2,
+              repeat: Infinity,
+              repeatDelay: 0.2,
+              ease: "easeInOut",
+            }
+      }
+    >
+      <ArrowRight className="size-4" />
+    </motion.span>
+  </span>
+</Button>
               </div>
             </motion.div>
           </div>
