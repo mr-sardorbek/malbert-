@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/carousel";
 import { Progress } from "@/components/ui/progress";
 
-const SLIDE_DURATION = 5000;
+const SLIDE_DURATION = 3000;
 const REVEAL_EASE = [0.22, 1, 0.36, 1];
 
 const RevealText = ({

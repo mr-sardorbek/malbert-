@@ -176,13 +176,13 @@ const Products = () => {
               </Button>
 
               <div className="grid md:grid-cols-2">
-                <div className="flex min-h-64 items-center justify-center bg-surface p-6">
-                  <img
-                    src={selectedProduct.image}
-                    alt={t(selectedProduct.titleKey)}
-                    className="max-h-72 w-full object-cover"
-                  />
-                </div>
+                <div className="relative aspect-[4/3] w-full overflow-hidden md:aspect-auto md:min-h-64">
+  <img
+    src={selectedProduct.modalImage ?? selectedProduct.image}
+    alt={t(selectedProduct.titleKey)}
+    className="absolute inset-0 h-full w-full object-cover object-center"
+  />
+</div>
 
                 <div className="p-6 sm:p-8">
                   <h3 className="mt-3 text-2xl font-bold text-foreground">
