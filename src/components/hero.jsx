@@ -76,7 +76,7 @@ const Hero = () => {
                 md:text-[42px]
                 lg:text-5xl
                 min-[1441px]:text-9xl
-                min-[1800px]:text-[240px]
+                min-[1800px]:text-[!200px]
               "
             >
               <span className="block max-w-full overflow-hidden">
