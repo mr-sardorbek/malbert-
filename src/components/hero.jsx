@@ -75,11 +75,11 @@ const Hero = () => {
                 sm:text-3xl
                 md:text-[42px]
                 lg:text-5xl
-                min-[1441px]:text-9xl
-                min-[1800px]:text-[240px]
+                min-[90.0625rem]:text-[50px]
+ min-[112.5rem]:text-[64px]
               "
             >
-              <span className=" max-w-full overflow-hidden">
+              <span className="block max-w-full overflow-hidden">
                 <motion.span
                   initial="hidden"
                   animate="visible"
