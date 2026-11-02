@@ -79,7 +79,7 @@ const Hero = () => {
                 min-[1800px]:text-[240px]
               "
             >
-              <span className="block max-w-full overflow-hidden">
+              <span className=" max-w-full overflow-hidden">
                 <motion.span
                   initial="hidden"
                   animate="visible"
@@ -92,7 +92,7 @@ const Hero = () => {
                       },
                     },
                   }}
-                  className=""
+                  className="inline-block"
                 >
                   {title.split(" ").map((word, index) => (
                     <motion.span
