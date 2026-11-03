@@ -11,7 +11,7 @@
   "hero": {
     "eyebrow": "Poligrafiya sohasida ishonchli hamkor",
     "title1": "CMYK kraskalar va etiketka rulonlari",
-    "title2": "Flexa bosma uchun barcha kerekli materiallar bir joyda!",
+    "title2": "Flekso bosma uchun barcha kerekli materiallar bir joyda!",
     "description": "Sifatli bosma mahsulotlari bilan brendingizni keyingi bosqichga olib chiqing.",
     "productsButton": "Mahsulotlar",
     "aboutButton": "Biz haqimizda",
@@ -36,7 +36,7 @@
       },
       "uvColors": {
         "title": "Flekso bosma uchun LED UV bo‘yoqlar",
-        "description": "LED UV bo‘yoqlar flexo pechatda yuqori sifatli va tez quriydigan bosma olish uchun qo‘llaniladi. LED UV nuri ta’sirida tez qotadi, ranglari yorqin va aniq chiqadi."
+        "description": "LED UV bo‘yoqlar flekso pechatda yuqori sifatli va tez quriydigan bosma olish uchun qo‘llaniladi. LED UV nuri ta’sirida tez qotadi, ranglari yorqin va aniq chiqadi."
       },
       "tesa": {
         "title": "Tesa skotchi",
@@ -60,13 +60,13 @@
   "about": {
   "eyebrow": "Biz haqimizda",
   "title": "Poligrafiya uchun sifatli yechimlar",
-  "subtitle": "MALBERT — Flexo Solutions",
+  "subtitle": "MALBERT — Flekso Solutions",
   "heading": "Sifat va ishonch ustuvor yo‘nalishimiz",
   "description": "MALBERT — poligrafiya sohasi uchun CMYK kraskalar va rulon mahsulotlarini taklif qiluvchi zamonaviy kompaniya. Biz mijozlarimizga sifatli mahsulot va ishonchli hamkorlikni taqdim etishga intilamiz.",
   "accent": "Sifatli mahsulot — kuchli hamkorlik.",
   "paragraphs": {
-    "company": "MALBERT – flexografik bosma sanoati uchun sifatli materiallar va professional yechimlarni taqdim etuvchi kompaniya.",
-    "materials": "Biz flexografik bosma va etiketka ishlab chiqarish sohasida faoliyat yurituvchi korxonalar uchun zarur materiallar va sarf mahsulotlarini taklif etamiz.",
+    "company": "MALBERT – fleksografik bosma sanoati uchun sifatli materiallar va professional yechimlarni taqdim etuvchi kompaniya.",
+    "materials": "Biz fleksorafik bosma va etiketka ishlab chiqarish sohasida faoliyat yurituvchi korxonalar uchun zarur materiallar va sarf mahsulotlarini taklif etamiz.",
     "mission": "Maqsadimiz – mijozlarimizga ishonchli mahsulotlar, sifatli xizmat va samarali hamkorlikni taqdim etish orqali ularning ishlab chiqarish jarayonini qo‘llab-quvvatlash."
   },
   "images": {
