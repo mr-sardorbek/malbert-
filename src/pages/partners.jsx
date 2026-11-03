@@ -1,50 +1,52 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "motion/react";
 import {
-  Microsoft,
   RisingPrint,
   FabrikaUpakovki,
   ChagayPlus,
   PreiumFlex,
   LFP,
   DizaynPrint,
+  LabelImpex,
 } from "@/assets";
 
 const partners = [
   {
     id: 1,
-    name: "Microsoft",
-    logo: Microsoft,
+    name: "Label Impex",
+    logo: LabelImpex,
+    website: "https://labelimpex.uz/",
   },
   {
     id: 2,
-    name: "Canon",
+    name: "Dizayn Print",
     logo: DizaynPrint,
+    website: "https://example.com/#dizayn-print",
   },
   {
     id: 3,
-    name: "HP",
+    name: "Chagay Plus",
     logo: ChagayPlus,
+    website: "https://chagayplus.uz/",
   },
-  {
-    id: 4,
-    name: "Epson",
-    logo: LFP,
-  },
+  { id: 4, name: "LFP", logo: LFP, website: "https://example.com/#lfp" },
   {
     id: 5,
-    name: "Zebra",
+    name: "Premium Flex",
     logo: PreiumFlex,
+    website: "https://example.com/#premium-flex",
   },
   {
     id: 6,
-    name: "TSC",
+    name: "Fabrika Upakovki",
     logo: FabrikaUpakovki,
+    website: "https://example.com/#fabrika-upakovki",
   },
   {
     id: 7,
-    name: "Brother",
+    name: "Rising Print",
     logo: RisingPrint,
+    website: "https://risingflexoprint2-bit.github.io/RisingFlexoPrint-web",
   },
 ];
 
@@ -111,7 +113,10 @@ const Partners = () => {
                   animationDelay: `${index * 0.4}s`,
                 }}
               >
-                <motion.div
+                <motion.a
+                  href={partner.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   initial={{
                     opacity: 0,
                     y: 35,
@@ -131,17 +136,17 @@ const Partners = () => {
                     once: true,
                     amount: 0.2,
                   }}
-                  className={`group flex h-28 w-36 cursor-pointer items-center justify-center rounded-2xl border border-border 
-                    bg-white/80 p-6 shadow-[0_14px_30px_rgba(21,87,166,0.08)] backdrop-blur-md transition-all duration-500 
-                    hover:-translate-y-3 hover:scale-105 hover:shadow-[0_22px_40px_rgba(21,87,166,0.14)] ${rotations[index]} 
-                    ${offsets[index]} min-[1800px]:h-32 min-[1800px]:w-44 min-[1800px]:rounded-3xl min-[1800px]:p-7`}
+                  className={`group flex h-28 w-36 cursor-pointer items-center justify-center rounded-2xl border border-border
+    bg-white/80 p-6 shadow-[0_14px_30px_rgba(21,87,166,0.08)] backdrop-blur-md transition-all duration-500
+    hover:-translate-y-3 hover:scale-105 hover:shadow-[0_22px_40px_rgba(21,87,166,0.14)] ${rotations[index]}
+    ${offsets[index]} min-[1800px]:h-32 min-[1800px]:w-44 min-[1800px]:rounded-3xl min-[1800px]:p-7`}
                 >
                   <img
                     src={partner.logo}
                     alt={partner.name}
                     className="max-h-18 max-w-[110px] object-contain transition-transform duration-500 group-hover:scale-105 min-[1800px]:max-h-16 min-[1800px]:max-w-[135px]"
                   />
-                </motion.div>
+                </motion.a>
               </div>
             );
           })}

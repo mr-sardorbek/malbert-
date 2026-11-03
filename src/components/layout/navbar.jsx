@@ -161,7 +161,7 @@ const Navbar = () => {
           <img
             src={Logo}
             alt="MALBERT"
-            className="h-7 w-auto object-contain sm:h-8 md:h-10 min-[1441px]:h-14"
+            className="h-7 w-auto object-contain sm:h-8 md:h-14 min-[1441px]:h-18"
           />
         </div>
 
@@ -276,13 +276,13 @@ const Navbar = () => {
 
           {/* Phone Number */}
           <a
-            href="tel:+998781134040"
+            href="tel:+998971163003"
             className="inline-flex h-10 shrink-0 items-center gap-2.5 rounded-full bg-surface border px-4 text-sm font-medium 
             text-foreground transition-colors hover:bg-border sm:h-11 sm:gap-3 sm:px-5 sm:text-base lg:px-6 min-[1441px]:h-12 min-[1441px]:text-lg"
-            aria-label="Call +998 78 113 40 40"
+            aria-label="Call +998 97 116 30 03"
           >
             <Phone size={20} className="shrink-0 sm:h-[21px] sm:w-[21px]" />
-            <span className="whitespace-nowrap">78 113 40 40</span>
+            <span className="whitespace-nowrap">97 116 30 03</span>
           </a>
 
           {/* Mobile Menu */}

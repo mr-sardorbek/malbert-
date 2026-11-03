@@ -3,7 +3,7 @@ import { navLinks } from "@/data/navigation";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Mail, Phone } from "lucide-react";
-import { FaInstagram, FaTelegramPlane } from "react-icons/fa";
+import { FaFacebook, FaFacebookF, FaInstagram, FaTelegramPlane } from "react-icons/fa";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -75,11 +75,22 @@ const Footer = () => {
                   className="min-[1800px]:h-[18px] min-[1800px]:w-[18px]"
                 />
               </a>
+
+               <a
+                href="https://t.me/malbertuz"
+                aria-label="Telegram"
+                className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-white/15 bg-white/10 text-white transition-all duration-300 hover:-translate-y-1 hover:bg-white/20 hover:shadow-md min-[1800px]:h-11 min-[1800px]:w-11"
+              >
+                <FaFacebookF
+                  size={17}
+                  className="min-[1800px]:h-[18px] min-[1800px]:w-[18px]"
+                />
+              </a>
             </div>
 
             <div className="mt-6 space-y-3 min-[1800px]:mt-7 min-[1800px]:space-y-4">
               <a
-                href="tel:+998901234567"
+                href="tel:+998971163003"
                 className="flex w-fit max-w-full cursor-pointer items-center gap-2 text-sm text-white/80 transition-all duration-300 hover:text-white min-[1800px]:text-base"
               >
                 <Phone
@@ -88,7 +99,7 @@ const Footer = () => {
                 />
 
                 <span className="break-words">
-                  +998 78 113 40 40 
+                  +998 97 116 30 03 
                 </span>
               </a>
 
