@@ -122,6 +122,7 @@ const Hero = () => {
               </span>
             </h1>
 
+
            {/* Hero tugmalari */}
 <motion.div
   initial={{ opacity: 0, y: 20 }}
@@ -135,7 +136,7 @@ const Hero = () => {
     mt-60 flex w-full min-w-0 max-w-[360px] flex-nowrap items-center gap-2
     sm:mt-128 sm:max-w-[420px] sm:gap-4
     lg:mt-13 lg:max-w-[480px] lg:gap-6
-    min-[1800px]:mt-30 min-[1800px]:max-w-[560px]
+    min-[1800px]:mt-[220px] min-[1800px]:max-w-[560px]
   "
 >
   {/* Mahsulotlar */}
