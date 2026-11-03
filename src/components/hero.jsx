@@ -1,6 +1,6 @@
 import { HeroMobile,  HeroTablet,  Mbg } from "@/assets";
 
-import { ArrowDown, ArrowRight, ArrowUpRight } from "lucide-react";
+import {  ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Button } from "./ui/button";
 import { motion, useReducedMotion } from "motion/react";
@@ -151,7 +151,7 @@ const Hero = () => {
     })
   }
   className="
-    group/contact relative inline-flex h-10 w-fit shrink-0 -translate-y-49  lg:-translate-y-4
+    group/contact relative inline-flex h-10 w-fit shrink-0 -translate-y-49  lg:-translate-y-6
     cursor-pointer items-center justify-center overflow-hidden
     rounded-full border border-primary bg-[#e8edf4]/85  pl-2.5 pr-8
  text-xs font-semibold text-primary shadow-none backdrop-blur-[4px]
