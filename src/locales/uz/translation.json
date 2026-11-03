@@ -58,13 +58,27 @@
   },
 
   "about": {
-    "eyebrow": "Biz haqimizda",
-    "title": "Poligrafiya uchun sifatli yechimlar",
-    "subtitle": "MALBERT — Flexo Solutions",
-    "heading": "Sifat va ishonch ustuvor yo‘nalishimiz",
-    "description": "MALBERT — poligrafiya sohasi uchun CMYK kraskalar va rulon mahsulotlarini taklif qiluvchi zamonaviy kompaniya. Biz mijozlarimizga sifatli mahsulot va ishonchli hamkorlikni taqdim etishga intilamiz.",
-    "accent": "Sifatli mahsulot — kuchli hamkorlik."
+  "eyebrow": "Biz haqimizda",
+  "title": "Poligrafiya uchun sifatli yechimlar",
+  "subtitle": "MALBERT — Flexo Solutions",
+  "heading": "Sifat va ishonch ustuvor yo‘nalishimiz",
+  "description": "MALBERT — poligrafiya sohasi uchun CMYK kraskalar va rulon mahsulotlarini taklif qiluvchi zamonaviy kompaniya. Biz mijozlarimizga sifatli mahsulot va ishonchli hamkorlikni taqdim etishga intilamiz.",
+  "accent": "Sifatli mahsulot — kuchli hamkorlik.",
+  "paragraphs": {
+    "company": "MALBERT – flexografik bosma sanoati uchun sifatli materiallar va professional yechimlarni taqdim etuvchi kompaniya.",
+    "materials": "Biz flexografik bosma va etiketka ishlab chiqarish sohasida faoliyat yurituvchi korxonalar uchun zarur materiallar va sarf mahsulotlarini taklif etamiz.",
+    "mission": "Maqsadimiz – mijozlarimizga ishonchli mahsulotlar, sifatli xizmat va samarali hamkorlikni taqdim etish orqali ularning ishlab chiqarish jarayonini qo‘llab-quvvatlash."
   },
+  "images": {
+    "company": "MALBERT poligrafiya mahsulotlari",
+    "materials": "Fleksografik bosma uchun LED UV bo‘yoqlari",
+    "mission": "Fleksografik bosma uchun materiallar"
+  },
+  "carouselLabel": "MALBERT haqida",
+  "progressLabel": "Slaydlar progressi",
+  "previous": "Oldingi slayd",
+  "next": "Keyingi slayd"
+}, 
 
   "partners": {
     "eyebrow": "Hamkorlarimiz",
