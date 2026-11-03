@@ -88,7 +88,7 @@ const Footer = () => {
                 />
 
                 <span className="break-words">
-                  +998 90 123 45 67
+                  +998 78 113 40 40 
                 </span>
               </a>
 
