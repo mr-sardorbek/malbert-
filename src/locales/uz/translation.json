@@ -3,7 +3,7 @@
     "home": "Bosh sahifa",
     "products": "Mahsulotlar",
     "about": "Biz haqimizda",
-    "partners": "Hamkorlar",
+    "partners": "Mijozlar",
     "contact": "Kontakt",
     "request": "Bog‘lanish"
   },
@@ -81,10 +81,10 @@
 }, 
 
   "partners": {
-    "eyebrow": "Hamkorlarimiz",
-    "title": "Biz bilan birga rivojlaning",
-    "description": "Ishonchli hamkorlik — barqaror rivojlanishning muhim qismidir."
-  },
+  "eyebrow": "Mijozlar",
+  "title": "Bizning mijozlarimiz",
+  "description": "Ishonchli hamkorlik — barqaror rivojlanishning muhim qismidir."
+},
 
   "contact": {
     "title": "Biz bilan bog‘laning",

@@ -34,9 +34,7 @@ const Products = () => {
             {t("products.title")}
           </h2>
 
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-muted-foreground sm:text-base min-[1800px]:max-w-3xl min-[1800px]:text-lg min-[1800px]:leading-8">
-            {t("products.description")}
-          </p>
+        
         </motion.div>
 
         {/* Products Grid */}

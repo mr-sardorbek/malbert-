@@ -44,7 +44,7 @@ const Hero = () => {
           className="
             relative z-10 mx-auto
             min-h-[500px] w-full max-w-[1260px]
-            px-5 py-12
+            px-5 py-10
             sm:min-h-[560px] sm:px-6 sm:py-12
             md:min-h-[calc(100dvh-104px)] md:px-8 md:py-14
             lg:px-6 lg:py-14
@@ -71,7 +71,7 @@ const Hero = () => {
                 max-lg:translate-y-19
                 max-[1600px]:translate-y-6
                min-[1800px]:translate-y-[70px]
-                text-2xl font-bold leading-[1.08] tracking-tight text-white
+                text-xl font-bold leading-[1.08] tracking-tight text-white
                 sm:text-3xl
                 md:text-[42px]
                 lg:text-5xl
@@ -139,109 +139,71 @@ const Hero = () => {
     min-[1800px]:mt-[220px] min-[1800px]:max-w-[560px]
   "
 >
+  
+
   {/* Mahsulotlar */}
-  <Button
-    type="button"
-    onClick={() =>
-      document.getElementById("products")?.scrollIntoView({
-        behavior: reduceMotion ? "auto" : "smooth",
-      })
-    }
+<Button
+  type="button"
+  onClick={() =>
+    document.getElementById("products")?.scrollIntoView({
+      behavior: reduceMotion ? "auto" : "smooth",
+      block: "start",
+    })
+  }
+  className="
+    group/contact relative inline-flex h-10 w-fit shrink-0 -translate-y-49  lg:-translate-y-6
+    cursor-pointer items-center justify-center overflow-hidden
+    rounded-full border border-primary bg-[#e8edf4]/85  pl-2.5 pr-8
+ text-xs font-semibold text-primary shadow-none backdrop-blur-[4px]
+    transition-all duration-500
+    hover:border-primary hover:bg-primary hover:pl-11 hover:pr-3 hover:text-white
+    focus-visible:border-primary focus-visible:bg-primary
+    focus-visible:pl-11 focus-visible:pr-3 focus-visible:text-white
+    focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2
+    sm:h-12 sm:pl-5 sm:pr-14 sm:text-sm
+    sm:hover:pl-14 sm:hover:pr-5
+    sm:focus-visible:pl-14 sm:focus-visible:pr-5
+    min-[1800px]:text-base motion-reduce:transition-none
+  "
+>
+  <span className="relative z-10 whitespace-nowrap">
+    {t("hero.productsButton")}
+  </span>
+
+  <span
+    aria-hidden="true"
     className="
-      inline-flex h-auto min-h-11 min-w-0 flex-1 cursor-pointer
-      items-center justify-center gap-2 whitespace-normal
-      rounded-[10px] border-0 bg-secondary px-3 py-2.5
-      text-center text-xs font-semibold leading-5 text-gray-900 shadow-none
-      transition-colors duration-300 hover:bg-secondary/90
-      focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2
-      sm:flex-initial sm:px-4 sm:text-sm lg:px-5
-      min-[1800px]:text-base
+      absolute right-1 top-1/2 flex size-9 -translate-y-1/2
+      items-center justify-center rounded-full text-primary
+      transition-all duration-500
+      group-hover/contact:right-[calc(100%-40px)]
+      group-hover/contact:rotate-45 group-hover/contact:text-white
+      group-focus-visible/contact:right-[calc(100%-40px)]
+      group-focus-visible/contact:rotate-45 group-focus-visible/contact:text-white
+      sm:right-2.5 sm:size-10
+      sm:group-hover/contact:right-[calc(100%-44px)]
+      sm:group-focus-visible/contact:right-[calc(100%-44px)]
+      motion-reduce:transition-none
     "
   >
-    {t("hero.productsButton")}
-
     <motion.span
-      aria-hidden="true"
-      className="inline-flex shrink-0"
+      className="inline-flex"
       animate={{ x: reduceMotion ? 0 : [0, 4, 0] }}
       transition={
         reduceMotion
           ? { duration: 0 }
           : {
-              duration: 1.4,
+              duration: 1.2,
               repeat: Infinity,
-              repeatDelay: 0.35,
+              repeatDelay: 0.2,
               ease: "easeInOut",
             }
       }
     >
       <ArrowRight className="size-4" />
     </motion.span>
-  </Button>
-
-  {/* Bog‘lanish */}
-  <Button
-    type="button"
-    onClick={() =>
-      document.getElementById("contact")?.scrollIntoView({
-        behavior: reduceMotion ? "auto" : "smooth",
-        block: "start",
-      })
-    }
-    className="
-      group/contact relative inline-flex h-11 w-fit shrink-0
-      cursor-pointer items-center justify-center overflow-hidden
-      rounded-full border-primary bg-transparent py-1 pl-3 pr-11
-      text-xs font-semibold text-primary shadow-none
-      transition-all duration-500
-      hover:bg-primary hover:pl-11 hover:pr-3 hover:text-white
-      focus-visible:bg-primary focus-visible:pl-11 focus-visible:pr-3
-      focus-visible:text-white focus-visible:ring-2
-      focus-visible:ring-primary focus-visible:ring-offset-2
-      sm:h-12 sm:pl-5 sm:pr-14 sm:text-sm
-      sm:hover:pl-14 sm:hover:pr-5
-      sm:focus-visible:pl-14 sm:focus-visible:pr-5
-      min-[1800px]:text-base motion-reduce:transition-none
-    "
-  >
-    <span className="relative z-10 whitespace-nowrap">
-      {t("nav.request")}
-    </span>
-
-    <span
-      aria-hidden="true"
-      className="
-        absolute right-1 top-1/2 flex size-9 -translate-y-1/2
-        items-center justify-center rounded-full bg-transparent text-primary
-        transition-all duration-500
-        group-hover/contact:right-[calc(100%-40px)]
-        group-hover/contact:rotate-45 group-hover/contact:text-white
-        group-focus-visible/contact:right-[calc(100%-40px)]
-        group-focus-visible/contact:rotate-45 group-focus-visible/contact:text-white
-        sm:right-2.5 sm:size-10
-        sm:group-hover/contact:right-[calc(100%-44px)]
-        sm:group-focus-visible/contact:right-[calc(100%-44px)]
-        motion-reduce:transition-none
-      "
-    >
-      <motion.span
-        className="inline-flex"
-        animate={{ x: reduceMotion ? 0 : [0, 4, 0] }}
-        transition={
-          reduceMotion
-            ? { duration: 0 }
-            : {
-                duration: 1.2,
-                repeat: Infinity,
-                repeatDelay: 0.2,
-                ease: "easeInOut",
-              }
-        }
-      >
-        <ArrowRight className="size-4" />
-      </motion.span>
-    </span>
-  </Button>
+  </span>
+</Button>
 </motion.div>
           </div>
         </div>

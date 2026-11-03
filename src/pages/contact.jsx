@@ -325,7 +325,7 @@ const Contact = () => {
               </h3>
 
               <p className="mt-1 text-sm font-medium text-foreground md:text-[10px] lg:text-sm min-[1800px]:text-base">
-                +998 90 123 45 67
+                +998 78 113 40 40
               </p>
 
               <p className="mt-1 text-xs text-muted-foreground md:text-[9px] lg:text-xs min-[1800px]:text-sm">
