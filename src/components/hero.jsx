@@ -59,6 +59,7 @@ const Hero = () => {
               lg:max-w-[850px]
               min-[1441px]:max-w-[950px]
               min-[1800px]:max-w-[1100px]
+              [@media(width:1920px)]:-translate-x-[40px]
             "
           >
             {/* Main title */}
@@ -68,7 +69,7 @@ const Hero = () => {
                 max-md:translate-y-7
                 max-lg:translate-y-19
                 max-[1600px]:translate-y-[-5px]
-                min-[112.5rem]:pt-[10px]
+                min-[112.5rem]:pt-[50px]
                 text-xl font-bold leading-[1.08] tracking-tight text-white
                 sm:text-3xl
                 md:text-[42px]
@@ -139,7 +140,7 @@ const Hero = () => {
                 mt-60 flex w-full min-w-0 max-w-[360px] flex-nowrap items-center gap-2
                 sm:mt-128 sm:max-w-[420px] sm:gap-4
                 lg:mt-13 lg:max-w-[480px] lg:gap-6
-                min-[1800px]:mt-[220px] min-[1800px]:max-w-[560px]
+                min-[1800px]:mt-[210px] min-[1800px]:max-w-[560px]
               "
             >
               <Button
