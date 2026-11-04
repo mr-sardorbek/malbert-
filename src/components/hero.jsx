@@ -47,7 +47,6 @@ const Hero = () => {
             sm:min-h-[560px] sm:px-6 sm:py-12
             md:min-h-[calc(100dvh-104px)] md:px-8 md:py-14
             lg:px-6 lg:py-14
-            min-[1800px]:max-w-[160px]
             min-[1800px]:py-16
           "
         >
@@ -94,35 +93,35 @@ const Hero = () => {
                   className="inline-block"
                 >
                   {title.split("\n").map((line, lineIndex) => (
-  <Fragment key={lineIndex}>
-    {lineIndex > 0 && <br className="hidden lg:inline" />}
+                    <Fragment key={lineIndex}>
+                      {lineIndex > 0 && <br className="hidden lg:inline" />}
 
-    {line.trim().split(/\s+/).map((word, index) => (
-      <motion.span
-        key={`${word}-${index}`}
-        variants={{
-          hidden: {
-            opacity: 0,
-            y: 35,
-            filter: "blur(25px)",
-          },
-          visible: {
-            opacity: 1,
-            y: 0,
-            filter: "blur(0px)",
-            transition: {
-              duration: 0.65,
-              ease: [0.22, 1, 0.36, 1],
-            },
-          },
-        }}
-        className="mr-[0.25em] inline-block text-[#4b90f2]"
-      >
-        {word}
-      </motion.span>
-    ))}
-  </Fragment>
-))}
+                      {line.trim().split(/\s+/).map((word, index) => (
+                        <motion.span
+                          key={`${word}-${index}`}
+                          variants={{
+                            hidden: {
+                              opacity: 0,
+                              y: 35,
+                              filter: "blur(25px)",
+                            },
+                            visible: {
+                              opacity: 1,
+                              y: 0,
+                              filter: "blur(0px)",
+                              transition: {
+                                duration: 0.65,
+                                ease: [0.22, 1, 0.36, 1],
+                              },
+                            },
+                          }}
+                          className="mr-[0.25em] inline-block text-[#4b90f2]"
+                        >
+                          {word}
+                        </motion.span>
+                      ))}
+                    </Fragment>
+                  ))}
                 </motion.span>
               </span>
             </h1>
