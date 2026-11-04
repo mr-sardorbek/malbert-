@@ -47,7 +47,7 @@ const Hero = () => {
             sm:min-h-[560px] sm:px-6 sm:py-12
             md:min-h-[calc(100dvh-104px)] md:px-8 md:py-14
             lg:px-6 lg:py-14
-            min-[1800px]:py-4
+            min-[1800px]:py-[-20px]
           "
         >
           <div
@@ -68,7 +68,7 @@ const Hero = () => {
                 max-md:translate-y-7
                 max-lg:translate-y-19
                 max-[1600px]:translate-y-[-5px]
-                min-[112.5rem]:pt-[30px]
+                min-[112.5rem]:pt-[10px]
                 text-xl font-bold leading-[1.08] tracking-tight text-white
                 sm:text-3xl
                 md:text-[42px]
