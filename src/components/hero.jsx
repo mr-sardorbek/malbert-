@@ -60,7 +60,7 @@
                 min-[1441px]:max-w-[950px]
                 min-[1800px]:max-w-[1100px]
                 [@media(width:1920px)]:-translate-x-[40px]
-                [@media(width:1920px)]:-translate-y-[24px]
+                [@media(width:1920px)]:-translate-y-[34px]
               "
             >
               {/* Main title */}
