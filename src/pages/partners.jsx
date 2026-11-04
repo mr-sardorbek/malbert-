@@ -21,7 +21,7 @@ const partners = [
     id: 2,
     name: "Dizayn Print",
     logo: DizaynPrint,
-    website: "https://example.com/#dizayn-print",
+    website: "https://dizaynprint.uz/",
   },
   {
     id: 3,
@@ -34,13 +34,13 @@ const partners = [
     id: 5,
     name: "Premium Flex",
     logo: PreiumFlex,
-    website: "https://example.com/#premium-flex",
+    website: "https://premiumflex.uz/",
   },
   {
     id: 6,
     name: "Fabrika Upakovki",
     logo: FabrikaUpakovki,
-    website: "https://example.com/#fabrika-upakovki",
+    website: "https://fabrikaupakovki.uz/",
   },
   {
     id: 7,
