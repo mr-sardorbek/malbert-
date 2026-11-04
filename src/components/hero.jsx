@@ -68,7 +68,7 @@ const Hero = () => {
                 max-md:translate-y-7
                 max-lg:translate-y-19
                 max-[1600px]:translate-y-[-5px]
-                min-[112.5rem]:pt-[70px]
+                min-[112.5rem]:pt-[60px]
                 text-xl font-bold leading-[1.08] tracking-tight text-white
                 sm:text-3xl
                 md:text-[42px]
