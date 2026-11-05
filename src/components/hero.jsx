@@ -76,7 +76,7 @@
                   md:text-[42px]
                   lg:text-5xl
                   min-[90.0625rem]:text-[57px]
-                  min-[112.5rem]:text-[70px]
+                  min-[112.5rem]:text-[60px]
                 "
               >
                 <span className="block max-w-full overflow-hidden">
@@ -156,10 +156,10 @@
                     group/contact relative inline-flex h-10 w-fit shrink-0
                     -translate-y-49 lg:-translate-y-4
                     cursor-pointer items-center justify-center overflow-hidden
-                    rounded-full border border-white/90 bg-white/5 pl-2.5 pr-8
+                    rounded-full border border-white/90 bg-primary/60 pl-2.5 pr-8
                     text-xs font-semibold text-white shadow-none backdrop-blur-[4px]
                     transition-all duration-500
-                    hover:border-primary hover:bg-primary hover:pl-11 hover:pr-3 hover:text-white
+                    hover:border-white/90 hover:bg-primary/60 hover:pl-11 hover:pr-3 hover:text-white
                     focus-visible:border-primary focus-visible:bg-primary
                     focus-visible:pl-11 focus-visible:pr-3 focus-visible:text-white
                     focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2
