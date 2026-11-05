@@ -21,7 +21,7 @@ const Preloader = () => {
       }}
     >
       {/* Final logo group */}
-      <div className="relative flex items-center justify-center">
+      <div className="relative flex items-center justify-center gap-2">
         {/* M */}
         <motion.img
           src={M}
@@ -48,7 +48,7 @@ const Preloader = () => {
         <motion.img
           src={A}
           alt="A"
-          className="mx-1 h-16 w-auto object-contain sm:mx-1.5 sm:h-20 md:mx-2 md:h-24 lg:h-28"
+          className="h-16 w-auto object-contain sm:h-20 md:h-24 lg:h-28"
           initial={{
             opacity: 0,
             x: 45,
@@ -77,7 +77,7 @@ const Preloader = () => {
 
         {/* L B E R T */}
         <motion.div
-          className="ml-[-7px] flex items-center gap-2"
+          className="flex items-center gap-2"
           initial={{
             opacity: 0,
             x: -35,
@@ -86,7 +86,7 @@ const Preloader = () => {
           }}
           animate={{
             opacity: 1,
-            x: 4,
+            x: 0,
             scaleX: 1,
           }}
           transition={{
