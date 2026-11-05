@@ -71,7 +71,7 @@
                   max-lg:translate-y-19
                   max-[1600px]:translate-y-[-5px]
                   min-[112.5rem]:pt-[50px]
-                  text-xl font-bold leading-[1.08] tracking-tight text-white
+                  text-[25px] font-bold leading-[1.08] tracking-tight text-white
                   sm:text-3xl
                   md:text-[42px]
                   lg:text-5xl
