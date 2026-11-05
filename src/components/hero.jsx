@@ -75,8 +75,8 @@
                   sm:text-3xl
                   md:text-[42px]
                   lg:text-5xl
-                  min-[90.0625rem]:text-[57px]
-                  min-[112.5rem]:text-[60px]
+                  min-[90.0625rem]:text-[55px]
+                  min-[112.5rem]:text-[55px]
                 "
               >
                 <span className="block max-w-full overflow-hidden">
@@ -153,7 +153,7 @@
                     })
                   }
                   className="
-                    group/contact relative inline-flex h-10 w-fit shrink-0
+                    group/contact relative inline-flex h-7 w-fit shrink-0
                     -translate-y-49 lg:-translate-y-4
                     cursor-pointer items-center justify-center overflow-hidden
                     rounded-full border border-white/90 bg-primary/60 pl-2.5 pr-8
