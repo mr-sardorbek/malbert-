@@ -48,7 +48,7 @@ const Preloader = () => {
         <motion.img
           src={A}
           alt="A"
-          className="mx-2 h-16 w-auto object-contain sm:mx-2.5 sm:h-20 md:mx-3 md:h-24 lg:h-28"
+          className="mx-1 h-16 w-auto object-contain sm:mx-1.5 sm:h-20 md:mx-2 md:h-24 lg:h-28"
           initial={{
             opacity: 0,
             x: 45,
@@ -77,7 +77,7 @@ const Preloader = () => {
 
         {/* L B E R T */}
         <motion.div
-          className="ml-[-7px] flex items-center gap-3"
+          className="ml-[-7px] flex items-center gap-2"
           initial={{
             opacity: 0,
             x: -35,
@@ -86,7 +86,7 @@ const Preloader = () => {
           }}
           animate={{
             opacity: 1,
-            x: 8,
+            x: 4,
             scaleX: 1,
           }}
           transition={{
@@ -122,9 +122,9 @@ const Preloader = () => {
             duration: 0.6,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="absolute left-1/2 top-full mt-3 -translate-x-1/2 whitespace-nowrap text-[8px] font-semibold  text-secondary sm:mt-3 sm:text-[10px]  md:text-[11px]  lg:text-xs "
+          className="absolute left-1/2 top-full mt-3 -translate-x-1/2 whitespace-nowrap text-[8px] font-semibold text-secondary sm:mt-3 sm:text-[10px] md:text-[11px] lg:text-xs"
         >
-          ВЫ ПЕЧАТАЕТЕ,  МЫ ВАС ПОДДЕРЖИВАЕМ!
+          ВЫ ПЕЧАТАЕТЕ, МЫ ВАС ПОДДЕРЖИВАЕМ!
         </motion.div>
       </div>
     </motion.div>
