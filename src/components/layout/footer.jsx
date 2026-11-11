@@ -113,7 +113,7 @@ const Footer = () => {
                 />
 
                 <span className="break-all">
-                  info@malbert.uz
+                  yozvoring@gmail.com
                 </span>
               </a>
             </div>
